@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gold Model Dashboard</title>
+  <style>
+    :root {
+      --bg: #f7f7f3;
+      --panel: #ffffff;
+      --text: #1d2430;
+      --muted: #687184;
+      --line: #d9dddf;
+      --gold: #c6922e;
+      --blue: #315f8c;
+      --green: #28765a;
+      --red: #b8504b;
+      --ink: #293241;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(1180px, calc(100% - 36px));
+      margin: 28px auto 44px;
+    }
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 14px 12px;
+      min-height: 82px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .value {
+      font-size: 24px;
+      font-weight: 650;
+      line-height: 1.1;
+    }
+    .note {
+      background: #fff8e7;
+      border: 1px solid #ead9ad;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: -4px 0 18px;
+      color: #5b4a1f;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .subcards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin: -6px 0 18px;
+    }
+    .subcard {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.65);
+    }
+    .subcard .value { font-size: 17px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .model-structure {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .flow {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .flow-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .flow-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      min-height: 74px;
+      background: #fbfbf8;
+    }
+    .flow-box strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+    .flow-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1;
+    }
+    .formula-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .formula {
+      border-left: 3px solid var(--green);
+      background: #f7faf7;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #253226;
+      overflow-wrap: anywhere;
+    }
+    .formula-result {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .formula-result div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: #fff;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+    }
+    section.wide {
+      grid-column: 1 / -1;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 1.2;
+      margin: 0 0 4px;
+      letter-spacing: 0;
+    }
+    .chart {
+      width: 100%;
+      height: 330px;
+      margin-top: 12px;
+    }
+    .chart.small {
+      height: 280px;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { width: 10px; height: 10px; border-radius: 999px; display: inline-block; }
+    svg { width: 100%; height: 100%; display: block; }
+    .axis text { fill: var(--muted); font-size: 11px; }
+    .axis line, .gridline { stroke: var(--line); stroke-width: 1; }
+    .axis path { stroke: var(--line); }
+    .tooltip {
+      position: fixed;
+      pointer-events: none;
+      background: #202733;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.18);
+      display: none;
+      z-index: 4;
+      max-width: 260px;
+    }
+    @media (max-width: 900px) {
+      header { display: block; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .subcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .model-structure { grid-template-columns: 1fr; }
+      .flow-row { grid-template-columns: 1fr; }
+      .formula-result { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .chart { height: 290px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Gold Model Dashboard</h1>
+      <p>Quarterly view through Latest*. The upgraded model explains inflation-adjusted gold, then converts the estimate back to nominal dollars.</p>
+    </div>
+  </header>
+
+  <div class="cards">
+    
+    <div class="card">
+      <div class="label">Spot gold</div>
+      <div class="value">$4,185/oz</div>
+    </div>
+    
+    <div class="card">
+      <div class="label">Nowcast fit</div>
+      <div class="value">$3,751/oz</div>
+    </div>
+    
+    <div class="card">
+      <div class="label">Spot premium</div>
+      <div class="value">11.6%</div>
+    </div>
+    
+    <div class="card">
+      <div class="label">CB reported since Q1</div>
+      <div class="value">60t</div>
+    </div>
+    
+    <div class="card">
+      <div class="label">US debt/GDP</div>
+      <div class="value">123.6%</div>
+    </div>
+    
+  </div>
+  
+  <div class="note">Latest* uses spot gold from 2026-07-03, quarter-to-date price data, and the latest reported central-bank buying since Q1. It is not a complete quarterly observation.</div>
+  <div class="subcards">
+    
+    <div class="subcard">
+      <div class="label">Latest complete quarter</div>
+      <div class="value">2026Q1</div>
+    </div>
+    
+    <div class="subcard">
+      <div class="label">Complete-quarter gold</div>
+      <div class="value">$5,008/oz</div>
+    </div>
+    
+    <div class="subcard">
+      <div class="label">Complete-quarter fit</div>
+      <div class="value">$3,636/oz</div>
+    </div>
+    
+    <div class="subcard">
+      <div class="label">Complete-quarter premium</div>
+      <div class="value">37.7%</div>
+    </div>
+    
+    <div class="subcard">
+      <div class="label">Latest cumulative buying</div>
+      <div class="value">7,117t</div>
+    </div>
+    
+  </div>
+  
+
+  <div class="model-structure">
+    <section>
+      <h2>Model Calculation Structure</h2>
+      <p>The upgraded model first removes inflation, explains real gold with reserve and macro drivers, then converts the fitted value back to nominal dollars.</p>
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-box"><strong>1. Inputs</strong><span>Gold, CPI, central-bank buying, US debt/GDP, consumer sentiment, broad dollar</span></div>
+          <div class="flow-box"><strong>2. Deflate</strong><span>Turn nominal gold into real gold using CPI</span></div>
+          <div class="flow-box"><strong>3. Fit</strong><span>Estimate the real-gold center from standardized drivers</span></div>
+          <div class="flow-box"><strong>4. Reflate</strong><span>Convert fitted real gold back into nominal dollars</span></div>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="flow-row">
+          <div class="flow-box"><strong>Reserve demand</strong><span>Cumulative central-bank gold buying</span></div>
+          <div class="flow-box"><strong>Fiscal pressure</strong><span>US debt divided by US GDP</span></div>
+          <div class="flow-box"><strong>Risk pressure</strong><span>Weak consumer sentiment</span></div>
+          <div class="flow-box"><strong>Dollar pressure</strong><span>Broad dollar index</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Formulas</h2>
+      <p>Z(x) means the variable is standardized against the historical model sample.</p>
+      <div class="formula-list">
+        <div class="formula">Real gold = Nominal gold × CPI base / Current CPI</div>
+        <div class="formula">ln(Real gold) = 7.6642 + 0.2585×Z(CB cumulative buying) + 0.0438×Z(US debt/GDP) + 0.0143×Z(Weak consumer sentiment) - 0.1028×Z(Broad dollar)</div>
+        <div class="formula">Nominal fair value = exp(fitted ln real gold) × Current CPI / CPI base</div>
+        <div class="formula">Premium = Spot gold / Nominal fair value - 1</div>
+      </div>
+      <div class="formula-result">
+        <div><div class="label">Latest model price</div><div class="value">$3,751/oz</div></div>
+        <div><div class="label">Latest spot</div><div class="value">$4,185/oz</div></div>
+        <div><div class="label">Latest premium</div><div class="value">11.6%</div></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid">
+    <section class="wide">
+      <h2>Actual Gold vs Model Fair Value</h2>
+      <p>The gap between actual price and the upgraded model is the premium investors are paying above the long-term drivers.</p>
+      <div id="price-chart" class="chart"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--gold)"></i>Actual gold</span>
+        <span><i class="dot" style="background:var(--green)"></i>Upgraded fit</span>
+        <span><i class="dot" style="background:var(--blue)"></i>Legacy fit</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Premium / Discount</h2>
+      <p>Positive bars mean gold trades above the model estimate.</p>
+      <div id="gap-chart" class="chart small"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--green)"></i>Upgraded model</span>
+        <span><i class="dot" style="background:var(--blue)"></i>Legacy model</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Real Gold Price</h2>
+      <p>Gold price after removing CPI inflation, compared with the upgraded model.</p>
+      <div id="real-chart" class="chart small"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--gold)"></i>Real gold</span>
+        <span><i class="dot" style="background:var(--green)"></i>Real fitted value</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Central Bank Accumulation</h2>
+      <p>Long-term reserve demand is shown as cumulative net buying.</p>
+      <div id="cb-chart" class="chart small"></div>
+    </section>
+
+    <section>
+      <h2>Macro Drivers</h2>
+      <p>Debt pressure, dollar strength, and consumer confidence are normalized for comparison.</p>
+      <div id="drivers-chart" class="chart small"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--red)"></i>Debt/GDP</span>
+        <span><i class="dot" style="background:var(--blue)"></i>Dollar</span>
+        <span><i class="dot" style="background:var(--ink)"></i>Consumer sentiment</span>
+      </div>
+    </section>
+  </div>
+</main>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const data = {"quarters": ["2016Q1", "2016Q2", "2016Q3", "2016Q4", "2017Q1", "2017Q2", "2017Q3", "2017Q4", "2018Q1", "2018Q2", "2018Q3", "2018Q4", "2019Q1", "2019Q2", "2019Q3", "2019Q4", "2020Q1", "2020Q2", "2020Q3", "2020Q4", "2021Q1", "2021Q2", "2021Q3", "2021Q4", "2022Q1", "2022Q2", "2022Q3", "2022Q4", "2023Q1", "2023Q2", "2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3", "2025Q4", "2026Q1", "Latest*"], "price": [{"quarter": "2016Q1", "gold_usd": 1231.0, "upgraded_fitted_gold_usd": 1103.4463905191333, "fitted_gold_usd": 1177.0570505118362}, {"quarter": "2016Q2", "gold_usd": 1295.5, "upgraded_fitted_gold_usd": 1189.4478091792516, "fitted_gold_usd": 1218.7794372778724}, {"quarter": "2016Q3", "gold_usd": 1342.575, "upgraded_fitted_gold_usd": 1180.2996681589968, "fitted_gold_usd": 1209.6067122545005}, {"quarter": "2016Q4", "gold_usd": 1216.75, "upgraded_fitted_gold_usd": 1110.2896804400214, "fitted_gold_usd": 1192.5704888524535}, {"quarter": "2017Q1", "gold_usd": 1226.475, "upgraded_fitted_gold_usd": 1102.3769724849485, "fitted_gold_usd": 1202.0651472982765}, {"quarter": "2017Q2", "gold_usd": 1250.6333333333334, "upgraded_fitted_gold_usd": 1177.656766224447, "fitted_gold_usd": 1224.751519225867}, {"quarter": "2017Q3", "gold_usd": 1288.25, "upgraded_fitted_gold_usd": 1313.123320502746, "fitted_gold_usd": 1297.2335243068173}, {"quarter": "2017Q4", "gold_usd": 1265.1, "upgraded_fitted_gold_usd": 1301.5123183437981, "fitted_gold_usd": 1310.7532055808913}, {"quarter": "2018Q1", "gold_usd": 1337.975, "upgraded_fitted_gold_usd": 1426.1077135191358, "fitted_gold_usd": 1415.4665514571511}, {"quarter": "2018Q2", "gold_usd": 1321.6, "upgraded_fitted_gold_usd": 1374.848500699728, "fitted_gold_usd": 1325.1125069021864}, {"quarter": "2018Q3", "gold_usd": 1219.7, "upgraded_fitted_gold_usd": 1333.8741424991777, "fitted_gold_usd": 1226.3582340160415}, {"quarter": "2018Q4", "gold_usd": 1235.0666666666666, "upgraded_fitted_gold_usd": 1319.2906160704504, "fitted_gold_usd": 1318.0003476474678}, {"quarter": "2019Q1", "gold_usd": 1313.0749999999996, "upgraded_fitted_gold_usd": 1381.1803856667602, "fitted_gold_usd": 1351.374749817256}, {"quarter": "2019Q2", "gold_usd": 1332.35, "upgraded_fitted_gold_usd": 1388.9919878271958, "fitted_gold_usd": 1236.8836152569122}, {"quarter": "2019Q3", "gold_usd": 1454.9499999999996, "upgraded_fitted_gold_usd": 1398.8969510759725, "fitted_gold_usd": 1373.7264113506155}, {"quarter": "2019Q4", "gold_usd": 1486.5500000000004, "upgraded_fitted_gold_usd": 1435.4423456680868, "fitted_gold_usd": 1408.1231221495768}, {"quarter": "2020Q1", "gold_usd": 1623.975, "upgraded_fitted_gold_usd": 1446.546498727485, "fitted_gold_usd": 1389.3760365270862}, {"quarter": "2020Q2", "gold_usd": 1691.05, "upgraded_fitted_gold_usd": 1517.8173647116605, "fitted_gold_usd": 1641.2995908054459}, {"quarter": "2020Q3", "gold_usd": 1865.775, "upgraded_fitted_gold_usd": 1619.2100409257835, "fitted_gold_usd": 1816.8148481516}, {"quarter": "2020Q4", "gold_usd": 1899.475, "upgraded_fitted_gold_usd": 1778.8822297406618, "fitted_gold_usd": 1852.046746291879}, {"quarter": "2021Q1", "gold_usd": 1824.55, "upgraded_fitted_gold_usd": 1870.6798734168801, "fitted_gold_usd": 1841.278005069671}, {"quarter": "2021Q2", "gold_usd": 1816.55, "upgraded_fitted_gold_usd": 1946.7273734579749, "fitted_gold_usd": 1760.0142505017136}, {"quarter": "2021Q3", "gold_usd": 1758.5666666666666, "upgraded_fitted_gold_usd": 1923.494430062846, "fitted_gold_usd": 1880.513367158589}, {"quarter": "2021Q4", "gold_usd": 1804.775, "upgraded_fitted_gold_usd": 1919.114006149352, "fitted_gold_usd": 2079.72247340038}, {"quarter": "2022Q1", "gold_usd": 1870.25, "upgraded_fitted_gold_usd": 1981.2042694880176, "fitted_gold_usd": 2122.5647196998857}, {"quarter": "2022Q2", "gold_usd": 1852.6, "upgraded_fitted_gold_usd": 1903.884559048036, "fitted_gold_usd": 2043.9276038013854}, {"quarter": "2022Q3", "gold_usd": 1739.9, "upgraded_fitted_gold_usd": 1842.3347405376715, "fitted_gold_usd": 1616.3921000694736}, {"quarter": "2022Q4", "gold_usd": 1716.525, "upgraded_fitted_gold_usd": 1892.4136750037653, "fitted_gold_usd": 1822.291306756236}, {"quarter": "2023Q1", "gold_usd": 1873.65, "upgraded_fitted_gold_usd": 2155.349126484844, "fitted_gold_usd": 2030.349566457927}, {"quarter": "2023Q2", "gold_usd": 1982.2, "upgraded_fitted_gold_usd": 2290.0769208872753, "fitted_gold_usd": 2362.1732893169324}, {"quarter": "2023Q3", "gold_usd": 1961.275, "upgraded_fitted_gold_usd": 2386.1203689917384, "fitted_gold_usd": 2166.526426865335}, {"quarter": "2023Q4", "gold_usd": 1934.4, "upgraded_fitted_gold_usd": 2406.1234593375657, "fitted_gold_usd": 2574.3334969686643}, {"quarter": "2024Q1", "gold_usd": 2026.775, "upgraded_fitted_gold_usd": 2555.0477225692225, "fitted_gold_usd": 2446.164915030733}, {"quarter": "2024Q2", "gold_usd": 2359.425, "upgraded_fitted_gold_usd": 2537.5452776015077, "fitted_gold_usd": 2685.029551366778}, {"quarter": "2024Q3", "gold_usd": 2488.25, "upgraded_fitted_gold_usd": 2619.462073133177, "fitted_gold_usd": 2756.9676826331256}, {"quarter": "2024Q4", "gold_usd": 2647.925, "upgraded_fitted_gold_usd": 2586.4324998335264, "fitted_gold_usd": 2476.187263146345}, {"quarter": "2025Q1", "gold_usd": 2949.350000000001, "upgraded_fitted_gold_usd": 2586.0041087194786, "fitted_gold_usd": 2718.893669163645}, {"quarter": "2025Q2", "gold_usd": 3319.075, "upgraded_fitted_gold_usd": 2978.4923922953235, "fitted_gold_usd": 2981.388797563132}, {"quarter": "2025Q3", "gold_usd": 3483.625, "upgraded_fitted_gold_usd": 3265.5787903852583, "fitted_gold_usd": 3142.082962148192}, {"quarter": "2025Q4", "gold_usd": 4140.15, "upgraded_fitted_gold_usd": 3380.904498605833, "fitted_gold_usd": 3331.7746117238244}, {"quarter": "2026Q1", "gold_usd": 5007.525, "upgraded_fitted_gold_usd": 3635.830212087027, "fitted_gold_usd": 3398.214144721915}, {"quarter": "Latest*", "gold_usd": 4184.97, "upgraded_fitted_gold_usd": 3751.2697425921883, "fitted_gold_usd": null}], "gap": [{"quarter": "2016Q1", "upgraded_residual_pct": 0.1155956560978528, "residual_pct_gold_usd": 0.04582866180080822}, {"quarter": "2016Q2", "upgraded_residual_pct": 0.08916086103342966, "residual_pct_gold_usd": 0.06294868486908671}, {"quarter": "2016Q3", "upgraded_residual_pct": 0.13748655211783326, "residual_pct_gold_usd": 0.1099268765611174}, {"quarter": "2016Q4", "upgraded_residual_pct": 0.0958851743247646, "residual_pct_gold_usd": 0.020275121155155455}, {"quarter": "2017Q1", "upgraded_residual_pct": 0.11257313116339253, "residual_pct_gold_usd": 0.02030659715622436}, {"quarter": "2017Q2", "upgraded_residual_pct": 0.06196760312671444, "residual_pct_gold_usd": 0.021132298022235263}, {"quarter": "2017Q3", "upgraded_residual_pct": -0.01894210552381538, "residual_pct_gold_usd": -0.0069251404149593895}, {"quarter": "2017Q4", "upgraded_residual_pct": -0.02797692947703596, "residual_pct_gold_usd": -0.03482974932772267}, {"quarter": "2018Q1", "upgraded_residual_pct": -0.06179947887782975, "residual_pct_gold_usd": -0.054746296461317005}, {"quarter": "2018Q2", "upgraded_residual_pct": -0.03873044969873212, "residual_pct_gold_usd": -0.002650723530183985}, {"quarter": "2018Q3", "upgraded_residual_pct": -0.08559588859355056, "residual_pct_gold_usd": -0.005429273299888461}, {"quarter": "2018Q4", "upgraded_residual_pct": -0.06384033083980217, "residual_pct_gold_usd": -0.06292386882054443}, {"quarter": "2019Q1", "upgraded_residual_pct": -0.04930955172367494, "residual_pct_gold_usd": -0.028341324138574632}, {"quarter": "2019Q2", "upgraded_residual_pct": -0.04077920414487134, "residual_pct_gold_usd": 0.0771829973050928}, {"quarter": "2019Q3", "upgraded_residual_pct": 0.04006946250108962, "residual_pct_gold_usd": 0.05912646650618529}, {"quarter": "2019Q4", "upgraded_residual_pct": 0.035604114986677884, "residual_pct_gold_usd": 0.05569603724047968}, {"quarter": "2020Q1", "upgraded_residual_pct": 0.12265661797156008, "residual_pct_gold_usd": 0.1688520294759958}, {"quarter": "2020Q2", "upgraded_residual_pct": 0.114132727241033, "residual_pct_gold_usd": 0.030311595441353582}, {"quarter": "2020Q3", "upgraded_residual_pct": 0.1522748456606921, "residual_pct_gold_usd": 0.02694834418499599}, {"quarter": "2020Q4", "upgraded_residual_pct": 0.0677913176281033, "residual_pct_gold_usd": 0.02560856188056844}, {"quarter": "2021Q1", "upgraded_residual_pct": -0.02465941611518033, "residual_pct_gold_usd": -0.00908499695516534}, {"quarter": "2021Q2", "upgraded_residual_pct": -0.06686985308412273, "residual_pct_gold_usd": 0.032122324851728105}, {"quarter": "2021Q3", "upgraded_residual_pct": -0.08574382167084871, "residual_pct_gold_usd": -0.06484755844952139}, {"quarter": "2021Q4", "upgraded_residual_pct": -0.0595790587651276, "residual_pct_gold_usd": -0.1322039247625363}, {"quarter": "2022Q1", "upgraded_residual_pct": -0.05600344759840975, "residual_pct_gold_usd": -0.11887256834060685}, {"quarter": "2022Q2", "upgraded_residual_pct": -0.026936800765734813, "residual_pct_gold_usd": -0.09360781832269713}, {"quarter": "2022Q3", "upgraded_residual_pct": -0.05560050423180782, "residual_pct_gold_usd": 0.0764096161601002}, {"quarter": "2022Q4", "upgraded_residual_pct": -0.09294409426808613, "residual_pct_gold_usd": -0.05804028497754553}, {"quarter": "2023Q1", "upgraded_residual_pct": -0.13069767817349692, "residual_pct_gold_usd": -0.07717861448425319}, {"quarter": "2023Q2", "upgraded_residual_pct": -0.13443955444430658, "residual_pct_gold_usd": -0.16085749975896513}, {"quarter": "2023Q3", "upgraded_residual_pct": -0.17804859072187454, "residual_pct_gold_usd": -0.09473755977318284}, {"quarter": "2023Q4", "upgraded_residual_pct": -0.1960512281724052, "residual_pct_gold_usd": -0.24858220495604025}, {"quarter": "2024Q1", "upgraded_residual_pct": -0.20675649926335585, "residual_pct_gold_usd": -0.1714479315984562}, {"quarter": "2024Q2", "upgraded_residual_pct": -0.07019393079356878, "residual_pct_gold_usd": -0.12126665466345915}, {"quarter": "2024Q3", "upgraded_residual_pct": -0.05009122845448658, "residual_pct_gold_usd": -0.0974685645848698}, {"quarter": "2024Q4", "upgraded_residual_pct": 0.023775026091124227, "residual_pct_gold_usd": 0.06935571449286873}, {"quarter": "2025Q1", "upgraded_residual_pct": 0.1405047617888129, "residual_pct_gold_usd": 0.0847610678748043}, {"quarter": "2025Q2", "upgraded_residual_pct": 0.11434731496568043, "residual_pct_gold_usd": 0.11326473176288834}, {"quarter": "2025Q3", "upgraded_residual_pct": 0.06677107600549366, "residual_pct_gold_usd": 0.10869924249813602}, {"quarter": "2025Q4", "upgraded_residual_pct": 0.2245687512638269, "residual_pct_gold_usd": 0.2426260724334923}, {"quarter": "2026Q1", "upgraded_residual_pct": 0.3772714092514229, "residual_pct_gold_usd": 0.4735754683905533}, {"quarter": "Latest*", "upgraded_residual_pct": 0.11561425521698647, "residual_pct_gold_usd": null}], "real_price": [{"quarter": "2016Q1", "real_gold_usd": 1699.3102635372784, "fitted_real_gold_usd": 1523.2313376704526}, {"quarter": "2016Q2", "real_gold_usd": 1774.1586200611878, "fitted_real_gold_usd": 1628.922488435557}, {"quarter": "2016Q3", "real_gold_usd": 1830.855277443747, "fitted_real_gold_usd": 1609.5621297983373}, {"quarter": "2016Q4", "real_gold_usd": 1648.8027485393804, "fitted_real_gold_usd": 1504.5396973777829}, {"quarter": "2017Q1", "real_gold_usd": 1650.3666741055567, "fitted_real_gold_usd": 1483.3781509533717}, {"quarter": "2017Q2", "real_gold_usd": 1680.9351493345716, "fitted_real_gold_usd": 1582.8497445547796}, {"quarter": "2017Q3", "real_gold_usd": 1723.2565569448582, "fitted_real_gold_usd": 1756.5289129699677}, {"quarter": "2017Q4", "real_gold_usd": 1678.9330121407818, "fitted_real_gold_usd": 1727.2563409811755}, {"quarter": "2018Q1", "real_gold_usd": 1760.809194915537, "fitted_real_gold_usd": 1876.7940917464584}, {"quarter": "2018Q2", "real_gold_usd": 1729.8418370372735, "fitted_real_gold_usd": 1799.5387833674024}, {"quarter": "2018Q3", "real_gold_usd": 1590.0753685473587, "fitted_real_gold_usd": 1738.919749717284}, {"quarter": "2018Q4", "real_gold_usd": 1603.57979105689, "fitted_real_gold_usd": 1712.934068710112}, {"quarter": "2019Q1", "real_gold_usd": 1700.3244837250727, "fitted_real_gold_usd": 1788.5153751233026}, {"quarter": "2019Q2", "real_gold_usd": 1712.70053275124, "fitted_real_gold_usd": 1785.5123034779465}, {"quarter": "2019Q3", "real_gold_usd": 1864.1501897124438, "fitted_real_gold_usd": 1792.3323940592004}, {"quarter": "2019Q4", "real_gold_usd": 1891.353499128821, "fitted_real_gold_usd": 1826.328682706279}, {"quarter": "2020Q1", "real_gold_usd": 2058.7790574252413, "fitted_real_gold_usd": 1833.8457409578061}, {"quarter": "2020Q2", "real_gold_usd": 2164.9392724574577, "fitted_real_gold_usd": 1943.161007233469}, {"quarter": "2020Q3", "real_gold_usd": 2361.6323600457786, "fitted_real_gold_usd": 2049.5391086070827}, {"quarter": "2020Q4", "real_gold_usd": 2387.068553158214, "fitted_real_gold_usd": 2235.519725390384}, {"quarter": "2021Q1", "real_gold_usd": 2269.8661339286955, "fitted_real_gold_usd": 2327.2548804313365}, {"quarter": "2021Q2", "real_gold_usd": 2219.4531423035532, "fitted_real_gold_usd": 2378.503309146264}, {"quarter": "2021Q3", "real_gold_usd": 2114.908412004723, "fitted_real_gold_usd": 2313.255805249053}, {"quarter": "2021Q4", "real_gold_usd": 2124.218927669512, "fitted_real_gold_usd": 2258.795858884413}, {"quarter": "2022Q1", "real_gold_usd": 2153.886906718832, "fitted_real_gold_usd": 2281.668191731421}, {"quarter": "2022Q2", "real_gold_usd": 2084.5413625265196, "fitted_real_gold_usd": 2142.246633278201}, {"quarter": "2022Q3", "real_gold_usd": 1932.2361547634769, "fitted_real_gold_usd": 2045.9944794779456}, {"quarter": "2022Q4", "real_gold_usd": 1886.555126336357, "fitted_real_gold_usd": 2079.866427653182}, {"quarter": "2023Q1", "real_gold_usd": 2040.8640947514139, "fitted_real_gold_usd": 2347.7034899243413}, {"quarter": "2023Q2", "real_gold_usd": 2143.678022353501, "fitted_real_gold_usd": 2476.635841390893}, {"quarter": "2023Q3", "real_gold_usd": 2103.0858350844856, "fitted_real_gold_usd": 2558.649831784472}, {"quarter": "2023Q4", "real_gold_usd": 2059.4204214863967, "fitted_real_gold_usd": 2561.631404454755}, {"quarter": "2024Q1", "real_gold_usd": 2138.281186991565, "fitted_real_gold_usd": 2695.617657132841}, {"quarter": "2024Q2", "real_gold_usd": 2472.716045412152, "fitted_real_gold_usd": 2659.3890138000065}, {"quarter": "2024Q3", "real_gold_usd": 2599.0902584778896, "fitted_real_gold_usd": 2736.1472346961677}, {"quarter": "2024Q4", "real_gold_usd": 2744.3279454190147, "fitted_real_gold_usd": 2680.596689193655}, {"quarter": "2025Q1", "real_gold_usd": 3029.101002530192, "fitted_real_gold_usd": 2655.930167077277}, {"quarter": "2025Q2", "real_gold_usd": 3394.89566197887, "fitted_real_gold_usd": 3046.5328146668767}, {"quarter": "2025Q3", "real_gold_usd": 3536.204223062684, "fitted_real_gold_usd": 3314.866987492707}, {"quarter": "2025Q4", "real_gold_usd": 4172.791630855145, "fitted_real_gold_usd": 3407.5601117116357}, {"quarter": "2026Q1", "real_gold_usd": 5007.525, "fitted_real_gold_usd": 3635.830212087027}, {"quarter": "Latest*", "real_gold_usd": 4066.252749607585, "fitted_real_gold_usd": 3694.083818980728}], "drivers": [{"quarter": "2016Q1", "cumulative_central_bank_purchase_tonnes": 110.59, "debt_to_gdp": 1.039890332089783, "broad_dollar_index": 113.60903220338983, "consumer_sentiment": 91.56666666666666}, {"quarter": "2016Q2", "cumulative_central_bank_purchase_tonnes": 195.51, "debt_to_gdp": 1.0358005456046817, "broad_dollar_index": 110.91595625000004, "consumer_sentiment": 92.4}, {"quarter": "2016Q3", "cumulative_central_bank_purchase_tonnes": 284.46, "debt_to_gdp": 1.0360355011248978, "broad_dollar_index": 112.0512875, "consumer_sentiment": 90.33333333333331}, {"quarter": "2016Q4", "cumulative_central_bank_purchase_tonnes": 394.86, "debt_to_gdp": 1.0464890948546728, "broad_dollar_index": 115.8630426229508, "consumer_sentiment": 93.06666666666666}, {"quarter": "2017Q1", "cumulative_central_bank_purchase_tonnes": 486.9, "debt_to_gdp": 1.029374149131138, "broad_dollar_index": 116.46396229508196, "consumer_sentiment": 97.23333333333336}, {"quarter": "2017Q2", "cumulative_central_bank_purchase_tonnes": 583.1600000000002, "debt_to_gdp": 1.0208816625034645, "broad_dollar_index": 113.90348124999996, "consumer_sentiment": 96.36666666666667}, {"quarter": "2017Q3", "cumulative_central_bank_purchase_tonnes": 679.7500000000001, "debt_to_gdp": 1.028046329904896, "broad_dollar_index": 109.93858412698415, "consumer_sentiment": 95.09999999999998}, {"quarter": "2017Q4", "cumulative_central_bank_purchase_tonnes": 773.4100000000002, "debt_to_gdp": 1.0227407568501845, "broad_dollar_index": 110.97474426229506, "consumer_sentiment": 98.36666666666667}, {"quarter": "2018Q1", "cumulative_central_bank_purchase_tonnes": 858.21, "debt_to_gdp": 1.0374394554396396, "broad_dollar_index": 107.99645999999998, "consumer_sentiment": 98.93333333333334}, {"quarter": "2018Q2", "cumulative_central_bank_purchase_tonnes": 1010.98, "debt_to_gdp": 1.0298411282902724, "broad_dollar_index": 110.61840937500004, "consumer_sentiment": 98.33333333333331}, {"quarter": "2018Q3", "cumulative_central_bank_purchase_tonnes": 1251.53, "debt_to_gdp": 1.0344890377047171, "broad_dollar_index": 113.64876666666665, "consumer_sentiment": 98.06666666666668}, {"quarter": "2018Q4", "cumulative_central_bank_purchase_tonnes": 1429.65, "debt_to_gdp": 1.0504940922413626, "broad_dollar_index": 115.6998836065574, "consumer_sentiment": 98.13333333333333}, {"quarter": "2019Q1", "cumulative_central_bank_purchase_tonnes": 1575.88, "debt_to_gdp": 1.0434017391873656, "broad_dollar_index": 114.55487796610173, "consumer_sentiment": 94.46666666666664}, {"quarter": "2019Q2", "cumulative_central_bank_purchase_tonnes": 1803.69, "debt_to_gdp": 1.029224527011689, "broad_dollar_index": 115.429475, "consumer_sentiment": 98.46666666666664}, {"quarter": "2019Q3", "cumulative_central_bank_purchase_tonnes": 1917.15, "debt_to_gdp": 1.0461492315658325, "broad_dollar_index": 116.4749046875, "consumer_sentiment": 93.8}, {"quarter": "2019Q4", "cumulative_central_bank_purchase_tonnes": 2035.06, "debt_to_gdp": 1.057819294579848, "broad_dollar_index": 116.41376721311475, "consumer_sentiment": 97.2}, {"quarter": "2020Q1", "cumulative_central_bank_purchase_tonnes": 2175.830000000001, "debt_to_gdp": 1.088989546831315, "broad_dollar_index": 117.75593064516129, "consumer_sentiment": 96.63333333333333}, {"quarter": "2020Q2", "cumulative_central_bank_purchase_tonnes": 2239.57, "debt_to_gdp": 1.3266286603960609, "broad_dollar_index": 121.8336421875, "consumer_sentiment": 74.06666666666666}, {"quarter": "2020Q3", "cumulative_central_bank_purchase_tonnes": 2228.9700000000007, "debt_to_gdp": 1.2414692532506209, "broad_dollar_index": 117.3474875, "consumer_sentiment": 75.66666666666667}, {"quarter": "2020Q4", "cumulative_central_bank_purchase_tonnes": 2290.01, "debt_to_gdp": 1.256286364913722, "broad_dollar_index": 113.91718, "consumer_sentiment": 79.8}, {"quarter": "2021Q1", "cumulative_central_bank_purchase_tonnes": 2405.620000000001, "debt_to_gdp": 1.2403752523611231, "broad_dollar_index": 112.36396166666668, "consumer_sentiment": 80.23333333333333}, {"quarter": "2021Q2", "cumulative_central_bank_purchase_tonnes": 2615.26, "debt_to_gdp": 1.2178581695712043, "broad_dollar_index": 111.82601562500004, "consumer_sentiment": 85.56666666666666}, {"quarter": "2021Q3", "cumulative_central_bank_purchase_tonnes": 2705.82, "debt_to_gdp": 1.1854086106323596, "broad_dollar_index": 113.304753125, "consumer_sentiment": 74.76666666666667}, {"quarter": "2021Q4", "cumulative_central_bank_purchase_tonnes": 2740.120000000001, "debt_to_gdp": 1.1935879862676821, "broad_dollar_index": 114.96657213114756, "consumer_sentiment": 69.9}, {"quarter": "2022Q1", "cumulative_central_bank_purchase_tonnes": 2822.5600000000004, "debt_to_gdp": 1.2039818671870517, "broad_dollar_index": 115.49019354838707, "consumer_sentiment": 63.13333333333333}, {"quarter": "2022Q2", "cumulative_central_bank_purchase_tonnes": 2981.130000000001, "debt_to_gdp": 1.182020682843647, "broad_dollar_index": 118.96356507936504, "consumer_sentiment": 57.86666666666667}, {"quarter": "2022Q3", "cumulative_central_bank_purchase_tonnes": 3438.0400000000004, "debt_to_gdp": 1.174383148573419, "broad_dollar_index": 123.5284203125, "consumer_sentiment": 56.1}, {"quarter": "2022Q4", "cumulative_central_bank_purchase_tonnes": 3820.14, "debt_to_gdp": 1.1736677682601795, "broad_dollar_index": 124.81290819672131, "consumer_sentiment": 58.79999999999999}, {"quarter": "2023Q1", "cumulative_central_bank_purchase_tonnes": 4110.56, "debt_to_gdp": 1.1558613762755634, "broad_dollar_index": 120.30960806451614, "consumer_sentiment": 64.60000000000001}, {"quarter": "2023Q2", "cumulative_central_bank_purchase_tonnes": 4286.9000000000015, "debt_to_gdp": 1.1744355100185229, "broad_dollar_index": 119.39654761904762, "consumer_sentiment": 62.3}, {"quarter": "2023Q3", "cumulative_central_bank_purchase_tonnes": 4654.160000000002, "debt_to_gdp": 1.1813897053869205, "broad_dollar_index": 119.85063333333336, "consumer_sentiment": 69.56666666666666}, {"quarter": "2023Q4", "cumulative_central_bank_purchase_tonnes": 4870.950000000002, "debt_to_gdp": 1.196194413284516, "broad_dollar_index": 121.54992295081965, "consumer_sentiment": 64.93333333333334}, {"quarter": "2024Q1", "cumulative_central_bank_purchase_tonnes": 5184.220000000001, "debt_to_gdp": 1.2047631152462146, "broad_dollar_index": 120.6440129032258, "consumer_sentiment": 78.43333333333334}, {"quarter": "2024Q2", "cumulative_central_bank_purchase_tonnes": 5395.740000000002, "debt_to_gdp": 1.1950314560678426, "broad_dollar_index": 122.51596031746028, "consumer_sentiment": 71.5}, {"quarter": "2024Q3", "cumulative_central_bank_purchase_tonnes": 5596.7400000000025, "debt_to_gdp": 1.2017171898260868, "broad_dollar_index": 122.65020312500003, "consumer_sentiment": 68.13333333333334}, {"quarter": "2024Q4", "cumulative_central_bank_purchase_tonnes": 5963.330000000003, "debt_to_gdp": 1.2143632622825202, "broad_dollar_index": 125.77585806451614, "consumer_sentiment": 72.10000000000002}, {"quarter": "2025Q1", "cumulative_central_bank_purchase_tonnes": 6200.330000000003, "debt_to_gdp": 1.2054515080272197, "broad_dollar_index": 127.64460163934427, "consumer_sentiment": 64.46666666666667}, {"quarter": "2025Q2", "cumulative_central_bank_purchase_tonnes": 6379.580000000003, "debt_to_gdp": 1.1878170717787762, "broad_dollar_index": 122.41503492063494, "consumer_sentiment": 55.03333333333334}, {"quarter": "2025Q3", "cumulative_central_bank_purchase_tonnes": 6605.830000000003, "debt_to_gdp": 1.2102875045717725, "broad_dollar_index": 120.237221875, "consumer_sentiment": 58.33333333333334}, {"quarter": "2025Q4", "cumulative_central_bank_purchase_tonnes": 6813.470000000002, "debt_to_gdp": 1.2256815121811886, "broad_dollar_index": 120.748735483871, "consumer_sentiment": 52.5}, {"quarter": "2026Q1", "cumulative_central_bank_purchase_tonnes": 7057.130000000003, "debt_to_gdp": 1.2259387256180652, "broad_dollar_index": 119.06635081967215, "consumer_sentiment": 55.43333333333334}, {"quarter": "Latest*", "cumulative_central_bank_purchase_tonnes": 7117.130000000003, "debt_to_gdp": 1.2361027321146318, "broad_dollar_index": 119.25012786885245, "consumer_sentiment": 47.3}]};
+const colors = {
+  gold: "#c6922e",
+  blue: "#315f8c",
+  green: "#28765a",
+  red: "#b8504b",
+  ink: "#293241",
+  grid: "#d9dddf",
+  muted: "#687184"
+};
+
+function fmtMoney(v) { return "$" + Math.round(v).toLocaleString(); }
+function fmtPct(v) { return (v * 100).toFixed(1) + "%"; }
+function fmtNum(v, d=0) { return Number(v).toLocaleString(undefined, {maximumFractionDigits: d, minimumFractionDigits: d}); }
+
+function extent(seriesList) {
+  let values = [];
+  seriesList.forEach(s => s.values.forEach(p => {
+    const v = Number(p.y);
+    if (Number.isFinite(v)) values.push(v);
+  }));
+  let min = Math.min(...values), max = Math.max(...values);
+  if (min === max) { min -= 1; max += 1; }
+  const pad = (max - min) * 0.08;
+  return [min - pad, max + pad];
+}
+
+function lineChart(elId, rows, series, opts={}) {
+  const el = document.getElementById(elId);
+  const width = el.clientWidth || 800;
+  const height = el.clientHeight || 300;
+  const margin = {top: 18, right: 16, bottom: 34, left: opts.left || 58};
+  const innerW = width - margin.left - margin.right;
+  const innerH = height - margin.top - margin.bottom;
+  const prepared = series.map(s => ({
+    ...s,
+    values: rows.map((r, i) => ({x: i, y: r[s.key] === null ? NaN : Number(r[s.key]), row: r}))
+  }));
+  const [minY, maxY] = opts.yDomain || extent(prepared);
+  const x = i => margin.left + (rows.length === 1 ? 0 : i / (rows.length - 1) * innerW);
+  const y = v => margin.top + (maxY - v) / (maxY - minY) * innerH;
+  const ticks = 5;
+  let svg = `<svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">`;
+  for (let t = 0; t <= ticks; t++) {
+    const val = minY + (maxY - minY) * t / ticks;
+    const yy = y(val);
+    svg += `<line class="gridline" x1="${margin.left}" y1="${yy}" x2="${width - margin.right}" y2="${yy}"></line>`;
+    svg += `<text x="${margin.left - 8}" y="${yy + 4}" text-anchor="end" fill="${colors.muted}" font-size="11">${opts.format ? opts.format(val) : fmtNum(val)}</text>`;
+  }
+  const labelEvery = Math.max(1, Math.ceil(rows.length / 8));
+  rows.forEach((r, i) => {
+    if (i % labelEvery === 0 || i === rows.length - 1) {
+      svg += `<text x="${x(i)}" y="${height - 10}" text-anchor="middle" fill="${colors.muted}" font-size="11">${r.quarter}</text>`;
+    }
+  });
+  prepared.forEach(s => {
+    let open = false;
+    const d = s.values.map((p) => {
+      if (!Number.isFinite(p.y)) { open = false; return ""; }
+      const cmd = open ? "L" : "M";
+      open = true;
+      return `${cmd} ${x(p.x).toFixed(2)} ${y(p.y).toFixed(2)}`;
+    }).filter(Boolean).join(" ");
+    svg += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.4" vector-effect="non-scaling-stroke"></path>`;
+    s.values.forEach((p, i) => {
+      if (!Number.isFinite(p.y)) return;
+      svg += `<circle cx="${x(i)}" cy="${y(p.y)}" r="3.2" fill="${s.color}" data-tip="${s.name}: ${opts.format ? opts.format(p.y) : fmtNum(p.y)}<br>${p.row.quarter}"></circle>`;
+    });
+  });
+  svg += `</svg>`;
+  el.innerHTML = svg;
+  attachTooltips(el);
+}
+
+function barChart(elId, rows, series, opts={}) {
+  const el = document.getElementById(elId);
+  const width = el.clientWidth || 800;
+  const height = el.clientHeight || 300;
+  const margin = {top: 18, right: 16, bottom: 34, left: opts.left || 52};
+  const innerW = width - margin.left - margin.right;
+  const innerH = height - margin.top - margin.bottom;
+  const all = [];
+  rows.forEach(r => series.forEach(s => {
+    const v = r[s.key] === null ? NaN : Number(r[s.key]);
+    if (Number.isFinite(v)) all.push(v);
+  }));
+  const minY = Math.min(0, Math.min(...all) * 1.15);
+  const maxY = Math.max(0, Math.max(...all) * 1.15);
+  const xBand = innerW / rows.length;
+  const barW = Math.max(2, xBand / (series.length + 1));
+  const y = v => margin.top + (maxY - v) / (maxY - minY) * innerH;
+  let svg = `<svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">`;
+  for (let t = 0; t <= 5; t++) {
+    const val = minY + (maxY - minY) * t / 5;
+    const yy = y(val);
+    svg += `<line class="gridline" x1="${margin.left}" y1="${yy}" x2="${width - margin.right}" y2="${yy}"></line>`;
+    svg += `<text x="${margin.left - 8}" y="${yy + 4}" text-anchor="end" fill="${colors.muted}" font-size="11">${opts.format ? opts.format(val) : fmtNum(val)}</text>`;
+  }
+  const zeroY = y(0);
+  rows.forEach((r, i) => {
+    series.forEach((s, j) => {
+      const v = Number(r[s.key]);
+      if (!Number.isFinite(v)) return;
+      const xx = margin.left + i * xBand + (xBand - barW * series.length) / 2 + j * barW;
+      const yy = Math.min(y(v), zeroY);
+      const hh = Math.max(1, Math.abs(y(v) - zeroY));
+      svg += `<rect x="${xx}" y="${yy}" width="${barW * .82}" height="${hh}" fill="${s.color}" data-tip="${s.name}: ${opts.format ? opts.format(v) : fmtNum(v)}<br>${r.quarter}"></rect>`;
+    });
+  });
+  const labelEvery = Math.max(1, Math.ceil(rows.length / 8));
+  rows.forEach((r, i) => {
+    if (i % labelEvery === 0 || i === rows.length - 1) {
+      svg += `<text x="${margin.left + i * xBand + xBand/2}" y="${height - 10}" text-anchor="middle" fill="${colors.muted}" font-size="11">${r.quarter}</text>`;
+    }
+  });
+  svg += `</svg>`;
+  el.innerHTML = svg;
+  attachTooltips(el);
+}
+
+function normalizedRows(rows, keys) {
+  const stats = {};
+  keys.forEach(k => {
+    const values = rows.map(r => Number(r[k]));
+    const min = Math.min(...values), max = Math.max(...values);
+    stats[k] = {min, max};
+  });
+  return rows.map(r => {
+    const out = {quarter: r.quarter};
+    keys.forEach(k => {
+      const {min, max} = stats[k];
+      out[k] = max === min ? 0 : (Number(r[k]) - min) / (max - min);
+    });
+    return out;
+  });
+}
+
+function attachTooltips(el) {
+  const tt = document.getElementById("tooltip");
+  el.querySelectorAll("[data-tip]").forEach(node => {
+    node.addEventListener("mousemove", e => {
+      tt.innerHTML = node.getAttribute("data-tip");
+      tt.style.display = "block";
+      tt.style.left = (e.clientX + 12) + "px";
+      tt.style.top = (e.clientY + 12) + "px";
+    });
+    node.addEventListener("mouseleave", () => { tt.style.display = "none"; });
+  });
+}
+
+function render() {
+  lineChart("price-chart", data.price, [
+    {key: "gold_usd", name: "Actual gold", color: colors.gold},
+    {key: "upgraded_fitted_gold_usd", name: "Upgraded fit", color: colors.green},
+    {key: "fitted_gold_usd", name: "Legacy fit", color: colors.blue}
+  ], {format: fmtMoney, left: 66});
+  barChart("gap-chart", data.gap, [
+    {key: "upgraded_residual_pct", name: "Upgraded premium", color: colors.green},
+    {key: "residual_pct_gold_usd", name: "Legacy premium", color: colors.blue}
+  ], {format: fmtPct, left: 58});
+  lineChart("real-chart", data.real_price, [
+    {key: "real_gold_usd", name: "Real gold", color: colors.gold},
+    {key: "fitted_real_gold_usd", name: "Real fitted value", color: colors.green}
+  ], {format: fmtMoney, left: 66});
+  lineChart("cb-chart", data.drivers, [
+    {key: "cumulative_central_bank_purchase_tonnes", name: "Cumulative CB buying", color: colors.green}
+  ], {format: v => fmtNum(v, 0) + "t", left: 58});
+  lineChart("drivers-chart", normalizedRows(data.drivers, ["debt_to_gdp", "broad_dollar_index", "consumer_sentiment"]), [
+    {key: "debt_to_gdp", name: "Debt/GDP", color: colors.red},
+    {key: "broad_dollar_index", name: "Dollar", color: colors.blue},
+    {key: "consumer_sentiment", name: "Consumer sentiment", color: colors.ink}
+  ], {format: v => (v * 100).toFixed(0), left: 42, yDomain: [-.05, 1.05]});
+}
+
+render();
+window.addEventListener("resize", () => { clearTimeout(window.__resizeTimer); window.__resizeTimer = setTimeout(render, 120); });
+</script>
+</body>
+</html>

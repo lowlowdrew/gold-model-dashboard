@@ -1,0 +1,2274 @@
+year,country_code,country,gold_holdings_tonnes,annual_change_tonnes
+1950,IN,India,219.766,
+1950,ID,Indonesia,185.719,
+1950,IR,Iran,123.512,
+1950,IQ,Iraq,0.0,
+1950,IL,Israel,0.0,
+1950,JP,Japan,6.283,
+1950,JO,Jordan,0.0,
+1950,KW,Kuwait,0.0,
+1950,LB,Lebanon,17.76,
+1950,MY,Malaysia,0.0,
+1950,MM,Myanmar,0.0,
+1950,PK,Pakistan,24.149,
+1950,PH,Philippines,2.675,
+1950,KR,South Korea,1.089,
+1950,SY,Syria,4.448,
+1950,TW,Taiwan Province of China,39.999,
+1950,TH,Thailand,104.85,
+1950,TR,Turkey,133.31,
+1951,IN,India,219.766,0.0
+1951,ID,Indonesia,248.828,63.109
+1951,IR,Iran,122.641,-0.871
+1951,IQ,Iraq,0.0,0.0
+1951,IL,Israel,0.0,0.0
+1951,JP,Japan,9.207,2.924
+1951,JO,Jordan,0.0,0.0
+1951,KW,Kuwait,0.0,0.0
+1951,LB,Lebanon,23.359,5.599
+1951,MY,Malaysia,0.0,0.0
+1951,MM,Myanmar,0.0,0.0
+1951,PK,Pakistan,24.149,0.0
+1951,PH,Philippines,6.221,3.546
+1951,KR,South Korea,1.12,0.031
+1951,SY,Syria,9.766,5.319
+1951,TW,Taiwan Province of China,35.551,-4.448
+1951,TH,Thailand,101.335,-3.515
+1951,TR,Turkey,134.18,0.871
+1952,IN,India,219.766,0.0
+1952,ID,Indonesia,208.829,-39.999
+1952,IR,Iran,122.641,0.0
+1952,IQ,Iraq,0.0,0.0
+1952,IL,Israel,0.0,0.0
+1952,JP,Japan,14.183,4.977
+1952,JO,Jordan,0.0,0.0
+1952,KW,Kuwait,0.0,0.0
+1952,LB,Lebanon,27.184,3.826
+1952,MY,Malaysia,0.0,0.0
+1952,MM,Myanmar,0.0,0.0
+1952,PK,Pakistan,34.105,9.956
+1952,PH,Philippines,7.994,1.773
+1952,KR,South Korea,1.151,0.031
+1952,SY,Syria,12.441,2.675
+1952,TW,Taiwan Province of China,34.649,-0.902
+1952,TH,Thailand,101.242,-0.093
+1952,TR,Turkey,127.96,-6.221
+1953,IN,India,219.766,0.0
+1953,ID,Indonesia,128.862,-79.967
+1953,IR,Iran,121.739,-0.902
+1953,IQ,Iraq,0.0,0.0
+1953,IL,Israel,0.0,0.0
+1953,JP,Japan,16.267,2.084
+1953,JO,Jordan,0.0,0.0
+1953,KW,Kuwait,0.0,0.0
+1953,LB,Lebanon,30.824,3.639
+1953,MY,Malaysia,0.0,0.0
+1953,MM,Myanmar,0.0,0.0
+1953,PK,Pakistan,34.105,0.0
+1953,PH,Philippines,7.994,0.0
+1953,KR,South Korea,1.275,0.124
+1953,SY,Syria,12.441,0.0
+1953,TW,Taiwan Province of China,33.778,-0.871
+1953,TH,Thailand,101.242,0.0
+1953,TR,Turkey,127.96,0.0
+1954,IN,India,219.766,0.0
+1954,ID,Indonesia,79.967,-48.895
+1954,IR,Iran,122.641,0.902
+1954,IQ,Iraq,0.0,0.0
+1954,IL,Israel,0.0,0.0
+1954,JP,Japan,18.631,2.364
+1954,JO,Jordan,0.0,0.0
+1954,KW,Kuwait,0.0,0.0
+1954,LB,Lebanon,56.08,25.256
+1954,MY,Malaysia,0.0,0.0
+1954,MM,Myanmar,0.0,0.0
+1954,PK,Pakistan,34.105,0.0
+1954,PH,Philippines,7.994,0.0
+1954,KR,South Korea,1.151,-0.124
+1954,SY,Syria,15.116,2.675
+1954,TW,Taiwan Province of China,35.551,1.773
+1954,TH,Thailand,100.526,-0.715
+1954,TR,Turkey,127.96,0.0
+1955,IN,India,219.766,0.0
+1955,ID,Indonesia,71.973,-7.994
+1955,IR,Iran,122.641,0.0
+1955,IQ,Iraq,7.465,7.465
+1955,IL,Israel,0.0,0.0
+1955,JP,Japan,20.0,1.369
+1955,JO,Jordan,0.0,0.0
+1955,KW,Kuwait,0.0,0.0
+1955,LB,Lebanon,65.504,9.424
+1955,MY,Malaysia,0.0,0.0
+1955,MM,Myanmar,0.0,0.0
+1955,PK,Pakistan,43.047,8.942
+1955,PH,Philippines,14.214,6.221
+1955,KR,South Korea,1.089,-0.062
+1955,SY,Syria,16.889,1.773
+1955,TW,Taiwan Province of China,36.422,0.871
+1955,TH,Thailand,99.935,-0.591
+1955,TR,Turkey,127.96,0.0
+1956,IN,India,219.766,0.0
+1956,ID,Indonesia,39.999,-31.974
+1956,IR,Iran,122.641,0.0
+1956,IQ,Iraq,12.441,4.977
+1956,IL,Israel,3.204,3.204
+1956,JP,Japan,20.404,0.404
+1956,JO,Jordan,0.0,0.0
+1956,KW,Kuwait,0.0,0.0
+1956,LB,Lebanon,68.614,3.11
+1956,MY,Malaysia,0.0,0.0
+1956,MM,Myanmar,0.0,0.0
+1956,PK,Pakistan,43.29,0.243
+1956,PH,Philippines,19.564,5.35
+1956,KR,South Korea,1.182,0.093
+1956,SY,Syria,16.889,0.0
+1956,TW,Taiwan Province of China,37.324,0.902
+1956,TH,Thailand,99.935,0.0
+1956,TR,Turkey,127.96,0.0
+1956,VN,Vietnam,0.0,
+1957,IN,India,219.766,0.0
+1957,ID,Indonesia,34.649,-5.35
+1957,IR,Iran,122.641,0.0
+1957,IQ,Iraq,17.418,4.977
+1957,IL,Israel,1.431,-1.773
+1957,JP,Japan,20.808,0.404
+1957,JO,Jordan,0.0,0.0
+1957,KW,Kuwait,0.0,0.0
+1957,LB,Lebanon,81.056,12.441
+1957,MY,Malaysia,0.0,0.0
+1957,MM,Myanmar,0.0,0.0
+1957,NP,Nepal,1.637,
+1957,PK,Pakistan,43.377,0.087
+1957,PH,Philippines,5.319,-14.245
+1957,SA,Saudi Arabia,14.214,
+1957,KR,South Korea,1.337,0.156
+1957,SY,Syria,21.337,4.448
+1957,TW,Taiwan Province of China,37.324,0.0
+1957,TH,Thailand,99.935,0.0
+1957,TR,Turkey,127.96,0.0
+1957,VN,Vietnam,0.0,0.0
+1958,IN,India,219.766,0.0
+1958,ID,Indonesia,32.876,-1.773
+1958,IR,Iran,125.316,2.675
+1958,IQ,Iraq,29.859,12.441
+1958,IL,Israel,1.431,0.0
+1958,JP,Japan,47.837,27.029
+1958,JO,Jordan,0.0,0.0
+1958,KW,Kuwait,0.0,0.0
+1958,LB,Lebanon,81.056,0.0
+1958,MY,Malaysia,0.0,0.0
+1958,MM,Myanmar,0.0,0.0
+1958,NP,Nepal,1.637,0.0
+1958,PK,Pakistan,44.102,0.725
+1958,PH,Philippines,8.896,3.577
+1958,SA,Saudi Arabia,15.116,0.902
+1958,KR,South Korea,1.431,0.093
+1958,SY,Syria,21.337,0.0
+1958,TW,Taiwan Province of China,38.226,0.902
+1958,TH,Thailand,99.935,0.0
+1958,TR,Turkey,127.96,0.0
+1958,VN,Vietnam,4.448,4.448
+1959,IN,India,219.766,0.0
+1959,ID,Indonesia,29.331,-3.546
+1959,IR,Iran,124.414,-0.902
+1959,IQ,Iraq,74.648,44.789
+1959,IL,Israel,1.431,0.0
+1959,JP,Japan,217.071,169.234
+1959,JO,Jordan,0.0,0.0
+1959,KW,Kuwait,0.0,0.0
+1959,LB,Lebanon,90.387,9.331
+1959,MY,Malaysia,0.0,0.0
+1959,MM,Myanmar,0.0,0.0
+1959,NP,Nepal,1.637,0.0
+1959,PK,Pakistan,47.075,2.973
+1959,PH,Philippines,7.994,-0.902
+1959,SA,Saudi Arabia,15.987,0.871
+1959,KR,South Korea,1.586,0.156
+1959,SY,Syria,16.889,-4.448
+1959,TW,Taiwan Province of China,36.422,-1.804
+1959,TH,Thailand,92.719,-7.216
+1959,TR,Turkey,118.193,-9.766
+1959,VN,Vietnam,4.448,0.0
+1960,IN,India,219.766,0.0
+1960,ID,Indonesia,51.538,22.208
+1960,IR,Iran,115.518,-8.896
+1960,IQ,Iraq,87.09,12.441
+1960,IL,Israel,0.093,-1.337
+1960,JP,Japan,219.622,2.55
+1960,JO,Jordan,0.0,0.0
+1960,KW,Kuwait,0.0,0.0
+1960,LB,Lebanon,105.938,15.552
+1960,MY,Malaysia,0.0,0.0
+1960,MM,Myanmar,0.0,0.0
+1960,NP,Nepal,1.637,0.0
+1960,PK,Pakistan,47.075,0.0
+1960,PH,Philippines,13.343,5.35
+1960,SA,Saudi Arabia,15.987,0.0
+1960,KR,South Korea,1.586,0.0
+1960,SY,Syria,16.889,0.0
+1960,TW,Taiwan Province of China,36.422,0.0
+1960,TH,Thailand,92.719,0.0
+1960,TR,Turkey,111.071,-7.123
+1960,VN,Vietnam,4.448,0.0
+1961,IN,India,219.766,0.0
+1961,ID,Indonesia,39.097,-12.441
+1961,IR,Iran,115.518,0.0
+1961,IQ,Iraq,74.586,-12.504
+1961,IL,Israel,8.896,8.802
+1961,JP,Japan,254.955,35.334
+1961,JO,Jordan,0.0,0.0
+1961,KW,Kuwait,38.568,38.568
+1961,LB,Lebanon,124.601,18.662
+1961,MY,Malaysia,0.0,0.0
+1961,MM,Myanmar,0.0,0.0
+1961,NP,Nepal,1.637,0.0
+1961,PK,Pakistan,47.582,0.507
+1961,PH,Philippines,23.981,10.637
+1961,SA,Saudi Arabia,57.759,41.772
+1961,KR,South Korea,1.634,0.048
+1961,SY,Syria,16.889,0.0
+1961,TW,Taiwan Province of China,39.097,2.675
+1961,TH,Thailand,92.595,-0.124
+1961,TR,Turkey,118.193,7.123
+1961,VN,Vietnam,16.889,12.441
+1962,IN,India,219.766,0.0
+1962,ID,Indonesia,39.999,0.902
+1962,IR,Iran,114.647,-0.871
+1962,IQ,Iraq,86.903,12.317
+1962,IL,Israel,36.422,27.527
+1962,JP,Japan,256.604,1.648
+1962,JO,Jordan,0.0,0.0
+1962,KW,Kuwait,43.545,4.977
+1962,LB,Lebanon,152.594,27.993
+1962,MY,Malaysia,2.799,2.799
+1962,MM,Myanmar,37.324,37.324
+1962,NP,Nepal,1.637,0.0
+1962,PK,Pakistan,47.703,0.121
+1962,PH,Philippines,36.422,12.441
+1962,SA,Saudi Arabia,69.33,11.57
+1962,KR,South Korea,1.641,0.007
+1962,SY,Syria,16.889,0.0
+1962,TW,Taiwan Province of China,38.226,-0.871
+1962,TH,Thailand,92.595,0.0
+1962,TR,Turkey,124.414,6.221
+1962,VN,Vietnam,16.889,0.0
+1963,IN,India,219.766,0.0
+1963,ID,Indonesia,32.876,-7.123
+1963,IR,Iran,126.187,11.539
+1963,IQ,Iraq,86.903,0.0
+1963,IL,Israel,53.156,16.734
+1963,JP,Japan,257.132,0.529
+1963,JO,Jordan,0.0,0.0
+1963,KW,Kuwait,42.301,-1.244
+1963,LB,Lebanon,152.594,0.0
+1963,MY,Malaysia,7.154,4.354
+1963,MM,Myanmar,37.324,0.0
+1963,NP,Nepal,2.71,1.073
+1963,PK,Pakistan,47.703,0.0
+1963,PH,Philippines,24.883,-11.539
+1963,SA,Saudi Arabia,69.33,0.0
+1963,KR,South Korea,1.645,0.004
+1963,SY,Syria,16.889,0.0
+1963,TW,Taiwan Province of China,44.832,6.606
+1963,TH,Thailand,92.595,0.0
+1963,TR,Turkey,102.206,-22.208
+1963,VN,Vietnam,16.889,0.0
+1964,IN,India,219.766,0.0
+1964,ID,Indonesia,3.546,-29.331
+1964,IR,Iran,125.316,-0.871
+1964,IQ,Iraq,99.376,12.472
+1964,IL,Israel,49.486,-3.67
+1964,JP,Japan,270.6,13.468
+1964,JO,Jordan,0.0,0.0
+1964,KW,Kuwait,42.301,0.0
+1964,LB,Lebanon,162.796,10.202
+1964,MY,Malaysia,6.221,-0.933
+1964,MM,Myanmar,74.294,36.97
+1964,NP,Nepal,2.71,0.0
+1964,PK,Pakistan,47.99,0.286
+1964,PH,Philippines,20.435,-4.448
+1964,SA,Saudi Arabia,69.33,0.0
+1964,KR,South Korea,2.463,0.818
+1964,SY,Syria,16.889,0.0
+1964,TW,Taiwan Province of China,48.655,3.823
+1964,TH,Thailand,92.595,0.0
+1964,TR,Turkey,90.636,-11.57
+1964,VN,Vietnam,16.889,0.0
+1965,IN,India,249.617,29.851
+1965,ID,Indonesia,3.546,0.0
+1965,IR,Iran,129.733,4.417
+1965,IQ,Iraq,97.541,-1.835
+1965,IL,Israel,49.579,0.093
+1965,JP,Japan,291.657,21.057
+1965,JO,Jordan,3.017,3.017
+1965,KW,Kuwait,46.033,3.732
+1965,LB,Lebanon,161.925,-0.871
+1965,MY,Malaysia,1.866,-4.354
+1965,MM,Myanmar,74.294,0.0
+1965,NP,Nepal,2.71,0.0
+1965,PK,Pakistan,48.13,0.14
+1965,PH,Philippines,33.778,13.343
+1965,SA,Saudi Arabia,64.882,-4.448
+1965,KR,South Korea,2.92,0.457
+1965,SY,Syria,16.889,0.0
+1965,TW,Taiwan Province of China,48.663,0.008
+1965,TH,Thailand,85.721,-6.874
+1965,TR,Turkey,103.077,12.441
+1965,VN,Vietnam,16.889,0.0
+1966,BH,Bahrain,7.465,
+1966,IN,India,216.279,-33.338
+1966,ID,Indonesia,3.546,0.0
+1966,IR,Iran,115.518,-14.214
+1966,IQ,Iraq,93.808,-3.732
+1966,IL,Israel,40.777,-8.802
+1966,JP,Japan,292.933,1.275
+1966,JO,Jordan,3.017,0.0
+1966,KW,Kuwait,59.719,13.686
+1966,LB,Lebanon,171.505,9.58
+1966,MY,Malaysia,0.933,-0.933
+1966,MM,Myanmar,74.294,0.0
+1966,NP,Nepal,2.92,0.21
+1966,PK,Pakistan,48.13,0.0
+1966,PH,Philippines,39.097,5.319
+1966,QA,Qatar,0.0,
+1966,SA,Saudi Arabia,61.305,-3.577
+1966,KR,South Korea,3.004,0.084
+1966,SY,Syria,16.889,0.0
+1966,TW,Taiwan Province of China,55.33,6.667
+1966,TH,Thailand,81.491,-4.23
+1966,TR,Turkey,90.636,-12.441
+1966,VN,Vietnam,23.11,6.221
+1967,BH,Bahrain,7.372,-0.093
+1967,IN,India,216.279,0.0
+1967,ID,Indonesia,3.546,0.0
+1967,IR,Iran,127.96,12.441
+1967,IQ,Iraq,102.019,8.211
+1967,IL,Israel,40.777,0.0
+1967,JP,Japan,301.144,8.211
+1967,JO,Jordan,3.017,0.0
+1967,KW,Kuwait,121.21,61.492
+1967,LB,Lebanon,171.505,0.0
+1967,MY,Malaysia,27.682,26.749
+1967,MM,Myanmar,74.294,0.0
+1967,NP,Nepal,2.92,0.0
+1967,PK,Pakistan,48.145,0.016
+1967,PH,Philippines,53.311,14.214
+1967,QA,Qatar,4.323,4.323
+1967,SA,Saudi Arabia,61.305,0.0
+1967,KR,South Korea,2.971,-0.033
+1967,SY,Syria,16.889,0.0
+1967,TW,Taiwan Province of China,72.096,16.766
+1967,TH,Thailand,81.491,0.0
+1967,TR,Turkey,86.188,-4.448
+1967,VN,Vietnam,23.11,0.0
+1968,BH,Bahrain,7.372,0.0
+1968,IN,India,216.279,0.0
+1968,ID,Indonesia,3.546,0.0
+1968,IR,Iran,140.401,12.441
+1968,IQ,Iraq,171.194,69.174
+1968,IL,Israel,40.963,0.187
+1968,JP,Japan,316.385,15.241
+1968,JO,Jordan,26.314,23.297
+1968,KW,Kuwait,107.96,-13.25
+1968,LB,Lebanon,255.484,83.979
+1968,MY,Malaysia,58.786,31.103
+1968,MM,Myanmar,74.294,0.0
+1968,NP,Nepal,8.252,5.332
+1968,PK,Pakistan,48.54,0.395
+1968,PH,Philippines,55.084,1.773
+1968,QA,Qatar,5.754,1.431
+1968,SA,Saudi Arabia,105.752,44.447
+1968,KR,South Korea,3.013,0.042
+1968,SY,Syria,24.883,7.994
+1968,TW,Taiwan Province of China,71.912,-0.184
+1968,TH,Thailand,81.491,0.0
+1968,TR,Turkey,86.188,0.0
+1968,VN,Vietnam,21.337,-1.773
+1969,BH,Bahrain,7.372,0.0
+1969,IN,India,216.279,0.0
+1969,ID,Indonesia,3.546,0.0
+1969,IR,Iran,140.401,0.0
+1969,IQ,Iraq,171.287,0.093
+1969,IL,Israel,40.621,-0.342
+1969,JP,Japan,367.177,50.792
+1969,JO,Jordan,26.314,0.0
+1969,KW,Kuwait,76.608,-31.352
+1969,LB,Lebanon,255.484,0.0
+1969,MY,Malaysia,55.986,-2.799
+1969,MM,Myanmar,74.294,0.0
+1969,NP,Nepal,7.258,-0.994
+1969,PK,Pakistan,48.54,0.0
+1969,PH,Philippines,39.999,-15.085
+1969,QA,Qatar,5.754,0.0
+1969,SA,Saudi Arabia,105.752,0.0
+1969,KR,South Korea,3.017,0.004
+1969,SY,Syria,24.883,0.0
+1969,TW,Taiwan Province of China,72.757,0.845
+1969,TH,Thailand,81.491,0.0
+1969,TR,Turkey,103.979,17.791
+1969,VN,Vietnam,21.337,0.0
+1970,BH,Bahrain,7.372,0.0
+1970,IN,India,216.279,0.0
+1970,ID,Indonesia,3.546,0.0
+1970,IR,Iran,116.42,-23.981
+1970,IQ,Iraq,127.493,-43.794
+1970,IL,Israel,38.568,-2.053
+1970,JP,Japan,473.239,106.063
+1970,JO,Jordan,24.789,-1.524
+1970,KW,Kuwait,76.608,0.0
+1970,LB,Lebanon,255.484,0.0
+1970,MY,Malaysia,42.612,-13.374
+1970,MM,Myanmar,55.719,-18.575
+1970,NP,Nepal,4.58,-2.678
+1970,OM,Oman,1.989,
+1970,PK,Pakistan,48.54,0.0
+1970,PH,Philippines,49.766,9.766
+1970,QA,Qatar,5.754,0.0
+1970,SA,Saudi Arabia,105.752,0.0
+1970,KR,South Korea,3.03,0.013
+1970,SY,Syria,24.883,0.0
+1970,TW,Taiwan Province of China,72.761,0.004
+1970,TH,Thailand,72.844,-8.647
+1970,TR,Turkey,112.875,8.896
+1970,VN,Vietnam,21.337,0.0
+1971,BH,Bahrain,7.372,0.0
+1971,IN,India,216.279,0.0
+1971,ID,Indonesia,1.773,-1.773
+1971,IR,Iran,116.42,0.0
+1971,IQ,Iraq,127.493,0.0
+1971,IL,Israel,38.568,0.0
+1971,JP,Japan,603.998,130.759
+1971,JO,Jordan,24.789,0.0
+1971,KW,Kuwait,77.137,0.529
+1971,LB,Lebanon,286.494,31.01
+1971,MY,Malaysia,51.632,9.02
+1971,MM,Myanmar,19.194,-36.525
+1971,NP,Nepal,4.402,-0.178
+1971,OM,Oman,0.434,-1.555
+1971,PK,Pakistan,49.234,0.694
+1971,PH,Philippines,59.532,9.766
+1971,QA,Qatar,5.776,0.022
+1971,SA,Saudi Arabia,95.985,-9.766
+1971,KR,South Korea,3.074,0.044
+1971,SY,Syria,24.883,0.0
+1971,TW,Taiwan Province of China,71.351,-1.41
+1971,TH,Thailand,72.782,-0.062
+1971,TR,Turkey,106.654,-6.221
+1971,VN,Vietnam,21.337,0.0
+1972,BH,Bahrain,7.372,0.0
+1972,BD,Bangladesh,0.0,
+1972,IN,India,216.279,0.0
+1972,ID,Indonesia,3.764,1.991
+1972,IR,Iran,116.42,0.0
+1972,IQ,Iraq,127.493,0.0
+1972,IL,Israel,35.551,-3.017
+1972,JP,Japan,656.128,52.129
+1972,JO,Jordan,24.789,0.0
+1972,KW,Kuwait,77.137,0.0
+1972,LB,Lebanon,286.494,0.0
+1972,MY,Malaysia,51.632,0.0
+1972,MM,Myanmar,9.953,-9.241
+1972,NP,Nepal,4.224,-0.178
+1972,OM,Oman,0.434,-0.0
+1972,PK,Pakistan,49.392,0.159
+1972,PH,Philippines,57.759,-1.773
+1972,QA,Qatar,5.776,0.0
+1972,SA,Saudi Arabia,95.985,0.0
+1972,KR,South Korea,3.315,0.241
+1972,SY,Syria,24.883,0.0
+1972,TW,Taiwan Province of China,71.508,0.157
+1972,TH,Thailand,72.782,0.0
+1972,TR,Turkey,111.071,4.417
+1972,VN,Vietnam,21.337,0.0
+1973,BH,Bahrain,7.372,0.0
+1973,BD,Bangladesh,0.0,0.0
+1973,IN,India,216.279,0.0
+1973,ID,Indonesia,1.773,-1.991
+1973,IR,Iran,116.42,0.0
+1973,IQ,Iraq,127.493,0.0
+1973,IL,Israel,34.121,-1.431
+1973,JP,Japan,656.532,0.404
+1973,JO,Jordan,24.789,0.0
+1973,KW,Kuwait,88.52,11.384
+1973,LB,Lebanon,286.681,0.187
+1973,MY,Malaysia,51.632,0.0
+1973,MM,Myanmar,6.221,-3.732
+1973,NP,Nepal,4.047,-0.178
+1973,OM,Oman,0.434,0.0
+1973,PK,Pakistan,49.392,0.0
+1973,PH,Philippines,32.876,-24.883
+1973,QA,Qatar,5.776,0.0
+1973,SA,Saudi Arabia,95.985,0.0
+1973,KR,South Korea,3.415,0.1
+1973,SY,Syria,24.883,0.0
+1973,TW,Taiwan Province of China,71.562,0.054
+1973,TH,Thailand,72.782,0.0
+1973,TR,Turkey,111.071,0.0
+1973,AE,United Arab Emirates,0.0,
+1973,VN,Vietnam,21.337,0.0
+1974,BH,Bahrain,7.403,0.031
+1974,BD,Bangladesh,0.0,0.0
+1974,IN,India,216.293,0.014
+1974,ID,Indonesia,1.773,0.0
+1974,IR,Iran,116.269,-0.151
+1974,IQ,Iraq,127.493,0.0
+1974,IL,Israel,34.183,0.062
+1974,JP,Japan,656.586,0.053
+1974,JO,Jordan,24.789,0.0
+1974,KW,Kuwait,108.987,20.466
+1974,LB,Lebanon,286.619,-0.062
+1974,MY,Malaysia,51.632,0.0
+1974,MM,Myanmar,6.205,-0.016
+1974,NP,Nepal,4.047,0.0
+1974,OM,Oman,0.933,0.5
+1974,PK,Pakistan,49.392,0.0
+1974,PH,Philippines,32.845,-0.031
+1974,QA,Qatar,5.807,0.031
+1974,SA,Saudi Arabia,95.83,-0.156
+1974,KR,South Korea,3.428,0.013
+1974,SY,Syria,24.541,-0.342
+1974,TW,Taiwan Province of China,71.574,0.012
+1974,TH,Thailand,72.782,0.0
+1974,TR,Turkey,111.023,-0.048
+1974,AE,United Arab Emirates,0.0,0.0
+1974,VN,Vietnam,21.445,0.108
+1975,BH,Bahrain,4.666,-2.737
+1975,BD,Bangladesh,0.0,0.0
+1975,IN,India,216.293,0.0
+1975,ID,Indonesia,1.773,0.0
+1975,IR,Iran,116.269,0.0
+1975,IQ,Iraq,127.493,0.0
+1975,IL,Israel,34.245,0.062
+1975,JP,Japan,656.586,0.0
+1975,JO,Jordan,24.789,0.0
+1975,KW,Kuwait,124.041,15.054
+1975,LB,Lebanon,286.619,0.0
+1975,MY,Malaysia,51.632,0.0
+1975,MM,Myanmar,6.214,0.009
+1975,NP,Nepal,4.047,-0.0
+1975,OM,Oman,0.933,0.0
+1975,PK,Pakistan,49.392,0.0
+1975,PH,Philippines,32.845,0.0
+1975,QA,Qatar,5.844,0.037
+1975,SA,Saudi Arabia,95.83,0.0
+1975,KR,South Korea,3.464,0.036
+1975,SY,Syria,24.541,0.0
+1975,TW,Taiwan Province of China,71.65,0.076
+1975,TH,Thailand,72.782,0.0
+1975,TR,Turkey,111.025,0.002
+1975,AE,United Arab Emirates,0.0,0.0
+1976,BH,Bahrain,4.666,0.0
+1976,BD,Bangladesh,0.0,0.0
+1976,IN,India,216.293,0.0
+1976,ID,Indonesia,1.773,0.0
+1976,IR,Iran,116.269,0.0
+1976,IQ,Iraq,127.493,0.0
+1976,IL,Israel,34.307,0.062
+1976,JP,Japan,656.586,0.0
+1976,JO,Jordan,24.789,0.0
+1976,KW,Kuwait,173.495,49.455
+1976,LB,Lebanon,286.619,0.0
+1976,MY,Malaysia,51.632,0.0
+1976,MM,Myanmar,6.214,0.0
+1976,NP,Nepal,4.047,0.0
+1976,OM,Oman,1.434,0.501
+1976,PK,Pakistan,50.316,0.924
+1976,PH,Philippines,32.845,0.0
+1976,QA,Qatar,5.966,0.121
+1976,SA,Saudi Arabia,95.83,0.0
+1976,KR,South Korea,3.484,0.02
+1976,SY,Syria,24.541,0.0
+1976,TW,Taiwan Province of China,69.497,-2.153
+1976,TH,Thailand,72.782,0.0
+1976,TR,Turkey,111.025,0.0
+1976,AE,United Arab Emirates,16.951,16.951
+1977,BH,Bahrain,4.666,0.0
+1977,BD,Bangladesh,1.664,1.664
+1977,CN,China,398.125,
+1977,IN,India,228.807,12.514
+1977,ID,Indonesia,5.256,3.484
+1977,IR,Iran,117.547,1.278
+1977,IQ,Iraq,128.893,1.4
+1977,IL,Israel,36.204,1.897
+1977,JP,Japan,672.557,15.972
+1977,JO,Jordan,25.069,0.28
+1977,KW,Kuwait,78.101,-95.394
+1977,LB,Lebanon,286.712,0.093
+1977,MY,Malaysia,54.12,2.488
+1977,MM,Myanmar,7.014,0.799
+1977,NP,Nepal,4.129,0.083
+1977,OM,Oman,3.157,1.722
+1977,PK,Pakistan,50.316,0.0
+1977,PH,Philippines,32.845,0.0
+1977,QA,Qatar,5.695,-0.271
+1977,SA,Saudi Arabia,95.83,0.0
+1977,KR,South Korea,4.577,1.093
+1977,LK,Sri Lanka,0.0,
+1977,SY,Syria,25.225,0.684
+1977,TW,Taiwan Province of China,74.991,5.494
+1977,TH,Thailand,74.555,1.773
+1977,TR,Turkey,113.039,2.014
+1977,AE,United Arab Emirates,17.689,0.737
+1978,BH,Bahrain,4.666,0.0
+1978,BD,Bangladesh,0.83,-0.834
+1978,CN,China,398.125,0.0
+1978,IN,India,260.081,31.274
+1978,ID,Indonesia,6.967,1.711
+1978,IR,Iran,118.828,1.281
+1978,IQ,Iraq,128.893,0.0
+1978,IL,Israel,36.422,0.218
+1978,JP,Japan,745.589,73.032
+1978,JO,Jordan,25.225,0.156
+1978,KW,Kuwait,78.536,0.435
+1978,LB,Lebanon,286.712,0.0
+1978,MY,Malaysia,58.786,4.666
+1978,MM,Myanmar,7.415,0.401
+1978,NP,Nepal,4.541,0.412
+1978,OM,Oman,5.773,2.616
+1978,PK,Pakistan,53.433,3.117
+1978,PH,Philippines,47.06,14.214
+1978,QA,Qatar,7.851,2.155
+1978,SA,Saudi Arabia,141.179,45.349
+1978,KR,South Korea,8.55,3.973
+1978,LK,Sri Lanka,1.304,1.304
+1978,SY,Syria,25.225,0.0
+1978,TW,Taiwan Province of China,74.993,0.002
+1978,TH,Thailand,75.457,0.902
+1978,TR,Turkey,114.067,1.028
+1978,AE,United Arab Emirates,17.928,0.239
+1979,BH,Bahrain,4.666,0.0
+1979,BD,Bangladesh,1.664,0.834
+1979,CN,China,398.125,0.0
+1979,IN,India,266.259,6.178
+1979,ID,Indonesia,8.709,1.742
+1979,IR,Iran,121.383,2.555
+1979,IQ,Iraq,128.893,0.0
+1979,IL,Israel,38.288,1.866
+1979,JP,Japan,753.574,7.985
+1979,JO,Jordan,25.38,0.156
+1979,KW,Kuwait,78.972,0.435
+1979,LB,Lebanon,286.836,0.124
+1979,MY,Malaysia,66.25,7.465
+1979,MM,Myanmar,7.813,0.398
+1979,NP,Nepal,4.624,0.083
+1979,OM,Oman,5.819,0.046
+1979,PK,Pakistan,56.559,3.126
+1979,PH,Philippines,52.938,5.879
+1979,QA,Qatar,8.376,0.525
+1979,SA,Saudi Arabia,142.05,0.871
+1979,KR,South Korea,9.186,0.636
+1979,LK,Sri Lanka,1.956,0.652
+1979,SY,Syria,25.909,0.684
+1979,TW,Taiwan Province of China,75.041,0.048
+1979,TH,Thailand,76.359,0.902
+1979,TR,Turkey,117.114,3.047
+1979,AE,United Arab Emirates,17.931,0.003
+1980,BH,Bahrain,4.666,0.0
+1980,BD,Bangladesh,1.664,0.0
+1980,CN,China,398.125,0.0
+1980,IN,India,267.291,1.032
+1980,ID,Indonesia,74.462,65.753
+1980,IR,Iran,135.078,13.695
+1980,IQ,Iraq,128.893,0.0
+1980,IL,Israel,37.138,-1.151
+1980,JP,Japan,753.574,0.0
+1980,JO,Jordan,31.757,6.376
+1980,KW,Kuwait,78.972,0.0
+1980,LB,Lebanon,286.836,0.0
+1980,MY,Malaysia,72.16,5.91
+1980,MN,Mongolia,1.36,
+1980,MM,Myanmar,7.813,0.0
+1980,NP,Nepal,4.706,0.083
+1980,OM,Oman,6.495,0.677
+1980,PK,Pakistan,56.559,0.0
+1980,PH,Philippines,59.719,6.781
+1980,QA,Qatar,14.759,6.383
+1980,SA,Saudi Arabia,142.05,0.0
+1980,KR,South Korea,9.286,0.1
+1980,LK,Sri Lanka,1.956,0.0
+1980,SY,Syria,25.909,0.0
+1980,TW,Taiwan Province of China,97.603,22.562
+1980,TH,Thailand,77.354,0.995
+1980,TR,Turkey,117.187,0.073
+1980,AE,United Arab Emirates,17.931,0.0
+1981,BH,Bahrain,4.666,0.0
+1981,BD,Bangladesh,1.664,0.0
+1981,CN,China,395.014,-3.11
+1981,IN,India,267.291,0.0
+1981,ID,Indonesia,96.545,22.083
+1981,IR,Iran,135.078,0.0
+1981,IL,Israel,37.106,-0.031
+1981,JP,Japan,753.574,0.0
+1981,JO,Jordan,33.187,1.431
+1981,KW,Kuwait,78.972,0.0
+1981,LB,Lebanon,286.836,0.0
+1981,MY,Malaysia,72.471,0.311
+1981,MN,Mongolia,1.415,0.055
+1981,MM,Myanmar,7.813,0.0
+1981,NP,Nepal,4.706,-0.0
+1981,OM,Oman,8.516,2.021
+1981,PK,Pakistan,57.42,0.862
+1981,PH,Philippines,51.601,-8.118
+1981,QA,Qatar,22.177,7.418
+1981,SA,Saudi Arabia,142.05,0.0
+1981,KR,South Korea,9.414,0.128
+1981,LK,Sri Lanka,1.956,-0.0
+1981,SY,Syria,25.909,0.0
+1981,TW,Taiwan Province of China,101.335,3.732
+1981,TH,Thailand,77.354,0.0
+1981,TR,Turkey,117.197,0.01
+1981,AE,United Arab Emirates,21.073,3.141
+1981,VN,Vietnam,21.43,-0.015
+1982,BH,Bahrain,4.666,0.0
+1982,BD,Bangladesh,1.764,0.1
+1982,CN,China,395.014,0.0
+1982,IN,India,267.291,0.0
+1982,ID,Indonesia,96.545,0.0
+1982,IR,Iran,135.078,0.0
+1982,IL,Israel,33.716,-3.39
+1982,JP,Japan,753.574,0.0
+1982,JO,Jordan,33.592,0.404
+1982,KW,Kuwait,78.972,0.0
+1982,LB,Lebanon,286.836,0.0
+1982,MY,Malaysia,72.471,0.0
+1982,MN,Mongolia,1.391,-0.024
+1982,MM,Myanmar,7.813,0.0
+1982,NP,Nepal,4.706,0.0
+1982,OM,Oman,8.668,0.152
+1982,PK,Pakistan,57.473,0.053
+1982,PH,Philippines,58.039,6.438
+1982,QA,Qatar,27.9,5.723
+1982,SA,Saudi Arabia,142.952,0.902
+1982,KR,South Korea,9.431,0.017
+1982,LK,Sri Lanka,1.956,0.0
+1982,SY,Syria,25.909,0.0
+1982,TW,Taiwan Province of China,116.483,15.147
+1982,TH,Thailand,77.354,0.0
+1982,TR,Turkey,117.242,0.045
+1982,AE,United Arab Emirates,25.418,4.345
+1982,VN,Vietnam,21.43,0.0
+1983,BH,Bahrain,4.666,0.0
+1983,BD,Bangladesh,1.778,0.014
+1983,CN,China,395.014,0.0
+1983,IN,India,267.291,0.0
+1983,ID,Indonesia,96.545,0.0
+1983,IR,Iran,135.078,0.0
+1983,IL,Israel,31.57,-2.146
+1983,JP,Japan,753.574,0.0
+1983,JO,Jordan,33.903,0.311
+1983,KW,Kuwait,78.972,0.0
+1983,LB,Lebanon,286.836,0.0
+1983,MY,Malaysia,72.471,0.0
+1983,MN,Mongolia,1.144,-0.247
+1983,MM,Myanmar,7.813,0.0
+1983,NP,Nepal,4.706,-0.0
+1983,OM,Oman,8.957,0.289
+1983,PK,Pakistan,57.912,0.439
+1983,PH,Philippines,8.989,-49.05
+1983,QA,Qatar,33.141,5.242
+1983,SA,Saudi Arabia,142.952,0.0
+1983,KR,South Korea,9.465,0.034
+1983,LK,Sri Lanka,1.956,0.0
+1983,SY,Syria,25.909,0.0
+1983,TW,Taiwan Province of China,127.96,11.477
+1983,TH,Thailand,77.354,0.0
+1983,TR,Turkey,117.429,0.187
+1983,AE,United Arab Emirates,25.418,0.0
+1983,VN,Vietnam,21.43,0.0
+1984,BH,Bahrain,4.666,0.0
+1984,BD,Bangladesh,1.834,0.056
+1984,CN,China,395.014,0.0
+1984,IN,India,271.754,4.463
+1984,ID,Indonesia,96.545,0.0
+1984,IR,Iran,135.078,0.0
+1984,IL,Israel,31.632,0.062
+1984,JP,Japan,753.574,0.0
+1984,JO,Jordan,32.97,-0.933
+1984,KW,Kuwait,78.972,0.0
+1984,LB,Lebanon,286.836,0.0
+1984,MO,Macao SAR,0.0,
+1984,MY,Malaysia,72.471,0.0
+1984,MN,Mongolia,1.1,-0.044
+1984,MM,Myanmar,7.813,0.0
+1984,NP,Nepal,4.706,0.0
+1984,OM,Oman,8.982,0.025
+1984,PK,Pakistan,58.005,0.093
+1984,PH,Philippines,24.447,15.458
+1984,QA,Qatar,37.485,4.344
+1984,SA,Saudi Arabia,142.952,0.0
+1984,KR,South Korea,9.617,0.152
+1984,LK,Sri Lanka,1.956,0.0
+1984,SY,Syria,25.909,0.0
+1984,TW,Taiwan Province of China,138.846,10.886
+1984,TH,Thailand,77.354,0.0
+1984,TR,Turkey,118.187,0.758
+1984,AE,United Arab Emirates,25.418,0.0
+1984,VN,Vietnam,21.43,0.0
+1985,BH,Bahrain,4.666,0.0
+1985,BD,Bangladesh,1.872,0.038
+1985,CN,China,395.014,0.0
+1985,IN,India,292.273,20.519
+1985,ID,Indonesia,96.545,0.0
+1985,IR,Iran,135.078,0.0
+1985,IL,Israel,31.632,0.0
+1985,JP,Japan,753.574,0.0
+1985,JO,Jordan,33.001,0.031
+1985,KW,Kuwait,78.972,0.0
+1985,LB,Lebanon,286.836,0.0
+1985,MO,Macao SAR,0.0,0.0
+1985,MY,Malaysia,72.782,0.311
+1985,MN,Mongolia,1.527,0.427
+1985,MM,Myanmar,7.813,0.0
+1985,NP,Nepal,4.706,0.0
+1985,OM,Oman,8.982,0.0
+1985,PK,Pakistan,59.162,1.157
+1985,PH,Philippines,45.971,21.524
+1985,QA,Qatar,33.451,-4.034
+1985,SA,Saudi Arabia,142.952,0.0
+1985,KR,South Korea,9.733,0.116
+1985,LK,Sri Lanka,1.956,0.0
+1985,SY,Syria,25.909,0.0
+1985,TW,Taiwan Province of China,155.891,17.045
+1985,TH,Thailand,77.354,0.0
+1985,TR,Turkey,120.002,1.815
+1985,AE,United Arab Emirates,25.418,0.0
+1985,VN,Vietnam,21.43,0.0
+1986,BH,Bahrain,4.666,0.0
+1986,BD,Bangladesh,2.051,0.179
+1986,CN,China,395.014,0.0
+1986,IN,India,324.989,32.716
+1986,ID,Indonesia,96.545,0.0
+1986,IR,Iran,135.078,0.0
+1986,IL,Israel,31.632,0.0
+1986,JP,Japan,753.574,0.0
+1986,JO,Jordan,33.094,0.093
+1986,KW,Kuwait,78.972,0.0
+1986,LB,Lebanon,286.836,0.0
+1986,MO,Macao SAR,0.0,0.0
+1986,MY,Malaysia,72.782,0.0
+1986,MN,Mongolia,1.017,-0.509
+1986,MM,Myanmar,7.813,0.0
+1986,NP,Nepal,4.706,0.0
+1986,OM,Oman,8.982,0.0
+1986,PK,Pakistan,60.139,0.977
+1986,PH,Philippines,70.263,24.292
+1986,QA,Qatar,30.037,-3.414
+1986,SA,Saudi Arabia,142.952,0.0
+1986,KR,South Korea,9.85,0.117
+1986,LK,Sri Lanka,1.956,0.0
+1986,SY,Syria,25.909,0.0
+1986,TW,Taiwan Province of China,173.371,17.48
+1986,TH,Thailand,77.354,0.0
+1986,TR,Turkey,119.426,-0.576
+1986,AE,United Arab Emirates,25.418,0.0
+1986,VN,Vietnam,21.43,0.0
+1987,BH,Bahrain,4.666,0.0
+1987,BD,Bangladesh,2.127,0.076
+1987,CN,China,395.014,0.0
+1987,IN,India,324.989,0.0
+1987,ID,Indonesia,96.545,0.0
+1987,IR,Iran,135.078,0.0
+1987,IL,Israel,31.632,0.0
+1987,JP,Japan,753.574,0.0
+1987,JO,Jordan,31.166,-1.928
+1987,KW,Kuwait,78.972,0.0
+1987,LB,Lebanon,286.836,0.0
+1987,MO,Macao SAR,0.0,0.0
+1987,MY,Malaysia,73.093,0.311
+1987,MN,Mongolia,0.943,-0.075
+1987,MM,Myanmar,7.813,0.0
+1987,NP,Nepal,4.706,0.0
+1987,OM,Oman,8.982,0.0
+1987,PK,Pakistan,60.328,0.19
+1987,PH,Philippines,86.343,16.08
+1987,QA,Qatar,25.898,-4.139
+1987,SA,Saudi Arabia,142.952,0.0
+1987,KR,South Korea,9.948,0.098
+1987,LK,Sri Lanka,1.956,0.0
+1987,SY,Syria,25.909,0.0
+1987,TW,Taiwan Province of China,238.47,65.1
+1987,TH,Thailand,77.012,-0.342
+1987,TR,Turkey,119.173,-0.253
+1987,AE,United Arab Emirates,25.418,0.0
+1988,BH,Bahrain,4.666,0.0
+1988,BD,Bangladesh,2.309,0.182
+1988,CN,China,395.014,0.0
+1988,IN,India,324.989,0.0
+1988,ID,Indonesia,96.545,0.0
+1988,IR,Iran,135.078,0.0
+1988,IL,Israel,31.663,0.031
+1988,JP,Japan,753.574,0.0
+1988,JO,Jordan,23.11,-8.056
+1988,KW,Kuwait,78.972,0.0
+1988,LB,Lebanon,286.836,0.0
+1988,MO,Macao SAR,0.0,0.0
+1988,MY,Malaysia,73.093,0.0
+1988,MN,Mongolia,0.935,-0.008
+1988,MM,Myanmar,7.813,0.0
+1988,NP,Nepal,4.742,0.036
+1988,OM,Oman,8.982,0.0
+1988,PK,Pakistan,60.509,0.18
+1988,PH,Philippines,88.365,2.022
+1988,QA,Qatar,27.382,1.484
+1988,SA,Saudi Arabia,142.952,0.0
+1988,KR,South Korea,9.948,0.0
+1988,LK,Sri Lanka,1.956,0.0
+1988,SY,Syria,25.909,0.0
+1988,TW,Taiwan Province of China,419.493,181.022
+1988,TH,Thailand,77.012,0.0
+1988,TR,Turkey,118.875,-0.298
+1988,AE,United Arab Emirates,25.418,0.0
+1989,BH,Bahrain,4.666,0.0
+1989,BD,Bangladesh,2.376,0.068
+1989,CN,China,395.014,0.0
+1989,IN,India,324.989,0.0
+1989,ID,Indonesia,96.639,0.093
+1989,IR,Iran,135.078,0.0
+1989,IL,Israel,31.632,-0.031
+1989,JP,Japan,753.574,0.0
+1989,JO,Jordan,23.265,0.156
+1989,KW,Kuwait,78.972,0.0
+1989,LA,Lao PDR,0.533,
+1989,LB,Lebanon,286.836,0.0
+1989,MO,Macao SAR,0.0,0.0
+1989,MY,Malaysia,73.715,0.622
+1989,MN,Mongolia,0.952,0.017
+1989,MM,Myanmar,7.813,0.0
+1989,NP,Nepal,4.753,0.01
+1989,OM,Oman,8.982,0.0
+1989,PK,Pakistan,60.633,0.124
+1989,PH,Philippines,76.11,-12.255
+1989,QA,Qatar,28.039,0.657
+1989,SA,Saudi Arabia,142.952,0.0
+1989,KR,South Korea,9.948,0.0
+1989,LK,Sri Lanka,1.956,0.0
+1989,SY,Syria,25.909,0.0
+1989,TW,Taiwan Province of China,421.048,1.555
+1989,TH,Thailand,77.012,0.0
+1989,TR,Turkey,117.723,-1.152
+1989,AE,United Arab Emirates,24.799,-0.619
+1989,YE,Yemen,1.555,
+1990,BH,Bahrain,4.666,0.0
+1990,BD,Bangladesh,2.498,0.121
+1990,CN,China,395.014,0.0
+1990,HK,Hong Kong SAR,7.092,
+1990,IN,India,332.563,7.574
+1990,ID,Indonesia,96.763,0.124
+1990,IR,Iran,135.078,0.0
+1990,IL,Israel,26.096,-5.536
+1990,JP,Japan,753.574,0.0
+1990,JO,Jordan,23.421,0.156
+1990,LA,Lao PDR,0.533,0.0
+1990,LB,Lebanon,286.836,0.0
+1990,MO,Macao SAR,0.0,0.0
+1990,MY,Malaysia,73.093,-0.622
+1990,MN,Mongolia,1.143,0.191
+1990,MM,Myanmar,7.813,0.0
+1990,NP,Nepal,4.753,0.0
+1990,OM,Oman,8.982,0.0
+1990,PK,Pakistan,60.633,0.0
+1990,PH,Philippines,89.827,13.717
+1990,QA,Qatar,25.899,-2.14
+1990,SA,Saudi Arabia,142.952,0.0
+1990,KR,South Korea,9.948,0.0
+1990,LK,Sri Lanka,1.948,-0.008
+1990,SY,Syria,25.909,0.0
+1990,TW,Taiwan Province of China,421.048,0.0
+1990,TH,Thailand,77.012,0.0
+1990,TR,Turkey,127.368,9.645
+1990,AE,United Arab Emirates,24.777,-0.022
+1990,YE,Yemen,1.555,0.0
+1991,BH,Bahrain,4.666,0.0
+1991,BD,Bangladesh,2.613,0.116
+1991,CN,China,395.014,0.0
+1991,HK,Hong Kong SAR,7.092,0.0
+1991,IN,India,350.917,18.354
+1991,ID,Indonesia,96.763,0.0
+1991,IR,Iran,135.078,0.0
+1991,IL,Israel,13.095,-13.001
+1991,JP,Japan,753.574,0.0
+1991,JO,Jordan,24.541,1.12
+1991,KW,Kuwait,78.958,-0.013
+1991,LA,Lao PDR,0.533,0.0
+1991,LB,Lebanon,286.836,0.0
+1991,MO,Macao SAR,0.0,0.0
+1991,MY,Malaysia,73.093,0.0
+1991,MN,Mongolia,4.419,3.275
+1991,MM,Myanmar,7.813,0.0
+1991,NP,Nepal,4.753,0.0
+1991,OM,Oman,8.982,-0.0
+1991,PK,Pakistan,60.981,0.348
+1991,PH,Philippines,104.694,14.867
+1991,QA,Qatar,25.755,-0.144
+1991,SA,Saudi Arabia,142.952,0.0
+1991,KR,South Korea,9.992,0.044
+1991,LK,Sri Lanka,3.439,1.49
+1991,SY,Syria,25.909,0.0
+1991,TW,Taiwan Province of China,421.048,0.0
+1991,TH,Thailand,77.012,0.0
+1991,TR,Turkey,129.483,2.115
+1991,AE,United Arab Emirates,24.755,-0.022
+1991,YE,Yemen,1.555,0.0
+1992,AM,Armenia,0.0,
+1992,AZ,Azerbaijan,0.0,
+1992,BH,Bahrain,4.666,0.0
+1992,BD,Bangladesh,2.695,0.082
+1992,CN,China,395.014,0.0
+1992,HK,Hong Kong SAR,7.092,0.0
+1992,IN,India,352.956,2.039
+1992,ID,Indonesia,96.452,-0.311
+1992,IR,Iran,135.078,0.0
+1992,IL,Israel,0.28,-12.815
+1992,JP,Japan,753.574,0.0
+1992,JO,Jordan,24.541,0.0
+1992,KW,Kuwait,78.958,0.0
+1992,LA,Lao PDR,0.533,0.0
+1992,LB,Lebanon,286.836,0.0
+1992,MO,Macao SAR,0.0,0.0
+1992,MY,Malaysia,74.337,1.244
+1992,MN,Mongolia,0.604,-3.815
+1992,MM,Myanmar,7.813,0.0
+1992,NP,Nepal,4.753,0.0
+1992,OM,Oman,8.982,0.0
+1992,PK,Pakistan,62.869,1.888
+1992,PH,Philippines,87.028,-17.667
+1992,QA,Qatar,26.793,1.038
+1992,SA,Saudi Arabia,142.952,0.0
+1992,KR,South Korea,10.036,0.044
+1992,LK,Sri Lanka,4.978,1.539
+1992,SY,Syria,25.909,0.0
+1992,TW,Taiwan Province of China,421.265,0.218
+1992,TH,Thailand,76.95,-0.062
+1992,TR,Turkey,125.862,-3.621
+1992,AE,United Arab Emirates,24.765,0.009
+1992,YE,Yemen,1.555,0.0
+1993,AM,Armenia,0.0,0.0
+1993,AZ,Azerbaijan,0.0,0.0
+1993,BH,Bahrain,4.666,0.0
+1993,BD,Bangladesh,2.848,0.152
+1993,KH,Cambodia,0.0,
+1993,CN,China,395.014,0.0
+1993,HK,Hong Kong SAR,2.115,-4.977
+1993,IN,India,356.339,3.383
+1993,ID,Indonesia,96.452,0.0
+1993,IR,Iran,148.193,13.115
+1993,IL,Israel,0.28,0.0
+1993,JP,Japan,753.574,0.0
+1993,JO,Jordan,24.603,0.062
+1993,KZ,Kazakhstan,20.342,
+1993,KW,Kuwait,78.958,0.0
+1993,LA,Lao PDR,0.533,0.0
+1993,LB,Lebanon,286.836,0.0
+1993,MO,Macao SAR,0.0,0.0
+1993,MY,Malaysia,74.337,0.0
+1993,MN,Mongolia,0.5,-0.104
+1993,MM,Myanmar,7.813,-0.0
+1993,NP,Nepal,4.753,0.0
+1993,OM,Oman,8.982,0.0
+1993,PK,Pakistan,63.588,0.718
+1993,PH,Philippines,100.184,13.157
+1993,QA,Qatar,26.821,0.028
+1993,SA,Saudi Arabia,142.952,0.0
+1993,KR,South Korea,10.082,0.046
+1993,LK,Sri Lanka,1.948,-3.029
+1993,SY,Syria,25.909,0.0
+1993,TW,Taiwan Province of China,421.701,0.435
+1993,TH,Thailand,76.95,0.0
+1993,TR,Turkey,125.389,-0.473
+1993,TM,Turkmenistan,0.0,
+1993,AE,United Arab Emirates,24.812,0.048
+1993,YE,Yemen,1.555,0.0
+1994,AM,Armenia,0.311,0.311
+1994,AZ,Azerbaijan,0.0,0.0
+1994,BH,Bahrain,4.666,0.0
+1994,BD,Bangladesh,2.93,0.082
+1994,KH,Cambodia,0.0,0.0
+1994,CN,China,395.014,0.0
+1994,HK,Hong Kong SAR,2.115,0.0
+1994,IN,India,367.03,10.691
+1994,ID,Indonesia,96.452,0.0
+1994,IR,Iran,147.435,-0.758
+1994,IL,Israel,0.267,-0.012
+1994,JP,Japan,753.574,0.0
+1994,JO,Jordan,24.696,0.093
+1994,KZ,Kazakhstan,30.73,10.389
+1994,KW,Kuwait,78.958,0.0
+1994,LA,Lao PDR,0.533,0.0
+1994,LB,Lebanon,286.836,0.0
+1994,MO,Macao SAR,0.0,0.0
+1994,MY,Malaysia,74.337,0.0
+1994,MN,Mongolia,1.038,0.538
+1994,MM,Myanmar,7.813,0.0
+1994,NP,Nepal,4.753,0.0
+1994,OM,Oman,8.982,0.0
+1994,PK,Pakistan,63.824,0.236
+1994,PH,Philippines,89.951,-10.233
+1994,QA,Qatar,25.32,-1.502
+1994,SA,Saudi Arabia,142.952,0.0
+1994,KR,South Korea,10.114,0.032
+1994,LK,Sri Lanka,1.948,0.0
+1994,SY,Syria,25.909,0.0
+1994,TW,Taiwan Province of China,421.919,0.218
+1994,TH,Thailand,76.95,0.0
+1994,TR,Turkey,118.806,-6.583
+1994,TM,Turkmenistan,0.0,0.0
+1994,AE,United Arab Emirates,24.732,-0.08
+1994,YE,Yemen,1.555,0.0
+1995,AM,Armenia,0.933,0.622
+1995,AZ,Azerbaijan,0.0,0.0
+1995,BH,Bahrain,4.666,0.0
+1995,BD,Bangladesh,2.936,0.007
+1995,KH,Cambodia,0.0,0.0
+1995,CN,China,395.014,0.0
+1995,GE,Georgia,0.0,
+1995,HK,Hong Kong SAR,2.084,-0.031
+1995,IN,India,397.516,30.486
+1995,ID,Indonesia,96.452,0.0
+1995,IR,Iran,150.603,3.168
+1995,IL,Israel,0.271,0.003
+1995,JP,Japan,753.555,-0.019
+1995,JO,Jordan,24.653,-0.044
+1995,KZ,Kazakhstan,42.172,11.442
+1995,KW,Kuwait,78.958,0.0
+1995,KG,Kyrgyz Republic,4.236,
+1995,LA,Lao PDR,0.533,0.0
+1995,LB,Lebanon,286.836,0.0
+1995,MO,Macao SAR,0.0,0.0
+1995,MY,Malaysia,74.337,0.0
+1995,MN,Mongolia,3.257,2.218
+1995,MM,Myanmar,7.198,-0.615
+1995,NP,Nepal,4.753,0.0
+1995,OM,Oman,9.039,0.057
+1995,PK,Pakistan,63.915,0.09
+1995,PH,Philippines,111.35,21.399
+1995,QA,Qatar,8.345,-16.975
+1995,SA,Saudi Arabia,142.952,0.0
+1995,KR,South Korea,10.177,0.063
+1995,LK,Sri Lanka,1.948,0.0
+1995,SY,Syria,25.909,0.0
+1995,TW,Taiwan Province of China,422.136,0.218
+1995,TH,Thailand,76.95,0.0
+1995,TR,Turkey,116.537,-2.269
+1995,TM,Turkmenistan,0.0,0.0
+1995,AE,United Arab Emirates,24.727,-0.005
+1995,VN,Vietnam,0.0,-21.43
+1995,YE,Yemen,1.555,0.0
+1996,AM,Armenia,1.058,0.124
+1996,AZ,Azerbaijan,0.2,0.2
+1996,BH,Bahrain,4.666,0.0
+1996,BD,Bangladesh,2.936,0.0
+1996,KH,Cambodia,0.0,0.0
+1996,CN,China,395.014,0.0
+1996,GE,Georgia,0.0,0.0
+1996,HK,Hong Kong SAR,2.084,0.0
+1996,IN,India,397.519,0.003
+1996,ID,Indonesia,96.452,0.0
+1996,IL,Israel,0.271,0.0
+1996,JP,Japan,753.555,0.0
+1996,JO,Jordan,24.879,0.227
+1996,KZ,Kazakhstan,56.101,13.929
+1996,KW,Kuwait,78.958,0.0
+1996,KG,Kyrgyz Republic,3.841,-0.395
+1996,LA,Lao PDR,0.533,0.0
+1996,LB,Lebanon,286.836,0.0
+1996,MO,Macao SAR,0.0,0.0
+1996,MY,Malaysia,74.337,0.0
+1996,MN,Mongolia,4.512,1.255
+1996,MM,Myanmar,7.197,-0.0
+1996,NP,Nepal,4.753,-0.0
+1996,OM,Oman,9.039,0.0
+1996,PK,Pakistan,63.949,0.034
+1996,PH,Philippines,144.662,33.312
+1996,QA,Qatar,8.345,0.0
+1996,SA,Saudi Arabia,142.952,0.0
+1996,KR,South Korea,10.177,0.0
+1996,LK,Sri Lanka,1.948,0.0
+1996,SY,Syria,25.909,0.0
+1996,TW,Taiwan Province of China,421.919,-0.218
+1996,TH,Thailand,76.95,0.0
+1996,TR,Turkey,116.548,0.011
+1996,TM,Turkmenistan,0.0,0.0
+1996,AE,United Arab Emirates,24.821,0.093
+1996,VN,Vietnam,0.0,0.0
+1996,YE,Yemen,1.555,0.0
+1997,AM,Armenia,1.123,0.065
+1997,AZ,Azerbaijan,0.131,-0.069
+1997,BH,Bahrain,4.666,0.0
+1997,BD,Bangladesh,3.143,0.206
+1997,KH,Cambodia,0.0,0.0
+1997,CN,China,395.014,0.0
+1997,GE,Georgia,0.0,0.0
+1997,HK,Hong Kong SAR,2.084,0.0
+1997,IN,India,396.249,-1.27
+1997,ID,Indonesia,96.452,0.0
+1997,IL,Israel,0.271,0.0
+1997,JP,Japan,753.555,0.0
+1997,JO,Jordan,25.255,0.376
+1997,KZ,Kazakhstan,56.341,0.24
+1997,KW,Kuwait,78.958,0.0
+1997,KG,Kyrgyz Republic,2.582,-1.26
+1997,LA,Lao PDR,0.533,0.0
+1997,LB,Lebanon,286.836,0.0
+1997,MO,Macao SAR,0.0,0.0
+1997,MY,Malaysia,73.093,-1.244
+1997,MN,Mongolia,2.642,-1.869
+1997,MM,Myanmar,7.198,0.0
+1997,NP,Nepal,4.753,0.0
+1997,OM,Oman,9.039,0.0
+1997,PK,Pakistan,64.272,0.323
+1997,PH,Philippines,155.144,10.482
+1997,QA,Qatar,1.685,-6.66
+1997,SA,Saudi Arabia,142.952,0.0
+1997,KR,South Korea,10.418,0.241
+1997,LK,Sri Lanka,1.948,0.0
+1997,SY,Syria,25.909,0.0
+1997,TW,Taiwan Province of China,421.919,0.0
+1997,TJ,Tajikistan,0.25,
+1997,TH,Thailand,76.95,0.0
+1997,TR,Turkey,116.58,0.032
+1997,TM,Turkmenistan,0.0,0.0
+1997,AE,United Arab Emirates,24.727,-0.093
+1997,VN,Vietnam,0.0,0.0
+1997,YE,Yemen,1.555,0.0
+1998,AM,Armenia,1.344,0.221
+1998,AZ,Azerbaijan,0.131,0.0
+1998,BH,Bahrain,4.666,0.0
+1998,BD,Bangladesh,3.281,0.139
+1998,KH,Cambodia,12.436,12.436
+1998,CN,China,395.014,0.0
+1998,GE,Georgia,0.0,0.0
+1998,HK,Hong Kong SAR,2.084,0.0
+1998,IN,India,357.273,-38.976
+1998,ID,Indonesia,96.452,0.0
+1998,IL,Israel,0.0,-0.271
+1998,JP,Japan,753.555,0.0
+1998,JO,Jordan,25.708,0.453
+1998,KZ,Kazakhstan,54.493,-1.848
+1998,KW,Kuwait,78.958,0.0
+1998,KG,Kyrgyz Republic,2.584,0.003
+1998,LA,Lao PDR,0.533,0.0
+1998,LB,Lebanon,286.836,0.0
+1998,MO,Macao SAR,0.0,0.0
+1998,MY,Malaysia,73.093,0.0
+1998,MN,Mongolia,0.98,-1.662
+1998,MM,Myanmar,7.197,-0.0
+1998,NP,Nepal,4.753,0.0
+1998,OM,Oman,9.039,0.0
+1998,PK,Pakistan,64.593,0.32
+1998,PH,Philippines,168.954,13.81
+1998,QA,Qatar,1.685,0.0
+1998,SA,Saudi Arabia,142.952,0.0
+1998,KR,South Korea,13.516,3.098
+1998,LK,Sri Lanka,1.948,0.0
+1998,SY,Syria,25.909,0.0
+1998,TW,Taiwan Province of China,422.074,0.156
+1998,TJ,Tajikistan,0.249,-0.001
+1998,TH,Thailand,76.95,0.0
+1998,TR,Turkey,116.589,0.009
+1998,TM,Turkmenistan,0.0,0.0
+1998,AE,United Arab Emirates,24.727,0.0
+1998,VN,Vietnam,0.0,0.0
+1998,YE,Yemen,1.555,0.0
+1999,AM,Armenia,1.356,0.012
+1999,AZ,Azerbaijan,0.0,-0.131
+1999,BH,Bahrain,4.666,0.0
+1999,BD,Bangladesh,3.294,0.013
+1999,KH,Cambodia,12.436,0.0
+1999,CN,China,395.014,0.0
+1999,GE,Georgia,0.0,0.0
+1999,HK,Hong Kong SAR,2.084,0.0
+1999,IN,India,357.763,0.49
+1999,ID,Indonesia,96.452,0.0
+1999,IL,Israel,0.0,0.0
+1999,JP,Japan,753.555,0.0
+1999,JO,Jordan,15.103,-10.605
+1999,KZ,Kazakhstan,55.906,1.413
+1999,KW,Kuwait,78.958,0.0
+1999,KG,Kyrgyz Republic,2.584,-0.0
+1999,LA,Lao PDR,3.644,3.11
+1999,LB,Lebanon,286.836,0.0
+1999,MO,Macao SAR,0.0,0.0
+1999,MY,Malaysia,36.702,-36.391
+1999,MN,Mongolia,0.045,-0.936
+1999,MM,Myanmar,7.197,0.0
+1999,NP,Nepal,4.753,0.0
+1999,OM,Oman,9.039,0.0
+1999,PK,Pakistan,64.95,0.358
+1999,PH,Philippines,192.81,23.856
+1999,QA,Qatar,0.595,-1.09
+1999,SA,Saudi Arabia,142.952,0.0
+1999,KR,South Korea,13.598,0.082
+1999,LK,Sri Lanka,1.948,0.0
+1999,SY,Syria,25.909,0.0
+1999,TW,Taiwan Province of China,422.074,0.0
+1999,TJ,Tajikistan,0.242,-0.007
+1999,TH,Thailand,76.95,0.0
+1999,TR,Turkey,116.463,-0.126
+1999,TM,Turkmenistan,0.0,0.0
+1999,AE,United Arab Emirates,12.348,-12.379
+1999,UZ,Uzbekistan,51.321,
+1999,VN,Vietnam,0.0,0.0
+1999,YE,Yemen,1.555,0.0
+2000,AM,Armenia,1.387,0.031
+2000,AZ,Azerbaijan,0.0,0.0
+2000,BH,Bahrain,4.666,0.0
+2000,BD,Bangladesh,3.38,0.086
+2000,KH,Cambodia,12.436,0.0
+2000,CN,China,395.014,0.0
+2000,GE,Georgia,0.0,0.0
+2000,HK,Hong Kong SAR,2.084,0.0
+2000,IN,India,357.763,0.0
+2000,ID,Indonesia,96.452,0.0
+2000,IL,Israel,0.0,0.0
+2000,JP,Japan,763.508,9.953
+2000,JO,Jordan,12.468,-2.635
+2000,KZ,Kazakhstan,57.215,1.309
+2000,KW,Kuwait,78.958,0.0
+2000,KG,Kyrgyz Republic,2.584,0.0
+2000,LA,Lao PDR,0.524,-3.119
+2000,LB,Lebanon,286.836,0.0
+2000,MO,Macao SAR,0.0,0.0
+2000,MY,Malaysia,36.391,-0.311
+2000,MN,Mongolia,2.642,2.597
+2000,MM,Myanmar,7.197,0.0
+2000,NP,Nepal,4.753,-0.0
+2000,OM,Oman,9.039,0.0
+2000,PK,Pakistan,65.031,0.081
+2000,PH,Philippines,224.83,32.02
+2000,QA,Qatar,0.595,0.0
+2000,SA,Saudi Arabia,142.952,0.0
+2000,SG,Singapore,127.4,
+2000,KR,South Korea,13.657,0.059
+2000,LK,Sri Lanka,10.466,8.518
+2000,SY,Syria,25.909,0.0
+2000,TW,Taiwan Province of China,421.763,-0.311
+2000,TJ,Tajikistan,0.161,-0.081
+2000,TH,Thailand,73.622,-3.328
+2000,TR,Turkey,116.287,-0.176
+2000,AE,United Arab Emirates,12.348,0.0
+2000,VN,Vietnam,0.0,0.0
+2000,YE,Yemen,1.555,0.0
+2001,AM,Armenia,1.397,0.009
+2001,AZ,Azerbaijan,0.0,0.0
+2001,BH,Bahrain,4.666,0.0
+2001,BD,Bangladesh,3.443,0.063
+2001,KH,Cambodia,12.436,0.0
+2001,CN,China,500.766,105.752
+2001,GE,Georgia,0.0,0.0
+2001,HK,Hong Kong SAR,2.084,0.0
+2001,IN,India,357.76,-0.003
+2001,ID,Indonesia,96.452,0.0
+2001,IL,Israel,0.0,0.0
+2001,JP,Japan,765.221,1.713
+2001,JO,Jordan,12.597,0.128
+2001,KZ,Kazakhstan,57.22,0.005
+2001,KW,Kuwait,78.958,0.0
+2001,KG,Kyrgyz Republic,2.585,0.0
+2001,LA,Lao PDR,2.248,1.724
+2001,LB,Lebanon,286.836,0.0
+2001,MO,Macao SAR,0.0,0.0
+2001,MY,Malaysia,36.391,0.0
+2001,MN,Mongolia,5.727,3.086
+2001,MM,Myanmar,7.197,0.0
+2001,NP,Nepal,4.753,-0.0
+2001,OM,Oman,9.039,0.0
+2001,PK,Pakistan,65.031,0.0
+2001,PH,Philippines,248.22,23.389
+2001,QA,Qatar,0.595,0.0
+2001,SA,Saudi Arabia,142.952,0.0
+2001,SG,Singapore,127.4,0.0
+2001,KR,South Korea,13.737,0.08
+2001,LK,Sri Lanka,7.947,-2.519
+2001,SY,Syria,25.909,0.0
+2001,TW,Taiwan Province of China,421.763,0.0
+2001,TJ,Tajikistan,0.194,0.033
+2001,TH,Thailand,77.137,3.515
+2001,TR,Turkey,116.104,-0.183
+2001,AE,United Arab Emirates,12.348,0.0
+2001,VN,Vietnam,0.0,0.0
+2001,YE,Yemen,1.555,0.0
+2002,AM,Armenia,1.397,-0.0
+2002,AZ,Azerbaijan,0.0,0.0
+2002,BH,Bahrain,4.666,0.0
+2002,BD,Bangladesh,3.496,0.053
+2002,KH,Cambodia,12.436,0.0
+2002,CN,China,599.986,99.22
+2002,GE,Georgia,0.0,0.0
+2002,HK,Hong Kong SAR,2.084,0.0
+2002,IN,India,357.759,-0.001
+2002,ID,Indonesia,96.452,0.0
+2002,IL,Israel,0.0,0.0
+2002,JP,Japan,765.221,0.0
+2002,JO,Jordan,12.749,0.152
+2002,KZ,Kazakhstan,53.137,-4.083
+2002,KW,Kuwait,78.958,0.0
+2002,KG,Kyrgyz Republic,2.585,0.0
+2002,LA,Lao PDR,2.248,0.0
+2002,LB,Lebanon,286.836,0.0
+2002,MO,Macao SAR,0.0,0.0
+2002,MY,Malaysia,36.391,0.0
+2002,MN,Mongolia,4.431,-1.296
+2002,MM,Myanmar,7.197,0.0
+2002,NP,Nepal,4.753,0.0
+2002,OM,Oman,0.019,-9.02
+2002,PK,Pakistan,65.112,0.081
+2002,PH,Philippines,271.493,23.274
+2002,QA,Qatar,0.595,0.0
+2002,SA,Saudi Arabia,142.952,0.0
+2002,SG,Singapore,127.4,0.0
+2002,KR,South Korea,13.825,0.088
+2002,LK,Sri Lanka,6.734,-1.213
+2002,SY,Syria,25.909,0.0
+2002,TW,Taiwan Province of China,421.763,0.0
+2002,TJ,Tajikistan,0.0,-0.194
+2002,TH,Thailand,77.759,0.622
+2002,TR,Turkey,116.104,0.0
+2002,AE,United Arab Emirates,12.348,0.0
+2002,VN,Vietnam,0.0,0.0
+2002,YE,Yemen,1.555,0.0
+2003,AM,Armenia,0.0,-1.397
+2003,AZ,Azerbaijan,0.0,0.0
+2003,BH,Bahrain,4.666,0.0
+2003,BD,Bangladesh,3.484,-0.012
+2003,KH,Cambodia,12.436,0.0
+2003,CN,China,599.986,0.0
+2003,GE,Georgia,0.0,0.0
+2003,HK,Hong Kong SAR,2.084,0.0
+2003,IN,India,357.759,0.0
+2003,ID,Indonesia,96.452,0.0
+2003,IL,Israel,0.0,0.0
+2003,JP,Japan,765.221,0.0
+2003,JO,Jordan,12.783,0.033
+2003,KZ,Kazakhstan,54.113,0.975
+2003,KW,Kuwait,78.958,0.0
+2003,KG,Kyrgyz Republic,2.584,-0.0
+2003,LA,Lao PDR,3.644,1.395
+2003,LB,Lebanon,286.836,0.0
+2003,MO,Macao SAR,0.0,0.0
+2003,MY,Malaysia,36.391,0.0
+2003,MN,Mongolia,0.498,-3.934
+2003,MM,Myanmar,7.197,0.0
+2003,NP,Nepal,4.753,0.0
+2003,OM,Oman,0.019,0.0
+2003,PK,Pakistan,65.199,0.087
+2003,PH,Philippines,255.592,-15.902
+2003,QA,Qatar,0.595,0.0
+2003,SA,Saudi Arabia,142.952,0.0
+2003,SG,Singapore,127.4,0.0
+2003,KR,South Korea,13.975,0.15
+2003,LK,Sri Lanka,5.132,-1.601
+2003,SY,Syria,25.909,0.0
+2003,TW,Taiwan Province of China,423.629,1.866
+2003,TJ,Tajikistan,0.426,0.426
+2003,TH,Thailand,80.869,3.11
+2003,TR,Turkey,116.104,0.0
+2003,AE,United Arab Emirates,0.0,-12.348
+2003,VN,Vietnam,0.0,0.0
+2003,YE,Yemen,1.555,0.0
+2004,AM,Armenia,0.0,0.0
+2004,AZ,Azerbaijan,0.0,0.0
+2004,BH,Bahrain,4.666,0.0
+2004,BD,Bangladesh,3.502,0.019
+2004,KH,Cambodia,12.436,0.0
+2004,CN,China,599.986,0.0
+2004,GE,Georgia,0.0,0.0
+2004,HK,Hong Kong SAR,2.078,-0.006
+2004,IN,India,357.751,-0.008
+2004,ID,Indonesia,96.452,0.0
+2004,IQ,Iraq,5.866,-123.027
+2004,IL,Israel,0.0,0.0
+2004,JP,Japan,765.221,0.0
+2004,JO,Jordan,12.784,0.001
+2004,KZ,Kazakhstan,57.063,2.95
+2004,KW,Kuwait,78.958,0.0
+2004,KG,Kyrgyz Republic,2.584,0.0
+2004,LA,Lao PDR,3.644,0.0
+2004,LB,Lebanon,286.836,0.0
+2004,MO,Macao SAR,0.0,0.0
+2004,MY,Malaysia,36.391,0.0
+2004,MN,Mongolia,1.001,0.503
+2004,MM,Myanmar,7.197,0.0
+2004,NP,Nepal,4.753,-0.0
+2004,OM,Oman,0.019,0.0
+2004,PK,Pakistan,65.271,0.072
+2004,PH,Philippines,221.426,-34.166
+2004,QA,Qatar,1.297,0.702
+2004,SA,Saudi Arabia,142.952,0.0
+2004,SG,Singapore,127.4,0.0
+2004,KR,South Korea,14.126,0.151
+2004,LK,Sri Lanka,5.181,0.049
+2004,SY,Syria,25.909,0.0
+2004,TW,Taiwan Province of China,423.318,-0.311
+2004,TJ,Tajikistan,1.034,0.607
+2004,TH,Thailand,83.979,3.11
+2004,TR,Turkey,116.104,0.0
+2004,AE,United Arab Emirates,0.0,0.0
+2004,VN,Vietnam,0.0,0.0
+2004,YE,Yemen,1.555,0.0
+2005,AM,Armenia,0.0,0.0
+2005,AZ,Azerbaijan,0.0,0.0
+2005,BH,Bahrain,4.666,0.0
+2005,BD,Bangladesh,3.502,0.0
+2005,KH,Cambodia,12.436,0.0
+2005,CN,China,599.986,0.0
+2005,GE,Georgia,0.0,0.0
+2005,HK,Hong Kong SAR,2.084,0.006
+2005,IN,India,357.751,0.0
+2005,ID,Indonesia,96.421,-0.031
+2005,IQ,Iraq,5.866,-0.0
+2005,IL,Israel,0.0,0.0
+2005,JP,Japan,765.221,0.0
+2005,JO,Jordan,12.784,0.0
+2005,KZ,Kazakhstan,59.752,2.689
+2005,KW,Kuwait,78.958,0.0
+2005,KG,Kyrgyz Republic,2.584,-0.0
+2005,LA,Lao PDR,4.532,0.889
+2005,LB,Lebanon,286.836,0.0
+2005,MO,Macao SAR,0.0,0.0
+2005,MY,Malaysia,36.391,0.0
+2005,MN,Mongolia,0.0,-1.001
+2005,MM,Myanmar,7.197,0.0
+2005,NP,Nepal,4.015,-0.738
+2005,OM,Oman,0.019,0.0
+2005,PK,Pakistan,65.271,0.0
+2005,PH,Philippines,154.518,-66.908
+2005,QA,Qatar,0.594,-0.703
+2005,SA,Saudi Arabia,142.952,0.0
+2005,SG,Singapore,127.4,0.0
+2005,KR,South Korea,14.238,0.112
+2005,LK,Sri Lanka,5.181,0.0
+2005,SY,Syria,25.909,0.0
+2005,TW,Taiwan Province of China,423.318,0.0
+2005,TJ,Tajikistan,1.255,0.221
+2005,TH,Thailand,83.979,0.0
+2005,TR,Turkey,116.104,0.0
+2005,AE,United Arab Emirates,0.0,0.0
+2005,VN,Vietnam,0.0,0.0
+2005,YE,Yemen,1.555,0.0
+2006,AM,Armenia,0.0,0.0
+2006,AZ,Azerbaijan,0.0,0.0
+2006,BH,Bahrain,4.666,0.0
+2006,BD,Bangladesh,3.501,-0.001
+2006,KH,Cambodia,12.436,0.0
+2006,CN,China,599.986,0.0
+2006,GE,Georgia,0.0,0.0
+2006,HK,Hong Kong SAR,2.084,0.0
+2006,IN,India,357.751,0.0
+2006,ID,Indonesia,73.093,-23.328
+2006,IQ,Iraq,5.866,0.0
+2006,IL,Israel,0.0,0.0
+2006,JP,Japan,765.221,0.0
+2006,JO,Jordan,12.731,-0.053
+2006,KZ,Kazakhstan,67.337,7.585
+2006,KW,Kuwait,78.958,0.0
+2006,KG,Kyrgyz Republic,2.584,0.0
+2006,LA,Lao PDR,6.532,2.0
+2006,LB,Lebanon,286.836,0.0
+2006,MO,Macao SAR,0.0,0.0
+2006,MY,Malaysia,36.391,0.0
+2006,MN,Mongolia,6.665,6.665
+2006,MM,Myanmar,7.197,0.0
+2006,NP,Nepal,0.0,-4.015
+2006,OM,Oman,0.019,0.0
+2006,PK,Pakistan,65.314,0.044
+2006,PH,Philippines,143.731,-10.787
+2006,QA,Qatar,0.594,0.0
+2006,SA,Saudi Arabia,142.952,0.0
+2006,SG,Singapore,127.4,0.0
+2006,KR,South Korea,13.004,-1.234
+2006,LK,Sri Lanka,5.181,0.0
+2006,SY,Syria,25.909,0.0
+2006,TW,Taiwan Province of China,423.318,0.0
+2006,TJ,Tajikistan,1.405,0.15
+2006,TH,Thailand,83.979,0.0
+2006,TR,Turkey,116.104,0.0
+2006,AE,United Arab Emirates,0.0,0.0
+2006,VN,Vietnam,0.0,0.0
+2006,YE,Yemen,1.555,0.0
+2007,AM,Armenia,0.0,0.0
+2007,AZ,Azerbaijan,0.0,0.0
+2007,BH,Bahrain,4.666,0.0
+2007,BD,Bangladesh,3.508,0.007
+2007,KH,Cambodia,12.436,0.0
+2007,CN,China,599.986,0.0
+2007,GE,Georgia,0.0,0.0
+2007,HK,Hong Kong SAR,2.084,0.0
+2007,IN,India,357.751,0.0
+2007,ID,Indonesia,73.093,0.0
+2007,IQ,Iraq,5.866,0.0
+2007,IL,Israel,0.0,0.0
+2007,JP,Japan,765.221,0.0
+2007,JO,Jordan,14.286,1.555
+2007,KZ,Kazakhstan,69.547,2.211
+2007,KW,Kuwait,78.958,0.0
+2007,KG,Kyrgyz Republic,2.584,0.0
+2007,LA,Lao PDR,6.532,0.0
+2007,LB,Lebanon,286.836,0.0
+2007,MO,Macao SAR,0.0,0.0
+2007,MY,Malaysia,36.391,0.0
+2007,MN,Mongolia,7.465,0.8
+2007,MM,Myanmar,7.269,0.072
+2007,NP,Nepal,0.0,0.0
+2007,OM,Oman,0.019,0.0
+2007,PK,Pakistan,65.435,0.121
+2007,PH,Philippines,131.674,-12.057
+2007,QA,Qatar,12.41,11.816
+2007,SA,Saudi Arabia,142.952,0.0
+2007,SG,Singapore,127.4,0.0
+2007,KR,South Korea,14.27,1.266
+2007,LK,Sri Lanka,5.181,0.0
+2007,SY,Syria,25.909,0.0
+2007,TW,Taiwan Province of China,423.318,0.0
+2007,TJ,Tajikistan,1.684,0.279
+2007,TH,Thailand,83.979,0.0
+2007,TR,Turkey,116.104,-0.0
+2007,AE,United Arab Emirates,0.0,0.0
+2007,VN,Vietnam,0.0,0.0
+2007,YE,Yemen,1.555,0.0
+2008,AM,Armenia,0.0,0.0
+2008,AZ,Azerbaijan,0.0,0.0
+2008,BH,Bahrain,4.666,0.0
+2008,BD,Bangladesh,3.507,-0.001
+2008,KH,Cambodia,12.436,0.0
+2008,CN,China,599.986,0.0
+2008,GE,Georgia,0.0,0.0
+2008,HK,Hong Kong SAR,2.084,0.0
+2008,IN,India,357.751,0.0
+2008,ID,Indonesia,73.093,0.0
+2008,IQ,Iraq,5.866,0.0
+2008,IL,Israel,0.0,0.0
+2008,JP,Japan,765.221,0.0
+2008,JO,Jordan,12.762,-1.524
+2008,KZ,Kazakhstan,71.939,2.392
+2008,KW,Kuwait,78.958,0.0
+2008,KG,Kyrgyz Republic,2.584,0.0
+2008,LA,Lao PDR,8.878,2.346
+2008,LB,Lebanon,286.836,0.0
+2008,MO,Macao SAR,0.0,0.0
+2008,MY,Malaysia,36.391,0.0
+2008,MN,Mongolia,3.404,-4.061
+2008,MM,Myanmar,7.269,0.0
+2008,NP,Nepal,0.0,0.0
+2008,OM,Oman,0.019,-0.001
+2008,PK,Pakistan,65.435,0.0
+2008,PH,Philippines,153.943,22.269
+2008,QA,Qatar,12.413,0.003
+2008,SA,Saudi Arabia,322.907,179.955
+2008,SG,Singapore,127.4,0.0
+2008,KR,South Korea,14.32,0.05
+2008,LK,Sri Lanka,5.288,0.106
+2008,SY,Syria,25.816,-0.093
+2008,TW,Taiwan Province of China,423.629,0.311
+2008,TJ,Tajikistan,2.134,0.45
+2008,TH,Thailand,83.979,0.0
+2008,TR,Turkey,116.104,0.0
+2008,AE,United Arab Emirates,0.0,0.0
+2008,VN,Vietnam,0.0,0.0
+2008,YE,Yemen,1.555,0.0
+2009,AM,Armenia,0.0,0.0
+2009,AZ,Azerbaijan,0.002,0.002
+2009,BH,Bahrain,4.666,0.0
+2009,BD,Bangladesh,3.508,0.001
+2009,KH,Cambodia,12.436,0.0
+2009,CN,China,1054.097,454.111
+2009,GE,Georgia,0.0,0.0
+2009,HK,Hong Kong SAR,2.084,0.0
+2009,IN,India,557.751,200.0
+2009,ID,Indonesia,73.093,0.0
+2009,IQ,Iraq,5.866,0.0
+2009,IL,Israel,0.0,0.0
+2009,JP,Japan,765.221,0.0
+2009,JO,Jordan,12.752,-0.009
+2009,KZ,Kazakhstan,70.452,-1.487
+2009,KW,Kuwait,78.958,0.0
+2009,KG,Kyrgyz Republic,2.584,0.0
+2009,LA,Lao PDR,8.878,0.0
+2009,LB,Lebanon,286.836,0.0
+2009,MO,Macao SAR,0.0,0.0
+2009,MY,Malaysia,36.391,0.0
+2009,MN,Mongolia,0.931,-2.473
+2009,MM,Myanmar,7.269,0.0
+2009,NP,Nepal,1.456,1.456
+2009,OM,Oman,0.019,0.0
+2009,PK,Pakistan,65.435,0.0
+2009,PH,Philippines,155.105,1.162
+2009,QA,Qatar,12.413,0.0
+2009,SA,Saudi Arabia,322.907,0.0
+2009,SG,Singapore,127.4,0.0
+2009,KR,South Korea,14.421,0.101
+2009,LK,Sri Lanka,21.095,15.807
+2009,SY,Syria,25.816,0.0
+2009,TW,Taiwan Province of China,423.629,0.0
+2009,TJ,Tajikistan,2.299,0.165
+2009,TH,Thailand,83.979,0.0
+2009,TR,Turkey,116.104,0.0
+2009,AE,United Arab Emirates,0.0,0.0
+2009,VN,Vietnam,0.0,0.0
+2009,YE,Yemen,1.555,0.0
+2010,AM,Armenia,0.0,0.0
+2010,AZ,Azerbaijan,0.002,0.0
+2010,BH,Bahrain,4.666,0.0
+2010,BD,Bangladesh,13.511,10.004
+2010,KH,Cambodia,12.436,0.0
+2010,CN,China,1054.097,0.0
+2010,GE,Georgia,0.0,0.0
+2010,HK,Hong Kong SAR,2.084,0.0
+2010,IN,India,557.751,0.0
+2010,ID,Indonesia,73.093,0.0
+2010,IQ,Iraq,5.866,0.0
+2010,IL,Israel,0.0,0.0
+2010,JP,Japan,765.221,0.0
+2010,JO,Jordan,12.752,0.0
+2010,KZ,Kazakhstan,67.318,-3.134
+2010,KW,Kuwait,78.896,-0.062
+2010,KG,Kyrgyz Republic,2.584,0.0
+2010,LA,Lao PDR,8.878,0.0
+2010,LB,Lebanon,286.836,0.0
+2010,MO,Macao SAR,0.0,0.0
+2010,MY,Malaysia,36.391,0.0
+2010,MN,Mongolia,2.015,1.084
+2010,MM,Myanmar,7.269,0.0
+2010,NP,Nepal,1.456,0.0
+2010,OM,Oman,0.019,0.0
+2010,PK,Pakistan,64.39,-1.045
+2010,PH,Philippines,154.1,-1.005
+2010,QA,Qatar,12.413,0.0
+2010,SA,Saudi Arabia,322.907,0.0
+2010,SG,Singapore,127.4,0.0
+2010,KR,South Korea,14.437,0.016
+2010,LK,Sri Lanka,10.747,-10.348
+2010,SY,Syria,25.816,0.0
+2010,TW,Taiwan Province of China,423.629,0.0
+2010,TJ,Tajikistan,1.746,-0.552
+2010,TH,Thailand,99.531,15.552
+2010,TR,Turkey,116.104,0.0
+2010,AE,United Arab Emirates,0.0,0.0
+2010,VN,Vietnam,0.0,0.0
+2010,YE,Yemen,1.555,0.0
+2011,AM,Armenia,0.0,0.0
+2011,AZ,Azerbaijan,0.002,0.0
+2011,BH,Bahrain,4.666,0.0
+2011,BD,Bangladesh,13.514,0.003
+2011,KH,Cambodia,12.435,-0.001
+2011,CN,China,1054.097,0.0
+2011,GE,Georgia,0.0,0.0
+2011,HK,Hong Kong SAR,2.084,0.0
+2011,IN,India,557.751,0.0
+2011,ID,Indonesia,73.093,0.0
+2011,IQ,Iraq,5.866,0.0
+2011,IL,Israel,0.0,0.0
+2011,JP,Japan,765.221,0.0
+2011,JO,Jordan,12.752,0.0
+2011,KZ,Kazakhstan,81.998,14.68
+2011,KW,Kuwait,78.958,0.062
+2011,KG,Kyrgyz Republic,2.609,0.025
+2011,LA,Lao PDR,8.878,0.0
+2011,LB,Lebanon,286.836,0.0
+2011,MO,Macao SAR,0.0,0.0
+2011,MY,Malaysia,36.391,0.0
+2011,MN,Mongolia,3.508,1.492
+2011,MM,Myanmar,7.269,0.0
+2011,NP,Nepal,1.456,0.0
+2011,OM,Oman,0.019,0.0
+2011,PK,Pakistan,64.4,0.009
+2011,PH,Philippines,159.142,5.042
+2011,QA,Qatar,12.413,0.0
+2011,SA,Saudi Arabia,322.907,0.0
+2011,SG,Singapore,127.4,0.0
+2011,KR,South Korea,54.438,40.001
+2011,LK,Sri Lanka,9.981,-0.766
+2011,TW,Taiwan Province of China,422.385,-1.244
+2011,TJ,Tajikistan,4.666,2.919
+2011,TH,Thailand,152.407,52.876
+2011,TR,Turkey,195.334,79.23
+2011,AE,United Arab Emirates,0.0,0.0
+2011,VN,Vietnam,0.0,0.0
+2011,YE,Yemen,1.555,0.0
+2012,AM,Armenia,0.0,0.0
+2012,AZ,Azerbaijan,0.002,0.0
+2012,BH,Bahrain,4.666,0.0
+2012,BD,Bangladesh,13.514,0.0
+2012,KH,Cambodia,12.436,0.001
+2012,CN,China,1054.097,0.0
+2012,GE,Georgia,0.0,0.0
+2012,HK,Hong Kong SAR,2.084,0.0
+2012,IN,India,557.751,0.0
+2012,ID,Indonesia,74.026,0.933
+2012,IQ,Iraq,29.788,23.922
+2012,IL,Israel,0.0,0.0
+2012,JP,Japan,765.221,0.0
+2012,JO,Jordan,13.852,1.1
+2012,KZ,Kazakhstan,115.289,33.291
+2012,KW,Kuwait,78.958,0.0
+2012,KG,Kyrgyz Republic,3.057,0.447
+2012,LA,Lao PDR,8.878,0.0
+2012,LB,Lebanon,286.836,0.0
+2012,MO,Macao SAR,0.0,0.0
+2012,MY,Malaysia,36.391,0.0
+2012,MN,Mongolia,3.661,0.154
+2012,MM,Myanmar,7.269,0.0
+2012,NP,Nepal,2.078,0.622
+2012,OM,Oman,0.019,0.001
+2012,PK,Pakistan,64.431,0.031
+2012,PH,Philippines,192.718,33.577
+2012,QA,Qatar,12.413,0.0
+2012,SA,Saudi Arabia,322.907,0.0
+2012,SG,Singapore,127.4,0.0
+2012,KR,South Korea,84.438,30.0
+2012,LK,Sri Lanka,13.623,3.642
+2012,TW,Taiwan Province of China,423.629,1.244
+2012,TJ,Tajikistan,6.221,1.555
+2012,TH,Thailand,152.407,0.0
+2012,TR,Turkey,359.64,164.306
+2012,AE,United Arab Emirates,0.0,0.0
+2012,VN,Vietnam,0.0,0.0
+2012,YE,Yemen,1.555,0.0
+2013,AM,Armenia,0.0,0.0
+2013,AZ,Azerbaijan,20.016,20.014
+2013,BH,Bahrain,4.666,0.0
+2013,BD,Bangladesh,13.513,-0.001
+2013,KH,Cambodia,12.436,0.0
+2013,CN,China,1054.097,0.0
+2013,GE,Georgia,0.0,0.0
+2013,HK,Hong Kong SAR,2.084,0.0
+2013,IN,India,557.751,0.0
+2013,ID,Indonesia,78.07,4.043
+2013,IQ,Iraq,42.222,12.433
+2013,IL,Israel,0.0,0.0
+2013,JP,Japan,765.221,0.0
+2013,JO,Jordan,15.552,1.699
+2013,KZ,Kazakhstan,143.705,28.417
+2013,KW,Kuwait,78.958,0.0
+2013,KG,Kyrgyz Republic,3.61,0.553
+2013,LA,Lao PDR,8.864,-0.013
+2013,LB,Lebanon,286.836,0.0
+2013,MO,Macao SAR,0.0,0.0
+2013,MY,Malaysia,36.391,0.0
+2013,MN,Mongolia,3.926,0.265
+2013,MM,Myanmar,7.269,0.0
+2013,NP,Nepal,3.633,1.555
+2013,OM,Oman,0.019,0.0
+2013,PK,Pakistan,64.435,0.004
+2013,PH,Philippines,193.509,0.791
+2013,QA,Qatar,12.413,0.0
+2013,SA,Saudi Arabia,322.907,0.0
+2013,SG,Singapore,127.4,0.0
+2013,KR,South Korea,104.438,20.0
+2013,LK,Sri Lanka,22.947,9.324
+2013,TW,Taiwan Province of China,423.629,0.0
+2013,TJ,Tajikistan,5.18,-1.041
+2013,TH,Thailand,152.407,0.0
+2013,TR,Turkey,519.737,160.096
+2013,AE,United Arab Emirates,0.0,0.0
+2013,UZ,Uzbekistan,217.413,166.093
+2013,VN,Vietnam,0.0,0.0
+2013,YE,Yemen,1.555,0.0
+2014,AM,Armenia,0.0,0.0
+2014,AZ,Azerbaijan,30.171,10.156
+2014,BH,Bahrain,4.666,0.0
+2014,BD,Bangladesh,13.782,0.269
+2014,KH,Cambodia,12.436,0.0
+2014,CN,China,1054.097,0.0
+2014,GE,Georgia,0.0,0.0
+2014,HK,Hong Kong SAR,2.084,0.0
+2014,IN,India,557.752,0.001
+2014,ID,Indonesia,78.07,0.0
+2014,IQ,Iraq,89.822,47.6
+2014,IL,Israel,0.0,0.0
+2014,JP,Japan,765.221,0.0
+2014,JO,Jordan,19.284,3.732
+2014,KZ,Kazakhstan,191.788,48.083
+2014,KW,Kuwait,78.958,0.0
+2014,KG,Kyrgyz Republic,3.938,0.328
+2014,LA,Lao PDR,8.864,0.0
+2014,LB,Lebanon,286.836,0.0
+2014,MO,Macao SAR,0.0,0.0
+2014,MY,Malaysia,35.769,-0.622
+2014,MN,Mongolia,2.874,-1.052
+2014,MM,Myanmar,7.269,0.0
+2014,NP,Nepal,4.877,1.244
+2014,OM,Oman,0.02,0.001
+2014,PK,Pakistan,64.47,0.035
+2014,PH,Philippines,195.298,1.788
+2014,QA,Qatar,12.413,0.0
+2014,SA,Saudi Arabia,322.907,0.0
+2014,SG,Singapore,127.4,0.0
+2014,KR,South Korea,104.445,0.007
+2014,LK,Sri Lanka,23.084,0.136
+2014,TW,Taiwan Province of China,423.629,0.0
+2014,TJ,Tajikistan,8.645,3.465
+2014,TH,Thailand,152.407,0.0
+2014,TR,Turkey,529.108,9.371
+2014,AE,United Arab Emirates,0.0,0.0
+2014,UZ,Uzbekistan,274.644,57.23
+2014,VN,Vietnam,0.0,0.0
+2015,AM,Armenia,0.0,0.0
+2015,AZ,Azerbaijan,30.171,0.0
+2015,BH,Bahrain,4.666,0.0
+2015,BD,Bangladesh,13.782,0.0
+2015,KH,Cambodia,14.458,2.022
+2015,CN,China,1762.323,708.226
+2015,GE,Georgia,0.0,0.0
+2015,HK,Hong Kong SAR,2.084,0.0
+2015,IN,India,557.752,0.0
+2015,ID,Indonesia,78.07,0.0
+2015,IQ,Iraq,89.822,0.0
+2015,IL,Israel,0.0,0.0
+2015,JP,Japan,765.221,0.0
+2015,JO,Jordan,41.368,22.083
+2015,KZ,Kazakhstan,221.833,30.045
+2015,KW,Kuwait,78.958,0.0
+2015,KG,Kyrgyz Republic,4.226,0.288
+2015,LA,Lao PDR,0.333,-8.532
+2015,LB,Lebanon,286.836,0.0
+2015,MO,Macao SAR,0.0,0.0
+2015,MY,Malaysia,38.257,2.488
+2015,MN,Mongolia,2.23,-0.644
+2015,MM,Myanmar,7.269,0.0
+2015,NP,Nepal,6.122,1.244
+2015,OM,Oman,0.02,0.0
+2015,PK,Pakistan,64.5,0.03
+2015,PH,Philippines,195.907,0.609
+2015,QA,Qatar,22.218,9.805
+2015,SA,Saudi Arabia,322.907,0.0
+2015,SG,Singapore,127.4,0.0
+2015,KR,South Korea,104.4,-0.045
+2015,LK,Sri Lanka,22.261,-0.822
+2015,TW,Taiwan Province of China,423.629,0.0
+2015,TJ,Tajikistan,12.587,3.942
+2015,TH,Thailand,152.407,0.0
+2015,TR,Turkey,515.52,-13.588
+2015,AE,United Arab Emirates,7.496,7.496
+2015,UZ,Uzbekistan,311.657,37.013
+2015,VN,Vietnam,0.0,0.0
+2016,AM,Armenia,0.0,0.0
+2016,AZ,Azerbaijan,20.016,-10.156
+2016,BH,Bahrain,4.666,0.0
+2016,BD,Bangladesh,13.782,0.0
+2016,KH,Cambodia,19.559,5.101
+2016,CN,China,1842.57,80.247
+2016,GE,Georgia,0.0,0.0
+2016,HK,Hong Kong SAR,2.084,0.0
+2016,IN,India,557.771,0.019
+2016,ID,Indonesia,78.07,0.0
+2016,IQ,Iraq,89.822,0.0
+2016,IL,Israel,0.0,0.0
+2016,JP,Japan,765.221,0.0
+2016,JO,Jordan,41.368,0.0
+2016,KZ,Kazakhstan,258.054,36.22
+2016,KW,Kuwait,78.958,0.0
+2016,KG,Kyrgyz Republic,4.578,0.352
+2016,LA,Lao PDR,0.881,0.548
+2016,LB,Lebanon,286.836,0.0
+2016,MO,Macao SAR,0.0,0.0
+2016,MY,Malaysia,38.257,0.0
+2016,MN,Mongolia,1.739,-0.491
+2016,MM,Myanmar,7.269,0.0
+2016,NP,Nepal,6.433,0.311
+2016,OM,Oman,0.02,0.0
+2016,PK,Pakistan,64.525,0.025
+2016,PH,Philippines,196.342,0.435
+2016,QA,Qatar,29.687,7.469
+2016,SA,Saudi Arabia,323.07,0.163
+2016,SG,Singapore,127.4,0.0
+2016,KR,South Korea,104.4,0.0
+2016,LK,Sri Lanka,22.248,-0.014
+2016,TW,Taiwan Province of China,423.629,0.0
+2016,TJ,Tajikistan,14.588,2.002
+2016,TH,Thailand,152.407,0.0
+2016,TR,Turkey,377.056,-138.464
+2016,AE,United Arab Emirates,7.415,-0.081
+2016,UZ,Uzbekistan,328.764,17.107
+2016,VN,Vietnam,0.0,0.0
+2017,AM,Armenia,0.0,0.0
+2017,AZ,Azerbaijan,0.0,-20.016
+2017,BH,Bahrain,4.666,0.0
+2017,BD,Bangladesh,13.969,0.187
+2017,KH,Cambodia,22.545,2.986
+2017,CN,China,1842.57,0.0
+2017,GE,Georgia,0.0,0.0
+2017,HK,Hong Kong SAR,2.084,0.0
+2017,IN,India,558.103,0.332
+2017,ID,Indonesia,80.558,2.488
+2017,IQ,Iraq,89.822,0.0
+2017,IL,Israel,0.0,0.0
+2017,JP,Japan,765.221,0.0
+2017,JO,Jordan,49.628,8.261
+2017,KZ,Kazakhstan,299.831,41.777
+2017,KW,Kuwait,78.956,-0.002
+2017,KG,Kyrgyz Republic,6.948,2.37
+2017,LA,Lao PDR,0.881,0.0
+2017,LB,Lebanon,286.836,0.0
+2017,MO,Macao SAR,0.0,0.0
+2017,MY,Malaysia,37.635,-0.622
+2017,MN,Mongolia,4.257,2.519
+2017,MM,Myanmar,7.269,0.0
+2017,NP,Nepal,6.433,0.0
+2017,OM,Oman,0.02,0.0
+2017,PK,Pakistan,64.559,0.035
+2017,PH,Philippines,196.362,0.02
+2017,QA,Qatar,29.699,0.012
+2017,SA,Saudi Arabia,323.07,0.0
+2017,SG,Singapore,127.4,0.0
+2017,KR,South Korea,104.4,0.0
+2017,LK,Sri Lanka,22.275,0.027
+2017,TW,Taiwan Province of China,423.629,0.0
+2017,TJ,Tajikistan,15.598,1.01
+2017,TH,Thailand,153.962,1.555
+2017,TR,Turkey,564.78,187.724
+2017,AE,United Arab Emirates,7.623,0.207
+2017,UZ,Uzbekistan,336.54,7.776
+2017,VN,Vietnam,0.0,0.0
+2018,AM,Armenia,0.0,0.0
+2018,AZ,Azerbaijan,0.0,0.0
+2018,BH,Bahrain,4.666,0.0
+2018,BD,Bangladesh,13.97,0.0
+2018,KH,Cambodia,30.521,7.976
+2018,CN,China,1852.523,9.953
+2018,GE,Georgia,0.0,0.0
+2018,HK,Hong Kong SAR,2.084,0.0
+2018,IN,India,600.446,42.343
+2018,ID,Indonesia,78.54,-2.018
+2018,IQ,Iraq,96.273,6.451
+2018,IL,Israel,0.0,0.0
+2018,JP,Japan,765.221,0.0
+2018,JO,Jordan,44.663,-4.965
+2018,KZ,Kazakhstan,350.448,50.617
+2018,KW,Kuwait,78.958,0.002
+2018,KG,Kyrgyz Republic,11.194,4.246
+2018,LA,Lao PDR,0.881,0.0
+2018,LB,Lebanon,286.836,0.0
+2018,MO,Macao SAR,0.0,0.0
+2018,MY,Malaysia,38.879,1.244
+2018,MN,Mongolia,18.68,14.423
+2018,MM,Myanmar,7.269,0.0
+2018,NP,Nepal,6.433,0.0
+2018,OM,Oman,0.02,0.0
+2018,PK,Pakistan,64.614,0.055
+2018,PH,Philippines,197.926,1.564
+2018,QA,Qatar,31.255,1.556
+2018,SA,Saudi Arabia,323.07,0.0
+2018,SG,Singapore,127.4,0.0
+2018,KR,South Korea,104.4,0.0
+2018,LK,Sri Lanka,19.918,-2.357
+2018,TW,Taiwan Province of China,423.629,0.0
+2018,TJ,Tajikistan,22.261,6.663
+2018,TH,Thailand,153.962,0.0
+2018,TR,Turkey,488.531,-76.249
+2018,AE,United Arab Emirates,7.496,-0.127
+2018,UZ,Uzbekistan,355.202,18.662
+2018,VN,Vietnam,0.0,0.0
+2019,AM,Armenia,0.0,0.0
+2019,AZ,Azerbaijan,0.0,0.0
+2019,BH,Bahrain,4.666,0.0
+2019,BD,Bangladesh,13.97,0.0
+2019,KH,Cambodia,35.502,4.981
+2019,CN,China,1948.322,95.799
+2019,GE,Georgia,0.0,0.0
+2019,HK,Hong Kong SAR,2.084,0.0
+2019,IN,India,634.967,34.521
+2019,ID,Indonesia,78.567,0.027
+2019,IQ,Iraq,96.273,0.0
+2019,JP,Japan,765.221,0.0
+2019,JO,Jordan,43.742,-0.922
+2019,KZ,Kazakhstan,385.482,35.034
+2019,KW,Kuwait,78.971,0.012
+2019,KG,Kyrgyz Republic,14.398,3.204
+2019,LA,Lao PDR,0.881,0.0
+2019,LB,Lebanon,286.836,0.0
+2019,MO,Macao SAR,0.0,0.0
+2019,MY,Malaysia,38.879,0.0
+2019,MN,Mongolia,22.963,4.283
+2019,MM,Myanmar,7.269,0.0
+2019,NP,Nepal,6.433,0.0
+2019,OM,Oman,0.02,0.0
+2019,PK,Pakistan,64.634,0.02
+2019,PH,Philippines,197.928,0.002
+2019,QA,Qatar,42.217,10.963
+2019,SA,Saudi Arabia,323.07,0.0
+2019,SG,Singapore,127.4,0.0
+2019,KR,South Korea,104.449,0.049
+2019,LK,Sri Lanka,19.575,-0.343
+2019,TW,Taiwan Province of China,422.385,-1.244
+2019,TJ,Tajikistan,19.334,-2.927
+2019,TH,Thailand,153.962,0.0
+2019,TR,Turkey,553.193,64.662
+2019,AE,United Arab Emirates,22.491,14.995
+2019,UZ,Uzbekistan,335.918,-19.284
+2019,VN,Vietnam,0.0,0.0
+2020,AM,Armenia,0.0,0.0
+2020,AZ,Azerbaijan,0.0,0.0
+2020,BH,Bahrain,4.666,0.0
+2020,BD,Bangladesh,13.97,0.0
+2020,KH,Cambodia,45.471,9.969
+2020,CN,China,1948.322,0.0
+2020,GE,Georgia,0.0,0.0
+2020,HK,Hong Kong SAR,2.084,0.0
+2020,IN,India,676.65,41.683
+2020,ID,Indonesia,78.567,0.0
+2020,IQ,Iraq,96.421,0.148
+2020,JP,Japan,765.221,0.0
+2020,JO,Jordan,61.411,17.669
+2020,KZ,Kazakhstan,387.861,2.379
+2020,KW,Kuwait,78.971,0.0
+2020,KG,Kyrgyz Republic,16.773,2.375
+2020,LB,Lebanon,286.836,0.0
+2020,MO,Macao SAR,0.0,0.0
+2020,MY,Malaysia,38.879,0.0
+2020,MN,Mongolia,8.157,-14.806
+2020,MM,Myanmar,7.269,0.0
+2020,NP,Nepal,6.433,0.0
+2020,OM,Oman,0.02,0.0
+2020,PK,Pakistan,64.639,0.005
+2020,PH,Philippines,188.785,-9.142
+2020,QA,Qatar,56.709,14.492
+2020,SA,Saudi Arabia,323.07,0.0
+2020,SG,Singapore,127.4,0.0
+2020,KR,South Korea,104.446,-0.003
+2020,LK,Sri Lanka,6.699,-12.875
+2020,TW,Taiwan Province of China,423.629,1.244
+2020,TJ,Tajikistan,13.877,-5.457
+2020,TH,Thailand,153.962,0.0
+2020,TR,Turkey,716.344,163.152
+2020,AE,United Arab Emirates,57.604,35.113
+2020,UZ,Uzbekistan,332.496,-3.421
+2021,AM,Armenia,0.0,0.0
+2021,AZ,Azerbaijan,0.0,0.0
+2021,BH,Bahrain,4.666,0.0
+2021,BD,Bangladesh,13.97,0.0
+2021,KH,Cambodia,50.448,4.977
+2021,CN,China,1948.322,0.0
+2021,GE,Georgia,0.0,0.0
+2021,HK,Hong Kong SAR,2.084,0.0
+2021,IN,India,754.103,77.454
+2021,ID,Indonesia,78.567,0.001
+2021,IQ,Iraq,96.421,0.0
+2021,JP,Japan,845.98,80.758
+2021,JO,Jordan,64.545,3.134
+2021,KZ,Kazakhstan,402.38,14.519
+2021,KW,Kuwait,78.971,0.0
+2021,KG,Kyrgyz Republic,10.193,-6.58
+2021,LB,Lebanon,286.836,0.0
+2021,MO,Macao SAR,0.0,0.0
+2021,MY,Malaysia,38.879,0.0
+2021,MN,Mongolia,9.673,1.516
+2021,MM,Myanmar,7.269,0.0
+2021,NP,Nepal,7.988,1.555
+2021,OM,Oman,0.02,0.0
+2021,PK,Pakistan,64.649,0.01
+2021,PH,Philippines,158.81,-29.975
+2021,QA,Qatar,56.728,0.018
+2021,SA,Saudi Arabia,323.07,0.0
+2021,SG,Singapore,153.744,26.345
+2021,KR,South Korea,104.446,0.0
+2021,LK,Sri Lanka,2.982,-3.717
+2021,TW,Taiwan Province of China,423.629,0.0
+2021,TJ,Tajikistan,1.983,-11.894
+2021,TH,Thailand,244.162,90.2
+2021,TR,Turkey,657.714,-58.63
+2021,AE,United Arab Emirates,55.432,-2.172
+2021,UZ,Uzbekistan,362.044,29.548
+2022,AM,Armenia,0.0,0.0
+2022,AZ,Azerbaijan,0.0,0.0
+2022,BH,Bahrain,4.666,0.0
+2022,BD,Bangladesh,14.033,0.063
+2022,KH,Cambodia,52.565,2.117
+2022,CN,China,2010.529,62.207
+2022,GE,Georgia,0.0,0.0
+2022,HK,Hong Kong SAR,2.084,0.0
+2022,IN,India,787.37,33.266
+2022,ID,Indonesia,78.567,0.0
+2022,IQ,Iraq,130.324,33.903
+2022,JP,Japan,845.98,0.0
+2022,JO,Jordan,68.824,4.279
+2022,KZ,Kazakhstan,351.669,-50.711
+2022,KW,Kuwait,78.971,0.0
+2022,KG,Kyrgyz Republic,16.392,6.199
+2022,LB,Lebanon,286.836,0.0
+2022,MO,Macao SAR,0.0,0.0
+2022,MY,Malaysia,38.879,0.0
+2022,MN,Mongolia,6.52,-3.152
+2022,MM,Myanmar,7.269,0.0
+2022,NP,Nepal,7.988,0.0
+2022,OM,Oman,1.884,1.864
+2022,PK,Pakistan,64.654,0.005
+2022,PH,Philippines,157.718,-1.092
+2022,QA,Qatar,91.778,35.05
+2022,SA,Saudi Arabia,323.07,0.0
+2022,SG,Singapore,153.744,0.0
+2022,KR,South Korea,104.446,0.0
+2022,LK,Sri Lanka,0.47,-2.512
+2022,TW,Taiwan Province of China,423.629,0.0
+2022,TJ,Tajikistan,8.458,6.475
+2022,TH,Thailand,244.162,0.0
+2022,TR,Turkey,786.825,129.111
+2022,AE,United Arab Emirates,74.978,19.546
+2022,UZ,Uzbekistan,395.947,33.903
+2023,AM,Armenia,0.0,0.0
+2023,AZ,Azerbaijan,0.0,0.0
+2023,BH,Bahrain,4.666,0.0
+2023,BD,Bangladesh,14.051,0.018
+2023,KH,Cambodia,42.612,-9.953
+2023,CN,China,2235.407,224.878
+2023,GE,Georgia,0.0,0.0
+2023,HK,Hong Kong SAR,2.084,0.0
+2023,IN,India,803.586,16.217
+2023,ID,Indonesia,78.567,0.0
+2023,IQ,Iraq,142.578,12.255
+2023,JP,Japan,845.98,0.0
+2023,JO,Jordan,71.181,2.357
+2023,KZ,Kazakhstan,294.235,-57.434
+2023,KW,Kuwait,78.971,0.0
+2023,KG,Kyrgyz Republic,21.57,5.178
+2023,LB,Lebanon,286.836,0.0
+2023,MO,Macao SAR,0.0,0.0
+2023,MY,Malaysia,38.879,0.0
+2023,MN,Mongolia,7.992,1.471
+2023,MM,Myanmar,7.269,0.0
+2023,NP,Nepal,7.988,0.0
+2023,OM,Oman,2.358,0.474
+2023,PK,Pakistan,64.664,0.01
+2023,PH,Philippines,159.05,1.331
+2023,QA,Qatar,100.951,9.173
+2023,SA,Saudi Arabia,323.07,0.0
+2023,SG,Singapore,230.041,76.297
+2023,KR,South Korea,104.446,0.0
+2023,LK,Sri Lanka,0.47,0.0
+2023,TW,Taiwan Province of China,422.385,-1.244
+2023,TH,Thailand,244.162,0.0
+2023,TR,Turkey,726.391,-60.434
+2023,AE,United Arab Emirates,74.498,-0.48
+2023,UZ,Uzbekistan,371.376,-24.572
+2024,AM,Armenia,0.0,0.0
+2024,AZ,Azerbaijan,0.0,0.0
+2024,BH,Bahrain,4.666,0.0
+2024,BD,Bangladesh,14.282,0.231
+2024,KH,Cambodia,46.467,3.855
+2024,CN,China,2279.574,44.167
+2024,GE,Georgia,7.138,7.138
+2024,HK,Hong Kong SAR,2.084,0.0
+2024,IN,India,876.184,72.598
+2024,ID,Indonesia,78.567,0.0
+2024,IQ,Iraq,162.64,20.062
+2024,JP,Japan,845.98,0.0
+2024,JO,Jordan,71.647,0.466
+2024,KZ,Kazakhstan,284.055,-10.18
+2024,KW,Kuwait,78.971,0.0
+2024,KG,Kyrgyz Republic,38.129,16.559
+2024,LB,Lebanon,286.836,0.0
+2024,MO,Macao SAR,0.0,0.0
+2024,MY,Malaysia,38.879,0.0
+2024,MN,Mongolia,7.35,-0.642
+2024,OM,Oman,6.728,4.369
+2024,PK,Pakistan,64.739,0.075
+2024,PH,Philippines,130.468,-28.581
+2024,QA,Qatar,110.809,9.858
+2024,SA,Saudi Arabia,323.07,0.0
+2024,SG,Singapore,219.964,-10.078
+2024,KR,South Korea,104.446,0.0
+2024,LK,Sri Lanka,0.47,0.0
+2024,TW,Taiwan Province of China,423.94,1.555
+2024,TH,Thailand,234.52,-9.642
+2024,TR,Turkey,761.942,35.551
+2024,AE,United Arab Emirates,74.403,-0.095
+2024,UZ,Uzbekistan,382.573,11.197

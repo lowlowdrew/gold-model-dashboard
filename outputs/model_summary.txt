@@ -1,0 +1,39 @@
+Legacy nominal four-factor model
+Sample: 2016Q1 to 2026Q1
+Observations: 41
+R2 on log gold_usd: 0.889
+Latest quarter: 2026Q1
+Actual gold price: $5,007.52/oz
+Model fitted price: $3,398.21/oz
+Residual: $1,609.31/oz (+47.4%)
+Standardized coefficients:
+Intercept: 7.4884
+real_rate_10y_tips: +0.0520
+broad_dollar_index: -0.0402
+central_bank_net_purchase_tonnes: -0.0819
+federal_debt_trillion_usd: +0.3663
+
+Upgraded real-gold model
+Sample: 2016Q1 to 2026Q1
+Observations: 41
+R2 on log real_gold_usd: 0.805
+Latest quarter: 2026Q1
+Actual gold price: $5,007.52/oz
+Model fitted price: $3,635.83/oz
+Residual: $1,371.69/oz (+37.7%)
+Standardized coefficients:
+Intercept: 7.6642
+cumulative_central_bank_purchase_tonnes: +0.2585
+debt_to_gdp: +0.0438
+weak_consumer_sentiment: +0.0143
+broad_dollar_index: -0.1028
+
+Latest available nowcast
+Quarter: 2026Q3 (partial_latest_available)
+Latest spot date: 2026-07-03
+Spot gold price: $4,184.97/oz
+Quarter-to-date gold average: $4,129.20/oz
+Model fitted price: $3,751.27/oz
+Spot residual: $433.70/oz (+11.6%)
+Central bank input: 60.0t reported in Apr-May 2026
+
