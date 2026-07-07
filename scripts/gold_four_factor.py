@@ -37,10 +37,13 @@ TREASURY_DEBT_URL = (
 LATEST_REPORTED_CB_MONTHS_2026Q2 = {
     "2026-04": 19.0,
     "2026-05": 41.0,
+    "2026-06 China reported": 14.929668864,
 }
 LATEST_REPORTED_CB_SOURCE = (
     "World Gold Council monthly central-bank updates: April 2026 net buying 19t; "
-    "May 2026 net buying 41t. Q2 is partial because full Q2 Gold Demand Trends is not yet published."
+    "May 2026 net buying 41t. People's Bank of China June 2026 official reserves "
+    "rose by 0.48mn oz, equivalent to 14.9t. June is China-only reported data; "
+    "full global June and Q2 Gold Demand Trends data are not yet published."
 )
 
 
@@ -451,7 +454,7 @@ def write_outputs(df, legacy_fit, upgraded_fit, latest_score=None):
         lines.append("Quarter-to-date gold average: ${:,.2f}/oz".format(latest["gold_usd"]))
         lines.append("Model fitted price: ${:,.2f}/oz".format(latest["upgraded_fitted_gold_usd"]))
         lines.append("Spot residual: ${:,.2f}/oz ({:+.1%})".format(latest["spot_residual_usd"], latest["spot_residual_pct"]))
-        lines.append("Central bank input: {}t reported in Apr-May 2026".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q2.values())))
+        lines.append("Central bank input: {:.1f}t reported since Q1 2026; June is China-only".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q2.values())))
         lines.append("")
 
     (OUTPUT_DIR / "model_summary.txt").write_text("\n".join(lines) + "\n")
