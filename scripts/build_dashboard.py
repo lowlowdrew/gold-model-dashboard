@@ -2,6 +2,7 @@
 """Build a static HTML dashboard for the gold model outputs."""
 
 import json
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -21,6 +22,75 @@ def to_records(df, columns):
 
 def metric(value, decimals=0, prefix="", suffix=""):
     return "{}{:,.{}f}{}".format(prefix, value, decimals, suffix)
+
+
+def pct_metric(value, decimals=1):
+    return "{:+,.{}f}%".format(value * 100, decimals)
+
+
+def build_short_term_payload():
+    signal_path = OUTPUT_DIR / "short_term_signal_latest.csv"
+    weekly_path = OUTPUT_DIR / "short_term_regression_weekly.csv"
+    summary_path = OUTPUT_DIR / "short_term_model_summary.txt"
+    if not signal_path.exists() or not weekly_path.exists() or not summary_path.exists():
+        return None, None
+
+    signal = pd.read_csv(signal_path)
+    weekly = pd.read_csv(weekly_path)
+    summary = summary_path.read_text()
+    latest_rows = weekly.dropna(subset=["predicted_4w_return", "gold_usd"])
+    if latest_rows.empty:
+        return None, None
+    latest = latest_rows.iloc[-1]
+
+    label_map = {
+        "real_yield_pressure": "Real-rate pressure",
+        "dollar_pressure": "Dollar pressure",
+        "etf_flow_pressure": "ETF flows",
+        "futures_position_pressure": "Futures positioning",
+        "momentum_pressure": "Momentum",
+        "market_risk_pressure": "Market risk",
+    }
+    weights = []
+    for row in signal.to_dict(orient="records"):
+        weights.append(
+            {
+                "label": label_map.get(row["factor"], row["factor"]),
+                "factor": row["factor"],
+                "weight": row["weight_abs_pct"],
+                "coefficient": row["coefficient"],
+                "z": row["current_z"],
+                "contribution": row["current_contribution"],
+            }
+        )
+
+    r2_match = re.search(r"R2:\s*([0-9.]+)", summary)
+    obs_match = re.search(r"Observations:\s*(\d+)", summary)
+    sample_match = re.search(r"Sample:\s*(.*?)\n", summary)
+    latest_complete = latest["week"]
+    cards = [
+        ("Short-term signal", "Neutral" if abs(latest["predicted_4w_return"]) < 0.02 else ("Bullish" if latest["predicted_4w_return"] > 0 else "Bearish")),
+        ("Predicted 4-week move", pct_metric(latest["predicted_4w_return"], 1)),
+        ("Signal date", latest_complete),
+        ("Regression sample", "{} weeks".format(obs_match.group(1) if obs_match else "n/a")),
+        ("Backtest R2", "{:.1f}%".format(float(r2_match.group(1)) * 100) if r2_match else "n/a"),
+    ]
+    history = weekly.dropna(subset=["predicted_4w_return"]).tail(52)
+    payload = {
+        "history": to_records(history, ["week", "predicted_4w_return", "actual_4w_forward_return"]),
+    }
+    view = {
+        "cards": cards,
+        "weights": weights,
+        "sample": sample_match.group(1) if sample_match else "2024 onward",
+        "latestGold": metric(latest["gold_usd"], 0, "$", "/oz"),
+        "latestWeek": latest_complete,
+        "note": (
+            "This is a 2024-onward historical regression for the next 4 weeks. "
+            "It is a short-term pressure gauge, not the long-term fair-value model."
+        ),
+    }
+    return payload, view
 
 
 def build_dashboard():
@@ -63,6 +133,7 @@ def build_dashboard():
         }
         chart_df = pd.concat([chart_df, pd.DataFrame([append_row])], ignore_index=True)
 
+    short_payload, short_term = build_short_term_payload()
     payload = {
         "quarters": chart_df["quarter"].tolist(),
         "price": to_records(
@@ -88,6 +159,8 @@ def build_dashboard():
             ],
         ),
     }
+    if short_payload is not None:
+        payload["short"] = short_payload
 
     if latest_nowcast is not None and not latest_nowcast.empty:
         cards = [
@@ -129,6 +202,7 @@ def build_dashboard():
         latest_quarter=latest_label,
         nowcast_note=nowcast_note,
         model_formula=model_formula,
+        short_term=short_term,
     )
     out = OUTPUT_DIR / "gold_model_dashboard.html"
     out.write_text(html)
@@ -306,6 +380,50 @@ TEMPLATE = r"""<!doctype html>
       padding: 10px 12px;
       background: #fff;
     }
+    .short-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .mini-cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .mini-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: #fbfbf8;
+    }
+    .mini-card .value {
+      font-size: 17px;
+    }
+    .weights {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .weight-row {
+      display: grid;
+      grid-template-columns: 150px 1fr 72px 82px;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #edf0ee;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--green);
+    }
     section {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -362,6 +480,9 @@ TEMPLATE = r"""<!doctype html>
       .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .subcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .model-structure { grid-template-columns: 1fr; }
+      .short-grid { grid-template-columns: 1fr; }
+      .mini-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .weight-row { grid-template-columns: 1fr 1fr 56px 72px; }
       .flow-row { grid-template-columns: 1fr; }
       .formula-result { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
@@ -435,6 +556,42 @@ TEMPLATE = r"""<!doctype html>
       </div>
     </section>
   </div>
+
+  {% if short_term %}
+  <div class="short-grid">
+    <section>
+      <h2>Short-Term Regression Signal</h2>
+      <p>{{ short_term.note }} Latest signal uses data available through {{ short_term.latestWeek }}.</p>
+      <div class="mini-cards">
+        {% for label, value in short_term.cards %}
+        <div class="mini-card">
+          <div class="label">{{ label }}</div>
+          <div class="value">{{ value }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div id="short-return-chart" class="chart small"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--green)"></i>Predicted 4-week move</span>
+        <span><i class="dot" style="background:var(--gold)"></i>Actual next 4-week move</span>
+      </div>
+    </section>
+    <section>
+      <h2>Historical Regression Weights</h2>
+      <p>Weights are based on absolute standardized coefficients from the 2024-onward sample. The sign of the coefficient still matters for direction.</p>
+      <div class="weights">
+        {% for item in short_term.weights %}
+        <div class="weight-row">
+          <div>{{ item.label }}</div>
+          <div class="bar-track"><div class="bar-fill" style="width: {{ '%.1f'|format(item.weight) }}%"></div></div>
+          <div>{{ '%.1f'|format(item.weight) }}%</div>
+          <div>{{ '%+.2f'|format(item.contribution * 100) }}%</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+  {% endif %}
 
   <div class="grid">
     <section class="wide">
@@ -541,7 +698,8 @@ function lineChart(elId, rows, series, opts={}) {
   const labelEvery = Math.max(1, Math.ceil(rows.length / 8));
   rows.forEach((r, i) => {
     if (i % labelEvery === 0 || i === rows.length - 1) {
-      svg += `<text x="${x(i)}" y="${height - 10}" text-anchor="middle" fill="${colors.muted}" font-size="11">${r.quarter}</text>`;
+      const label = r.quarter || r.week || "";
+      svg += `<text x="${x(i)}" y="${height - 10}" text-anchor="middle" fill="${colors.muted}" font-size="11">${label}</text>`;
     }
   });
   prepared.forEach(s => {
@@ -555,7 +713,8 @@ function lineChart(elId, rows, series, opts={}) {
     svg += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.4" vector-effect="non-scaling-stroke"></path>`;
     s.values.forEach((p, i) => {
       if (!Number.isFinite(p.y)) return;
-      svg += `<circle cx="${x(i)}" cy="${y(p.y)}" r="3.2" fill="${s.color}" data-tip="${s.name}: ${opts.format ? opts.format(p.y) : fmtNum(p.y)}<br>${p.row.quarter}"></circle>`;
+      const label = p.row.quarter || p.row.week || "";
+      svg += `<circle cx="${x(i)}" cy="${y(p.y)}" r="3.2" fill="${s.color}" data-tip="${s.name}: ${opts.format ? opts.format(p.y) : fmtNum(p.y)}<br>${label}"></circle>`;
     });
   });
   svg += `</svg>`;
@@ -661,6 +820,12 @@ function render() {
     {key: "broad_dollar_index", name: "Dollar", color: colors.blue},
     {key: "consumer_sentiment", name: "Consumer sentiment", color: colors.ink}
   ], {format: v => (v * 100).toFixed(0), left: 42, yDomain: [-.05, 1.05]});
+  if (data.short) {
+    lineChart("short-return-chart", data.short.history, [
+      {key: "predicted_4w_return", name: "Predicted 4-week move", color: colors.green},
+      {key: "actual_4w_forward_return", name: "Actual next 4-week move", color: colors.gold}
+    ], {format: fmtPct, left: 58});
+  }
 }
 
 render();
