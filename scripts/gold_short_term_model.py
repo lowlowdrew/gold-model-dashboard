@@ -9,6 +9,7 @@ import os
 import subprocess
 import time
 import zipfile
+from datetime import date
 from pathlib import Path
 
 import numpy as np
@@ -21,7 +22,7 @@ OUTPUT_DIR = ROOT / "outputs"
 CACHE_DIR = DATA_DIR / "cache"
 
 START_DATE = "2024-01-01"
-END_DATE = "2026-07-07"
+END_DATE = date.today().isoformat()
 FORECAST_WEEKS = 4
 
 WGC_PRICE_URL = "https://fsapi.gold.org/api/goldprice/v13/chart/main?cache09092024"
