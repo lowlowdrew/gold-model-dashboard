@@ -1,21 +1,21 @@
 Short-term historical regression model
 Sample: 2024-01-01 to 2026-07-10
-Observations: 125
+Observations: 128
 Target: future 4-week log return in gold
-Latest signal week: 2026-07-24
-Latest gold price in weekly data: $4,044.90/oz
-Predicted 4-week return: +1.06%
+Latest signal week: 2026-07-31
+Latest gold price in weekly data: $4,111.05/oz
+Predicted 4-week return: +1.81%
 Signal: neutral
-R2: 0.061
-Intercept: +0.0213
+R2: 0.027
+Intercept: +0.0222
 
 Weights by absolute standardized coefficient:
-etf_flow_pressure: +0.0088; weight 38.6%
-real_yield_pressure: +0.0049; weight 21.6%
-momentum_pressure: +0.0029; weight 12.8%
-futures_position_pressure: -0.0023; weight 10.3%
-dollar_pressure: -0.0023; weight 10.0%
-market_risk_pressure: -0.0015; weight 6.7%
+etf_flow_pressure: +0.0040; weight 27.1%
+futures_position_pressure: +0.0033; weight 21.8%
+momentum_pressure: +0.0030; weight 19.9%
+real_yield_pressure: +0.0023; weight 15.2%
+market_risk_pressure: +0.0016; weight 10.9%
+dollar_pressure: +0.0008; weight 5.0%
 
 Data sources: World Gold Council daily gold price and ETF weekly flows; FRED 10-year TIPS real yield, broad dollar index, and VIX; CFTC Disaggregated Commitments of Traders futures-only reports for COMEX gold.
 Risk factor note: market_risk_pressure uses VIX as a tradable market-risk proxy, not a pure geopolitical-war index.
