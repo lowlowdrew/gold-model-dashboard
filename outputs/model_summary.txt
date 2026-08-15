@@ -30,10 +30,10 @@ broad_dollar_index: -0.1028
 
 Latest available nowcast
 Quarter: 2026Q3 (partial_latest_available)
-Latest spot date: 2026-08-10
-Spot gold price: $4,356.38/oz
-Quarter-to-date gold average: $4,205.52/oz
-Model fitted price: $3,629.46/oz
-Spot residual: $726.92/oz (+20.0%)
+Latest spot date: 2026-08-15
+Spot gold price: $4,376.82/oz
+Quarter-to-date gold average: $4,233.10/oz
+Model fitted price: $3,648.97/oz
+Spot residual: $727.85/oz (+19.9%)
 Central bank input: 74.9t reported since Q1 2026; June is China-only
 
