@@ -22,7 +22,8 @@ CACHE_DIR = DATA_DIR / "cache"
 
 WGC_PRICE_URL = "https://fsapi.gold.org/api/goldprice/v13/chart/price/?cache09092024"
 WGC_SPOT_URL = "https://fsapi.gold.org/api/goldprice/v13/charts/spotprice"
-WGC_CB_QUARTERLY_URL = "https://fsapi.gold.org/api/v12/charts/js/gdt-q1-2026-zym8u/3301"
+WGC_CB_QUARTERLY_URL = "https://fsapi.gold.org/api/v12/charts/js/gdt-q2-2026-pmiac/3430"
+WGC_CB_COMPLETE_THROUGH = pd.Period("2026Q2", freq="Q")
 FED_DOLLAR_URL = "https://www.federalreserve.gov/releases/h10/summary/jrxwtfb_nb.htm"
 FED_REAL_RATE_MONTHLY_URL = (
     "https://www.federalreserve.gov/datadownload/Output.aspx?filetype=csv&from=&label=include"
@@ -34,16 +35,12 @@ TREASURY_DEBT_URL = (
     "debt_to_penny?fields=record_date,tot_pub_debt_out_amt&filter=record_date:gte:2016-01-01"
     "&sort=record_date&page[size]=10000&format=csv"
 )
-LATEST_REPORTED_CB_MONTHS_2026Q2 = {
-    "2026-04": 19.0,
-    "2026-05": 41.0,
-    "2026-06 China reported": 14.929668864,
-}
+LATEST_REPORTED_CB_MONTHS_2026Q3 = {}
 LATEST_REPORTED_CB_SOURCE = (
-    "World Gold Council monthly central-bank updates: April 2026 net buying 19t; "
-    "May 2026 net buying 41t. People's Bank of China June 2026 official reserves "
-    "rose by 0.48mn oz, equivalent to 14.9t. June is China-only reported data; "
-    "full global June and Q2 Gold Demand Trends data are not yet published."
+    "World Gold Council Gold Demand Trends Q2 2026 reports Q2 central-bank net purchases "
+    "of 288.9t and a revised Q1 estimate of 56.5t. No complete Q3 2026 global "
+    "central-bank demand estimate is available yet, so the partial latest quarter "
+    "does not add an estimated Q3 purchase."
 )
 
 
@@ -135,13 +132,38 @@ def quarter_label_to_period(label):
 
 def fetch_wgc_central_bank_quarterly():
     js = fetch_text(WGC_CB_QUARTERLY_URL)
+    series_match = re.search(r'"series":(\[.*?\]),"xAxis"', js, re.S)
+    categories_match = re.search(r'"categories":(\[.*?\])', js, re.S)
+    if series_match and categories_match:
+        series = json.loads(series_match.group(1))
+        categories = json.loads(categories_match.group(1))
+        quarter_series = {item["name"]: item["data"] for item in series if item.get("name") in ("Q1", "Q2", "Q3", "Q4")}
+        if quarter_series:
+            rows = []
+            for year_index, year in enumerate(categories):
+                for quarter in range(1, 5):
+                    values = quarter_series.get("Q{}".format(quarter), [])
+                    if year_index >= len(values):
+                        continue
+                    value = pd.to_numeric(values[year_index], errors="coerce")
+                    period = pd.Period(year=int(year), quarter=quarter, freq="Q")
+                    if pd.isna(value) or period > WGC_CB_COMPLETE_THROUGH:
+                        continue
+                    rows.append(
+                        {
+                            "quarter": period,
+                            "central_bank_net_purchase_tonnes": float(value),
+                        }
+                    )
+            return pd.DataFrame(rows)
+
     data_match = re.search(r'"name":"Net purchase".*?"data":\[(.*?)\]', js, re.S)
-    categories_match = re.search(r'"categories":\[(.*?)\]', js, re.S)
-    if not data_match or not categories_match:
+    old_categories_match = re.search(r'"categories":\[(.*?)\]', js, re.S)
+    if not data_match or not old_categories_match:
         raise RuntimeError("Could not parse WGC central bank chart data")
 
     purchases = json.loads("[" + data_match.group(1) + "]")
-    categories = json.loads("[" + categories_match.group(1) + "]")
+    categories = json.loads("[" + old_categories_match.group(1) + "]")
     df = pd.DataFrame(
         {
             "quarter": [quarter_label_to_period(x) for x in categories],
@@ -270,7 +292,7 @@ def build_latest_observation(base_df):
             return float(matched.iloc[-1])
         return float(frame[column].iloc[-1])
 
-    partial_cb = sum(LATEST_REPORTED_CB_MONTHS_2026Q2.values())
+    partial_cb = sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())
     latest_row = pd.DataFrame(
         [
             {
@@ -454,7 +476,7 @@ def write_outputs(df, legacy_fit, upgraded_fit, latest_score=None):
         lines.append("Quarter-to-date gold average: ${:,.2f}/oz".format(latest["gold_usd"]))
         lines.append("Model fitted price: ${:,.2f}/oz".format(latest["upgraded_fitted_gold_usd"]))
         lines.append("Spot residual: ${:,.2f}/oz ({:+.1%})".format(latest["spot_residual_usd"], latest["spot_residual_pct"]))
-        lines.append("Central bank input: {:.1f}t reported since Q1 2026; June is China-only".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q2.values())))
+        lines.append("Central bank input: {:.1f}t reported since Q2 2026; no complete Q3 estimate yet".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())))
         lines.append("")
 
     (OUTPUT_DIR / "model_summary.txt").write_text("\n".join(lines) + "\n")

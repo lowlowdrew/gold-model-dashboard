@@ -1,39 +1,39 @@
 Legacy nominal four-factor model
-Sample: 2016Q1 to 2026Q1
-Observations: 41
-R2 on log gold_usd: 0.889
-Latest quarter: 2026Q1
-Actual gold price: $5,007.52/oz
-Model fitted price: $3,398.21/oz
-Residual: $1,609.31/oz (+47.4%)
+Sample: 2016Q1 to 2026Q2
+Observations: 42
+R2 on log gold_usd: 0.905
+Latest quarter: 2026Q2
+Actual gold price: $4,687.18/oz
+Model fitted price: $3,450.46/oz
+Residual: $1,236.72/oz (+35.8%)
 Standardized coefficients:
-Intercept: 7.4884
-real_rate_10y_tips: +0.0520
-broad_dollar_index: -0.0402
-central_bank_net_purchase_tonnes: -0.0819
-federal_debt_trillion_usd: +0.3663
+Intercept: 7.5114
+real_rate_10y_tips: +0.0634
+broad_dollar_index: -0.0458
+central_bank_net_purchase_tonnes: -0.0954
+federal_debt_trillion_usd: +0.3881
 
 Upgraded real-gold model
-Sample: 2016Q1 to 2026Q1
-Observations: 41
-R2 on log real_gold_usd: 0.805
-Latest quarter: 2026Q1
-Actual gold price: $5,007.52/oz
-Model fitted price: $3,635.83/oz
-Residual: $1,371.69/oz (+37.7%)
+Sample: 2016Q1 to 2026Q2
+Observations: 42
+R2 on log real_gold_usd: 0.822
+Latest quarter: 2026Q2
+Actual gold price: $4,687.18/oz
+Model fitted price: $3,913.79/oz
+Residual: $773.39/oz (+19.8%)
 Standardized coefficients:
-Intercept: 7.6642
-cumulative_central_bank_purchase_tonnes: +0.2585
-debt_to_gdp: +0.0438
-weak_consumer_sentiment: +0.0143
-broad_dollar_index: -0.1028
+Intercept: 7.6973
+cumulative_central_bank_purchase_tonnes: +0.2822
+debt_to_gdp: +0.0339
+weak_consumer_sentiment: +0.0307
+broad_dollar_index: -0.1166
 
 Latest available nowcast
 Quarter: 2026Q3 (partial_latest_available)
-Latest spot date: 2026-08-21
-Spot gold price: $4,600.19/oz
-Quarter-to-date gold average: $4,279.23/oz
-Model fitted price: $3,669.56/oz
-Spot residual: $930.63/oz (+25.4%)
-Central bank input: 74.9t reported since Q1 2026; June is China-only
+Latest spot date: 2026-08-25
+Spot gold price: $4,626.27/oz
+Quarter-to-date gold average: $4,369.60/oz
+Model fitted price: $3,876.44/oz
+Spot residual: $749.83/oz (+19.3%)
+Central bank input: 0.0t reported since Q2 2026; no complete Q3 estimate yet
 

@@ -93,6 +93,43 @@ def build_short_term_payload():
     return payload, view
 
 
+def build_fit_formula():
+    summary_path = OUTPUT_DIR / "model_summary.txt"
+    default = (
+        "ln(Real gold) = 7.6973 + 0.2822×Z(CB cumulative buying) + "
+        "0.0339×Z(US debt/GDP) + 0.0307×Z(Weak consumer sentiment) - "
+        "0.1166×Z(Broad dollar)"
+    )
+    if not summary_path.exists():
+        return default
+
+    summary = summary_path.read_text()
+    block_match = re.search(r"Upgraded real-gold model\n(.*?)(?:\nLatest available nowcast|\Z)", summary, re.S)
+    if not block_match:
+        return default
+
+    block = block_match.group(1)
+    intercept_match = re.search(r"Intercept:\s*([+-]?[0-9.]+)", block)
+    if not intercept_match:
+        return default
+
+    label_map = {
+        "cumulative_central_bank_purchase_tonnes": "CB cumulative buying",
+        "debt_to_gdp": "US debt/GDP",
+        "weak_consumer_sentiment": "Weak consumer sentiment",
+        "broad_dollar_index": "Broad dollar",
+    }
+    parts = ["ln(Real gold) = {:.4f}".format(float(intercept_match.group(1)))]
+    for factor in label_map:
+        match = re.search(r"{}:\s*([+-]?[0-9.]+)".format(re.escape(factor)), block)
+        if not match:
+            return default
+        coef = float(match.group(1))
+        sign = "+" if coef >= 0 else "-"
+        parts.append("{} {:.4f}×Z({})".format(sign, abs(coef), label_map[factor]))
+    return " ".join(parts)
+
+
 def build_dashboard():
     upgraded = pd.read_csv(OUTPUT_DIR / "upgraded_real_gold_fit.csv")
     legacy = pd.read_csv(OUTPUT_DIR / "legacy_four_factor_fit.csv")
@@ -167,7 +204,7 @@ def build_dashboard():
             ("Spot gold", metric(latest["spot_gold_usd"], 0, "$", "/oz")),
             ("Nowcast fit", metric(latest["upgraded_fitted_gold_usd"], 0, "$", "/oz")),
             ("Spot premium", metric(latest["spot_residual_pct"] * 100, 1, "", "%")),
-            ("CB reported since Q1", metric(latest["central_bank_net_purchase_tonnes"], 0, "", "t")),
+            ("CB reported since Q2", metric(latest["central_bank_net_purchase_tonnes"], 0, "", "t")),
             ("US debt/GDP", metric(latest["debt_to_gdp"] * 100, 1, "", "%")),
         ]
     else:
@@ -187,7 +224,7 @@ def build_dashboard():
     ]
     model_formula = {
         "realGoldFormula": "Real gold = Nominal gold × CPI base / Current CPI",
-        "fitFormula": "ln(Real gold) = 7.6642 + 0.2585×Z(CB cumulative buying) + 0.0438×Z(US debt/GDP) + 0.0143×Z(Weak consumer sentiment) - 0.1028×Z(Broad dollar)",
+        "fitFormula": build_fit_formula(),
         "nominalFormula": "Nominal fair value = exp(fitted ln real gold) × Current CPI / CPI base",
         "premiumFormula": "Premium = Spot gold / Nominal fair value - 1",
         "latestFit": metric(latest["upgraded_fitted_gold_usd"], 0, "$", "/oz"),
