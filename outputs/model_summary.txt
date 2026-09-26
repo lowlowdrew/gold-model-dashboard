@@ -19,21 +19,21 @@ Observations: 42
 R2 on log real_gold_usd: 0.822
 Latest quarter: 2026Q2
 Actual gold price: $4,687.18/oz
-Model fitted price: $3,913.79/oz
-Residual: $773.39/oz (+19.8%)
+Model fitted price: $3,913.44/oz
+Residual: $773.74/oz (+19.8%)
 Standardized coefficients:
 Intercept: 7.6973
-cumulative_central_bank_purchase_tonnes: +0.2822
-debt_to_gdp: +0.0339
+cumulative_central_bank_purchase_tonnes: +0.2823
+debt_to_gdp: +0.0338
 weak_consumer_sentiment: +0.0307
 broad_dollar_index: -0.1166
 
 Latest available nowcast
 Quarter: 2026Q3 (partial_latest_available)
-Latest spot date: 2026-08-25
-Spot gold price: $4,626.27/oz
-Quarter-to-date gold average: $4,369.60/oz
-Model fitted price: $3,876.44/oz
-Spot residual: $749.83/oz (+19.3%)
-Central bank input: 0.0t reported since Q2 2026; no complete Q3 estimate yet
+Latest spot date: 2026-09-26
+Spot gold price: $4,284.97/oz
+Quarter-to-date gold average: $4,317.33/oz
+Model fitted price: $3,903.86/oz
+Spot residual: $381.11/oz (+9.8%)
+Central bank input: 23.0t reported since Q2 2026; partial reported purchases, not complete Q3 global demand
 

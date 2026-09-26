@@ -152,8 +152,9 @@ def build_dashboard():
         latest_label = "Latest*"
         nowcast_note = (
             "Latest* uses spot gold from {date}, quarter-to-date price data, and the latest reported "
-            "central-bank buying since Q1. It is not a complete quarterly observation."
-        ).format(date=latest["latest_spot_date"])
+            "central-bank buying since Q2. The {reported:.0f}t central-bank figure is July's reported purchases, "
+            "not a complete Q3 global estimate. It is not a complete quarterly observation."
+        ).format(date=latest["latest_spot_date"], reported=latest["central_bank_net_purchase_tonnes"])
         append_row = {
             "quarter": latest_label,
             "gold_usd": latest["spot_gold_usd"],
@@ -545,7 +546,7 @@ TEMPLATE = r"""<!doctype html>
     {% endfor %}
   </div>
   {% if nowcast_note %}
-  <div class="note">{{ nowcast_note }}</div>
+  <div class="note">{{ nowcast_note }} <a href="https://www.gold.org/goldhub/gold-focus/2026/09/central-bank-gold-statistics-central-banks-make-positive-headlines-gold">World Gold Council source</a></div>
   <div class="subcards">
     {% for label, value in complete_cards %}
     <div class="subcard">

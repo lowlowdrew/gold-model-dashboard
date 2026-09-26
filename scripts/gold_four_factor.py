@@ -9,6 +9,7 @@ import os
 import re
 import subprocess
 import time
+from datetime import date
 from pathlib import Path
 
 import numpy as np
@@ -35,12 +36,14 @@ TREASURY_DEBT_URL = (
     "debt_to_penny?fields=record_date,tot_pub_debt_out_amt&filter=record_date:gte:2016-01-01"
     "&sort=record_date&page[size]=10000&format=csv"
 )
-LATEST_REPORTED_CB_MONTHS_2026Q3 = {}
+LATEST_REPORTED_CB_MONTHS_2026Q3 = {"2026-07": 23.0}
 LATEST_REPORTED_CB_SOURCE = (
-    "World Gold Council Gold Demand Trends Q2 2026 reports Q2 central-bank net purchases "
-    "of 288.9t and a revised Q1 estimate of 56.5t. No complete Q3 2026 global "
-    "central-bank demand estimate is available yet, so the partial latest quarter "
-    "does not add an estimated Q3 purchase."
+    "World Gold Council reported central-bank net purchases of 23t for July 2026 "
+    "(published 3 September 2026). This reported monthly figure covers known "
+    "transactions and is not directly comparable with the complete quarterly "
+    "global demand estimate. No complete Q3 2026 estimate is available yet. "
+    "Source: https://www.gold.org/goldhub/gold-focus/2026/09/"
+    "central-bank-gold-statistics-central-banks-make-positive-headlines-gold"
 )
 
 
@@ -97,8 +100,9 @@ def fetch_json(url):
 
 
 def fetch_fred_series(series_id, value_name):
+    end_date = date.today().isoformat()
     try:
-        raw = fetch_text(FRED_CSV_URL.format(series_id=series_id, start="2016-01-01", end="2026-06-30"))
+        raw = fetch_text(FRED_CSV_URL.format(series_id=series_id, start="2016-01-01", end=end_date))
         df = pd.read_csv(io.StringIO(raw))
         df.columns = ["date", value_name]
         df["date"] = pd.to_datetime(df["date"])
@@ -108,9 +112,9 @@ def fetch_fred_series(series_id, value_name):
         pass
 
     frames = []
-    for year in range(2016, 2027):
+    for year in range(2016, date.today().year + 1):
         start = "{}-01-01".format(year)
-        end = "{}-12-31".format(year) if year < 2026 else "2026-06-30"
+        end = "{}-12-31".format(year) if year < date.today().year else end_date
         raw = fetch_text(FRED_CSV_URL.format(series_id=series_id, start=start, end=end))
         frame = pd.read_csv(io.StringIO(raw))
         frames.append(frame)
@@ -476,7 +480,7 @@ def write_outputs(df, legacy_fit, upgraded_fit, latest_score=None):
         lines.append("Quarter-to-date gold average: ${:,.2f}/oz".format(latest["gold_usd"]))
         lines.append("Model fitted price: ${:,.2f}/oz".format(latest["upgraded_fitted_gold_usd"]))
         lines.append("Spot residual: ${:,.2f}/oz ({:+.1%})".format(latest["spot_residual_usd"], latest["spot_residual_pct"]))
-        lines.append("Central bank input: {:.1f}t reported since Q2 2026; no complete Q3 estimate yet".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())))
+        lines.append("Central bank input: {:.1f}t reported since Q2 2026; partial reported purchases, not complete Q3 global demand".format(sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())))
         lines.append("")
 
     (OUTPUT_DIR / "model_summary.txt").write_text("\n".join(lines) + "\n")
