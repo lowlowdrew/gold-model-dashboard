@@ -152,26 +152,37 @@ def build_dashboard():
         latest_label = "Latest*"
         nowcast_note = (
             "Latest* uses spot gold from {date}, quarter-to-date price data, and the latest reported "
-            "central-bank buying since Q2. The {reported:.0f}t central-bank figure is July's reported purchases, "
-            "not a complete Q3 global estimate. It is not a complete quarterly observation."
-        ).format(date=latest["latest_spot_date"], reported=latest["central_bank_net_purchase_tonnes"])
-        append_row = {
-            "quarter": latest_label,
-            "gold_usd": latest["spot_gold_usd"],
-            "upgraded_fitted_gold_usd": latest["upgraded_fitted_gold_usd"],
-            "fitted_gold_usd": None,
-            "upgraded_residual_pct": latest["spot_residual_pct"],
-            "residual_pct_gold_usd": None,
-            "real_gold_usd": latest["real_gold_usd"],
-            "fitted_real_gold_usd": latest["fitted_real_gold_usd"],
-            "cumulative_central_bank_purchase_tonnes": latest["cumulative_central_bank_purchase_tonnes"],
-            "debt_to_gdp": latest["debt_to_gdp"],
-            "broad_dollar_index": latest["broad_dollar_index"],
-            "consumer_sentiment": latest["consumer_sentiment"],
-        }
-        chart_df = pd.concat([chart_df, pd.DataFrame([append_row])], ignore_index=True)
+            "central-bank buying since Q2. The {reported:.0f}t central-bank figure combines July and August reported purchases, "
+            "not a complete Q3 global estimate; no Q4 central-bank buying is assumed. "
+            "Debt/GDP uses the latest debt and Q2 GDP; CPI and sentiment use their latest published readings. "
+            "It is not a complete quarterly observation."
+        ).format(date=latest["latest_spot_date"], reported=latest["central_bank_reported_since_last_complete_tonnes"])
+        partial_rows = []
+        for _, row in latest_nowcast.iterrows():
+            is_latest = row["quarter"] == latest["quarter"]
+            partial_rows.append(
+                {
+                    "quarter": latest_label if is_latest else "{}*".format(row["quarter"]),
+                    "gold_usd": row["spot_gold_usd"] if is_latest else row["gold_usd"],
+                    "upgraded_fitted_gold_usd": row["upgraded_fitted_gold_usd"],
+                    "fitted_gold_usd": None,
+                    "upgraded_residual_pct": row["spot_residual_pct"] if is_latest else row["upgraded_residual_pct"],
+                    "residual_pct_gold_usd": None,
+                    "real_gold_usd": row["real_gold_usd"] * row["spot_gold_usd"] / row["gold_usd"] if is_latest else row["real_gold_usd"],
+                    "fitted_real_gold_usd": row["fitted_real_gold_usd"],
+                    "cumulative_central_bank_purchase_tonnes": row["cumulative_central_bank_purchase_tonnes"],
+                    "debt_to_gdp": row["debt_to_gdp"],
+                    "broad_dollar_index": row["broad_dollar_index"],
+                    "consumer_sentiment": row["consumer_sentiment"],
+                }
+            )
+        chart_df = pd.concat([chart_df, pd.DataFrame(partial_rows)], ignore_index=True)
 
     short_payload, short_term = build_short_term_payload()
+    if short_term is not None and latest_nowcast is not None and not latest_nowcast.empty:
+        signal_lag_days = (pd.Timestamp(latest["latest_spot_date"]) - pd.Timestamp(short_term["latestWeek"])).days
+        if signal_lag_days >= 14:
+            short_term["note"] += " The weekly ETF source has not published newer data; this signal is {} days old.".format(signal_lag_days)
     payload = {
         "quarters": chart_df["quarter"].tolist(),
         "price": to_records(
@@ -205,7 +216,7 @@ def build_dashboard():
             ("Spot gold", metric(latest["spot_gold_usd"], 0, "$", "/oz")),
             ("Nowcast fit", metric(latest["upgraded_fitted_gold_usd"], 0, "$", "/oz")),
             ("Spot premium", metric(latest["spot_residual_pct"] * 100, 1, "", "%")),
-            ("CB reported since Q2", metric(latest["central_bank_net_purchase_tonnes"], 0, "", "t")),
+            ("CB reported since Q2", metric(latest["central_bank_reported_since_last_complete_tonnes"], 0, "", "t")),
             ("US debt/GDP", metric(latest["debt_to_gdp"] * 100, 1, "", "%")),
         ]
     else:
@@ -546,7 +557,7 @@ TEMPLATE = r"""<!doctype html>
     {% endfor %}
   </div>
   {% if nowcast_note %}
-  <div class="note">{{ nowcast_note }} <a href="https://www.gold.org/goldhub/gold-focus/2026/09/central-bank-gold-statistics-central-banks-make-positive-headlines-gold">World Gold Council source</a></div>
+  <div class="note">{{ nowcast_note }} <a href="https://www.gold.org/goldhub/gold-focus/2026/09/central-bank-gold-statistics-central-banks-make-positive-headlines-gold">July source</a> · <a href="https://www.gold.org/goldhub/gold-focus/2026/10/central-bank-gold-statistics-central-banks-continue-summer-spree-august">August source</a></div>
   <div class="subcards">
     {% for label, value in complete_cards %}
     <div class="subcard">

@@ -36,14 +36,16 @@ TREASURY_DEBT_URL = (
     "debt_to_penny?fields=record_date,tot_pub_debt_out_amt&filter=record_date:gte:2016-01-01"
     "&sort=record_date&page[size]=10000&format=csv"
 )
-LATEST_REPORTED_CB_MONTHS_2026Q3 = {"2026-07": 23.0}
+LATEST_REPORTED_CB_MONTHS_2026Q3 = {"2026-07": 23.0, "2026-08": 39.0}
 LATEST_REPORTED_CB_SOURCE = (
-    "World Gold Council reported central-bank net purchases of 23t for July 2026 "
-    "(published 3 September 2026). This reported monthly figure covers known "
-    "transactions and is not directly comparable with the complete quarterly "
-    "global demand estimate. No complete Q3 2026 estimate is available yet. "
-    "Source: https://www.gold.org/goldhub/gold-focus/2026/09/"
-    "central-bank-gold-statistics-central-banks-make-positive-headlines-gold"
+    "World Gold Council reported central-bank net purchases of 23t in July and "
+    "39t in August 2026. These monthly reported figures cover known transactions "
+    "and are not directly comparable with the complete quarterly global demand "
+    "estimate. No complete Q3 2026 estimate is available yet. Sources: "
+    "https://www.gold.org/goldhub/gold-focus/2026/09/"
+    "central-bank-gold-statistics-central-banks-make-positive-headlines-gold ; "
+    "https://www.gold.org/goldhub/gold-focus/2026/10/"
+    "central-bank-gold-statistics-central-banks-continue-summer-spree-august"
 )
 
 
@@ -278,8 +280,9 @@ def build_dataset():
 
 def build_latest_observation(base_df):
     latest_spot = fetch_wgc_spot_price()
-    quarter = pd.Period(latest_spot["date"], freq="Q")
-    if quarter <= base_df["quarter"].iloc[-1]:
+    spot_quarter = pd.Period(latest_spot["date"], freq="Q")
+    last_complete_quarter = base_df["quarter"].iloc[-1]
+    if spot_quarter <= last_complete_quarter:
         return None
 
     gold = fetch_wgc_gold_price_quarterly()
@@ -290,37 +293,47 @@ def build_latest_observation(base_df):
     gdp = to_quarterly_last(fetch_fred_series("GDP", "nominal_gdp_billion_usd"), "date", "nominal_gdp_billion_usd")
     sentiment = to_quarterly_mean(fetch_fred_series("UMCSENT", "consumer_sentiment"), "date", "consumer_sentiment")
 
-    def value_for(frame, column):
-        matched = frame.loc[frame["quarter"] == quarter, column]
-        if not matched.empty:
-            return float(matched.iloc[-1])
-        return float(frame[column].iloc[-1])
+    def value_for(frame, column, quarter):
+        available = frame.loc[frame["quarter"] <= quarter, column]
+        if available.empty:
+            raise RuntimeError("No {} observation available by {}".format(column, quarter))
+        return float(available.iloc[-1])
 
-    partial_cb = sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())
-    latest_row = pd.DataFrame(
-        [
+    pending_quarters = pd.period_range(last_complete_quarter + 1, spot_quarter, freq="Q")
+    rows = []
+    for quarter in pending_quarters:
+        reported_cb = sum(
+            tonnes for month, tonnes in LATEST_REPORTED_CB_MONTHS_2026Q3.items()
+            if pd.Period(month, freq="M").asfreq("Q") == quarter
+        )
+        rows.append(
             {
                 "quarter": quarter,
-                "gold_usd": value_for(gold, "gold_usd"),
-                "central_bank_net_purchase_tonnes": partial_cb,
-                "real_rate_10y_tips": value_for(real_rate, "real_rate_10y_tips"),
-                "broad_dollar_index": value_for(dollar, "broad_dollar_index"),
-                "federal_debt_trillion_usd": value_for(debt, "federal_debt_trillion_usd"),
-                "us_cpi": value_for(cpi, "us_cpi"),
-                "nominal_gdp_billion_usd": value_for(gdp, "nominal_gdp_billion_usd"),
-                "consumer_sentiment": value_for(sentiment, "consumer_sentiment"),
+                "gold_usd": value_for(gold, "gold_usd", quarter),
+                "central_bank_net_purchase_tonnes": reported_cb,
+                "real_rate_10y_tips": value_for(real_rate, "real_rate_10y_tips", quarter),
+                "broad_dollar_index": value_for(dollar, "broad_dollar_index", quarter),
+                "federal_debt_trillion_usd": value_for(debt, "federal_debt_trillion_usd", quarter),
+                "us_cpi": value_for(cpi, "us_cpi", quarter),
+                "nominal_gdp_billion_usd": value_for(gdp, "nominal_gdp_billion_usd", quarter),
+                "consumer_sentiment": value_for(sentiment, "consumer_sentiment", quarter),
             }
-        ]
-    )
-    combined = pd.concat([base_df[latest_row.columns], latest_row], ignore_index=True)
+        )
+    pending = pd.DataFrame(rows)
+    combined = pd.concat([base_df[pending.columns], pending], ignore_index=True)
     combined = add_derived_columns(combined, base_df["us_cpi"].iloc[-1])
-    latest_full = combined.iloc[[-1]].copy()
-    latest_full["period_status"] = "partial_latest_available"
-    latest_full["spot_gold_usd"] = latest_spot["gold_usd"]
-    latest_full["latest_spot_date"] = latest_spot["date"].date().isoformat()
-    latest_full["latest_spot_timestamp"] = latest_spot["timestamp"]
-    latest_full["central_bank_source_note"] = LATEST_REPORTED_CB_SOURCE
-    return latest_full
+    partial = combined.tail(len(pending)).copy()
+    partial["period_status"] = "partial_reported"
+    partial["spot_gold_usd"] = np.nan
+    partial["latest_spot_date"] = None
+    partial["latest_spot_timestamp"] = None
+    partial["central_bank_reported_since_last_complete_tonnes"] = sum(LATEST_REPORTED_CB_MONTHS_2026Q3.values())
+    partial["central_bank_source_note"] = LATEST_REPORTED_CB_SOURCE
+    partial.loc[partial.index[-1], "period_status"] = "partial_latest_available"
+    partial.loc[partial.index[-1], "spot_gold_usd"] = latest_spot["gold_usd"]
+    partial.loc[partial.index[-1], "latest_spot_date"] = latest_spot["date"].date().isoformat()
+    partial.loc[partial.index[-1], "latest_spot_timestamp"] = latest_spot["timestamp"]
+    return partial
 
 
 def standardize(frame, columns):
